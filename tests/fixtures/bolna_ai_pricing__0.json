@@ -1,0 +1,509 @@
+{
+ "requested_url": "https://www.bolna.ai/pricing",
+ "final_url": "https://www.bolna.ai/pricing",
+ "title": "Voice AI pricing and enterprise plans | Bolna AI Voice Agents",
+ "meta_description": "Transparent, usage-based pricing for calls and flexible enterprise plans. Scale up or down as you need with Bolna's Voice AI platform.",
+ "text": "Bolna Voice AI Pricing \u2013 Volume-based plans, pay-as-you-go, enterprise\nHow it Works\nFeatures\nIntegrations\nAgents\nCase Studies\nPricing\nNews\nDocs\nCareers\nLogin\nBook a Demo\nPRICING\n\n\nOnly pay for what you use\n\nSimple, transparent, usage-based pricing for calls and flexible enterprise plans.\n\nPay-as-you-go\n\nFlexible credits, Top-up anytime\n\nPerfect for AdHoc use cases:\n\nPurchase credits ($10 to $5000)\nTop-up when balance is low\nNo commitment\nPilots Plan\n\nFixed volume-based per minute pricing\n\nPriority support via WhatsApp\nWeekly 1:1 calls with your POC\nEnterprise features enabled\nMaximum Concurrency of 25\nBuy a pilot\nEnterprise Plan\n\nCustom scalable plans\n\nScalable solutions for large organisations:\n\nBest-in-class pricing at committed volumes\nCustomised integrations and deployment\nPriority support\nDedicated account manager\nTalk to sales\nVolume-Based Pricing\n\nSee pricing for users who opt in for fixed per-minute volume-based plans, optimized for your location\n\n6.00\u00a2 (\u20b95.52)\nper minute\nStandard rate \u2014 increase volume for better pricing\nPAYMENT\n$15\nMINUTES\n250\nBONUS\n+0\nTOTAL MINUTES\n250\nSelect payment tier: $15, $60, $150, $300, $600, $1.5K, $3K\n$15\n$60\n$150\n$300\n$600\n$1.5K\n$3K\n6.00\u00a2 / min\nSavings: 0%\n4.51\u00a2 / min\nFAQ\nFrequently asked questions\n\nHave questions? We have answers. If you don't find what you're looking for, contact our team.\n\nHow much does Bolna AI cost?\nBolna AI starts at $0.06 per minute (about \u20b95.52) on pay-as-you-go, with speech-to-text, the LLM and text-to-speech included when your agent uses the bundled models. Telephony and the platform fee are added per minute. Larger top-ups bring the rate down to about 4.5\u00a2 (\u20b94.15) per minute, the Pilot plan locks in about 4.2\u00a2 (~\u20b94), and every new account gets $5 in free credits.\nHow does the Pilot plan work?\nThe Pilot plan is a one-time purchase at a fixed per-minute rate, billed in 30-second pulses. Two tiers are available: $500 for 12,000 minutes (~4.2\u00a2/min) or $300 for 6,500 minutes (~4.6\u00a2/min). Both include up to 25 concurrent calls, enterprise features, and one month of dedicated support \u2014 a WhatsApp channel with our team plus four 1:1 calls with your POC. You build your own agent in Agent Studio. Your rate holds until the minutes are used up, and any unused wallet balance carries over; after that the account reverts to standard pricing from 6\u00a2/minute.\nHow does pay-as-you-go pricing work?\nWith transparent token-based pricing, you only pay for what you actually consume. Purchase credits starting from $10 to $5000, and top up whenever your balance runs low. Every API call is billed based on the exact number of tokens processed, giving you complete visibility and control over your costs.\nCan I use my own API keys to reduce costs?\nYes! We support BYOK (Bring Your Own Keys) for LLM providers, TTS, and ASR services. By using your own API keys, you can significantly reduce costs while still leveraging our powerful voice AI platform and infrastructure. This gives you maximum flexibility and cost control.\nWhat happens if I run out of credits?\nYour agents will stop making calls when credits run out. You can set up automatic top-ups or receive notifications when your balance is low to ensure uninterrupted service.\nDo you offer volume discounts?\nYes! We offer enterprise plans and volume discounts based on your committed usage. Contact our sales team to discuss custom pricing tailored to your specific needs.\nIs there a free trial available?\nYes! We offer $5 in free credits when you sign up. This gives you the opportunity to test our platform and experience the service firsthand before committing to a larger purchase.\nStill have questions?\n\nOur team is here to help you find the perfect plan for your needs.\n\nTalk to our team\n1000+ Companies rely on Bolna to power their Voice AI Stack across\n10+ vernacular Indian languages including Hinglish, Hindi, Tamil, Telugu.\nTestimonials\nWHAT OUR CUSTOMERS SAY\n\nWe're saving countless hours and lakhs of rupees on each recruitment campaign. Bolna has set a very high standard for themselves, and we're looking forward to seeing them continue to meet it going forward.\n\nBadal\n\nDirector | Awign\n\nBolna\u2019s orchestration helps us build complex and capable AI voice agents in minutes with complete flexibility. The sheer speed of going live has been a game changer for us.\n\nArmaan\n\nFounder | Futwork\n\nWorking with Bolna.ai has been an incredible experience. The team quickly understood our needs and delivered tailor-made solutions on an intuitive, powerful platform. Beyond the tech, it\u2019s their approachable and passionate people who make the real difference. I only hope they remain this close to their clients as they scale.\n\nSid\n\nDirector | GoKwik\n\nAPI Documentation\nAPI authentication\nUsing Agents APIs\nMaking phone calls APIs\nGet call data APIs\nPhone numbers APIs\nInbound agents APIs\nKnowledgebases APIs\nBatch APIs\nSub account APIs\nSIP Trunk APIs\nDispositions APIs\nProduct\nDashboard\nFunction tool calling\nPDFs, RAGs & Knowledge bases\nUsing Twilio with Bolna Voice agents\nUsing Plivo with Bolna Voice agents\nUsing Vobiz with Bolna Voice agents\nMultilingual support\nMaking bulk calls & campaigns\nAI outbound calling\nAgent library & templates\nBolna Voice agent integrations\nAI voice agents\nAI voice agent platform\nHindi text to speech\nAgent Studio\nBeta Community\nBeta Community Terms\nBolna Builders Community Showcase\nBolna Builders Slack Community\nCompany\nYC Launch\nContact us\nSchedule a Call\nPartners Program\nPricing & Plans\nBolna CLI\nBolna Blogs\nNews & Updates\nLLMs.txt\nDocs LLMs.txt\nTop Indian AI Voice Agents\nSystem status\n\u00a9 2026 Whismurwave Inc. All Rights Reserved.\nTerms of use\nPrivacy Policy",
+ "scripts": [
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://connect.facebook.net/signals/config/2643166359437445?v=2.9.439&r=stable&domain=www.bolna.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://www.bolna.ai/_next/static/chunks/be0aa090-733f8398f81a6147.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/8685-4a434b20e1bf7274.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/main-app-4006fb8530a0b191.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/493ff4cd-969b642fdf80cd37.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/6934-b25a57c67ce364e2.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/249-da09f6cdb09cb347.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/9921-f2130cfbc3b41f52.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/532-55e57726309efd32.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/3480-6dd829c545eacbe9.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/332-91cf4d935899f1e2.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/pricing/page-2cf12be5c6483018.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/9379-07e92386518ce454.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/360-d062fb314a9a5c5b.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/layout-1f773d79e14b37cc.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11506217340/?random=1794318817388&cv=11&fst=1794318817388&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&rcb=11&frm=0&tiba=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1596085658.1794318817&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=QA&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=oubpnzma",
+  "https://pthg.bolna.ai/static/dead-clicks-autocapture.js?v=1.372.9",
+  "https://pthg.bolna.ai/static/surveys.js?v=1.372.9",
+  "https://pthg.bolna.ai/static/posthog-recorder.js?v=1.372.9",
+  "https://pthg.bolna.ai/array/phc_U5IIF51BsZRF2hLsithQGSBncrGPMEyEHE7sl1B7WCX/config.js",
+  "https://www.bolna.ai/_next/static/chunks/webpack-1ee80bc517df735a.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.googletagmanager.com/gtag/js?id=G-4YG936YT64",
+  "https://analytics.ahrefs.com/analytics.js"
+ ],
+ "iframes": [],
+ "links": [
+  {
+   "href": "https://www.bolna.ai/",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/agents",
+   "text": "Agents"
+  },
+  {
+   "href": "https://www.bolna.ai/#use-cases",
+   "text": "Case Studies"
+  },
+  {
+   "href": "https://www.bolna.ai/pricing",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://www.bolna.ai/newsroom",
+   "text": "News"
+  },
+  {
+   "href": "https://www.bolna.ai/#how-it-works",
+   "text": "How it Works"
+  },
+  {
+   "href": "https://www.bolna.ai/#features",
+   "text": "Features"
+  },
+  {
+   "href": "https://www.bolna.ai/agents",
+   "text": "Agents"
+  },
+  {
+   "href": "https://www.bolna.ai/#use-cases",
+   "text": "Case Studies"
+  },
+  {
+   "href": "https://www.bolna.ai/pricing",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://www.bolna.ai/newsroom",
+   "text": "News"
+  },
+  {
+   "href": "https://www.bolna.ai/docs",
+   "text": "Docs"
+  },
+  {
+   "href": "https://www.bolna.ai/careers",
+   "text": "Careers"
+  },
+  {
+   "href": "https://platform.bolna.ai/login",
+   "text": "Login"
+  },
+  {
+   "href": "https://www.bolna.ai/pilots",
+   "text": "Book a Demo"
+  },
+  {
+   "href": "https://www.bolna.ai/pilots",
+   "text": "Buy a pilot"
+  },
+  {
+   "href": "https://www.bolna.ai/book-demo",
+   "text": "Talk to sales"
+  },
+  {
+   "href": "https://www.bolna.ai/book-demo",
+   "text": "contact our team"
+  },
+  {
+   "href": "https://www.bolna.ai/book-demo",
+   "text": "Talk to our team"
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/futwork",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/gokwik",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/awign",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/hyreo",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/hypothesis",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/futwork",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/gokwik",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/awign",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/hyreo",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/customer-story/hypothesis",
+   "text": ""
+  },
+  {
+   "href": "https://x.com/bolna_dev",
+   "text": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/bolna-ai/",
+   "text": ""
+  },
+  {
+   "href": "https://www.youtube.com/@BolnaVoiceAI",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/join-slack",
+   "text": ""
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/introduction",
+   "text": "API authentication"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/agent/v2/overview",
+   "text": "Using Agents APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/calls/overview",
+   "text": "Making phone calls APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/executions/overview",
+   "text": "Get call data APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/phone-numbers/overview",
+   "text": "Phone numbers APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/inbound/overview",
+   "text": "Inbound agents APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/knowledgebase/overview",
+   "text": "Knowledgebases APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/batches/overview",
+   "text": "Batch APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/sub-accounts/overview",
+   "text": "Sub account APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/sip-trunks/overview",
+   "text": "SIP Trunk APIs"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/api-reference/dispositions/overview",
+   "text": "Dispositions APIs"
+  },
+  {
+   "href": "https://platform.bolna.ai/",
+   "text": "Dashboard"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/tool-calling/introduction",
+   "text": "Function tool calling"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/knowledge-base",
+   "text": "PDFs, RAGs & Knowledge bases"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/twilio",
+   "text": "Using Twilio with Bolna Voice agents"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/plivo",
+   "text": "Using Plivo with Bolna Voice agents"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/vobiz",
+   "text": "Using Vobiz with Bolna Voice agents"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/customizations/multilingual-languages-support",
+   "text": "Multilingual support"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/outbound/batch-calling",
+   "text": "Making bulk calls & campaigns"
+  },
+  {
+   "href": "https://www.bolna.ai/ai-outbound-calling",
+   "text": "AI outbound calling"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/agent-templates",
+   "text": "Agent library & templates"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/integrations",
+   "text": "Bolna Voice agent integrations"
+  },
+  {
+   "href": "https://www.bolna.ai/agents",
+   "text": "AI voice agents"
+  },
+  {
+   "href": "https://www.bolna.ai/ai-voice-agent-platform",
+   "text": "AI voice agent platform"
+  },
+  {
+   "href": "https://www.bolna.ai/hindi-text-to-speech",
+   "text": "Hindi text to speech"
+  },
+  {
+   "href": "https://www.bolna.ai/agent-studio",
+   "text": "Agent Studio"
+  },
+  {
+   "href": "https://www.bolna.ai/beta-community",
+   "text": "Beta Community"
+  },
+  {
+   "href": "https://www.bolna.ai/beta-terms",
+   "text": "Beta Community Terms"
+  },
+  {
+   "href": "https://www.bolna.ai/builders",
+   "text": "Bolna Builders Community Showcase"
+  },
+  {
+   "href": "https://www.bolna.ai/join-slack",
+   "text": "Bolna Builders Slack Community"
+  },
+  {
+   "href": "https://www.ycombinator.com/launches/OVc-bolna-voice-ai-for-india",
+   "text": "YC Launch"
+  },
+  {
+   "href": "https://www.bolna.ai/contact-us",
+   "text": "Contact us"
+  },
+  {
+   "href": "https://www.bolna.ai/book-demo",
+   "text": "Schedule a Call"
+  },
+  {
+   "href": "https://www.bolna.ai/partners",
+   "text": "Partners Program"
+  },
+  {
+   "href": "https://www.bolna.ai/pricing",
+   "text": "Pricing & Plans"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/cli/introduction",
+   "text": "Bolna CLI"
+  },
+  {
+   "href": "https://www.bolna.ai/blog",
+   "text": "Bolna Blogs"
+  },
+  {
+   "href": "https://www.bolna.ai/newsroom",
+   "text": "News & Updates"
+  },
+  {
+   "href": "https://www.bolna.ai/llms.txt",
+   "text": "LLMs.txt"
+  },
+  {
+   "href": "https://www.bolna.ai/docs/llms-full.txt",
+   "text": "Docs LLMs.txt"
+  },
+  {
+   "href": "https://www.bolna.ai/ai-voice-agent-companies-india",
+   "text": "Top Indian AI Voice Agents"
+  },
+  {
+   "href": "https://status.bolna.ai/",
+   "text": "System status"
+  },
+  {
+   "href": "https://www.bolna.ai/terms-of-service",
+   "text": "Terms of use"
+  },
+  {
+   "href": "https://www.bolna.ai/privacy-policy",
+   "text": "Privacy Policy"
+  }
+ ],
+ "resources": [
+  "https://www.bolna.ai/_next/static/media/27834908180db20f-s.p.woff2",
+  "https://www.bolna.ai/_next/static/media/78fec81b34c4a365.p.woff2",
+  "https://www.bolna.ai/logos/logo-white.svg",
+  "https://www.bolna.ai/icons/pay-as-you-go.svg",
+  "https://www.bolna.ai/icons/circular-checkmark.svg",
+  "https://www.bolna.ai/icons/enterprise-plan.svg",
+  "https://www.bolna.ai/logo-cloud/awign-white.svg",
+  "https://www.bolna.ai/icons/quote.svg",
+  "https://www.bolna.ai/images/customers/Badal.jpeg",
+  "https://www.bolna.ai/logo-cloud/futwork.svg",
+  "https://www.bolna.ai/images/customers/Armaan.png",
+  "https://www.bolna.ai/logo-cloud/gokwik.png",
+  "https://www.bolna.ai/_next/static/css/b1959b11e1f88b90.css?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/css/97f8fe7915117e58.css?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/webpack-1ee80bc517df735a.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.googletagmanager.com/gtag/js?id=G-4YG936YT64",
+  "https://www.bolna.ai/images/customers/Sid.jpeg",
+  "https://px.ads.linkedin.com/collect/?pid=10217452&fmt=gif",
+  "https://api.fontshare.com/",
+  "https://www.bolna.ai/pricing",
+  "https://www.bolna.ai/favicon.ico"
+ ],
+ "network_urls": [
+  "https://www.bolna.ai/pricing",
+  "https://www.bolna.ai/_next/static/media/27834908180db20f-s.p.woff2",
+  "https://www.bolna.ai/_next/static/media/78fec81b34c4a365.p.woff2",
+  "https://www.bolna.ai/logos/logo-white.svg",
+  "https://www.bolna.ai/icons/pay-as-you-go.svg",
+  "https://www.bolna.ai/icons/circular-checkmark.svg",
+  "https://www.bolna.ai/icons/enterprise-plan.svg",
+  "https://www.bolna.ai/logo-cloud/awign-white.svg",
+  "https://www.bolna.ai/icons/quote.svg",
+  "https://www.bolna.ai/images/customers/Badal.jpeg",
+  "https://www.bolna.ai/logo-cloud/futwork.svg",
+  "https://www.bolna.ai/images/customers/Armaan.png",
+  "https://www.bolna.ai/logo-cloud/gokwik.png",
+  "https://www.bolna.ai/_next/static/css/b1959b11e1f88b90.css?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/css/97f8fe7915117e58.css?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/webpack-1ee80bc517df735a.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/be0aa090-733f8398f81a6147.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/8685-4a434b20e1bf7274.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/main-app-4006fb8530a0b191.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/493ff4cd-969b642fdf80cd37.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/6934-b25a57c67ce364e2.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/249-da09f6cdb09cb347.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/9921-f2130cfbc3b41f52.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/532-55e57726309efd32.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/3480-6dd829c545eacbe9.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/332-91cf4d935899f1e2.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/pricing/page-2cf12be5c6483018.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/49409d0d-3aa6b3c0791dc51d.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/9379-07e92386518ce454.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/360-d062fb314a9a5c5b.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/layout-1f773d79e14b37cc.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.googletagmanager.com/gtag/js?id=G-4YG936YT64",
+  "https://www.bolna.ai/images/customers/Sid.jpeg",
+  "https://px.ads.linkedin.com/collect/?pid=10217452&fmt=gif",
+  "https://px4.ads.linkedin.com/collect/?pid=10217452&fmt=gif&e_ipv6=AQJxVNX8P-fRMwAAAaHFvFf4vWGFXKKyXd4qB2Z7fqLmHwe7uSzvUpnpQug25yDkHbv-VDLtHrqr9HiYnrIQlYKLA1t_oLmsjA",
+  "https://www.bolna.ai/logo-cloud/physics-wallah.svg",
+  "https://www.bolna.ai/logo-cloud/knotdating.svg",
+  "https://www.bolna.ai/logo-cloud/new/gokwik.png",
+  "https://www.bolna.ai/logo-cloud/new/shoplabs.png",
+  "https://www.bolna.ai/logo-cloud/new/spinny.svg",
+  "https://www.bolna.ai/logo-cloud/new/hyreo.png",
+  "https://www.bolna.ai/logo-cloud/new/hypothesis.png",
+  "https://pthg.bolna.ai/array/phc_U5IIF51BsZRF2hLsithQGSBncrGPMEyEHE7sl1B7WCX/config.js",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://analytics.google.com/g/collect?v=2&tid=G-4YG936YT64&gtm=45je6b61v9170367008za208zd9170367008xf1&_p=1794318817286&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&cid=324385542.1794318817&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=11&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794318817&sct=1&seg=0&dl=https%3A%2F%2Fwww.bolna.ai%2Fpricing&dt=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&_tu=QA&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1101",
+  "https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-4YG936YT64&cid=324385542.1794318817&gtm=45je6b61v9170367008za208zd9170367008xf1&rcb=11&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123814183",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11506217340/?random=1794318817388&cv=11&fst=1794318817388&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&rcb=11&frm=0&tiba=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1596085658.1794318817&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=QA&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://www.google.com/rmkt/collect/11506217340/?random=1794318817388&cv=11&fst=1794318817388&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&rcb=11&frm=0&tiba=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1596085658.1794318817&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=QA&data=event%3Dgtag.config&ept=68&gcp=5",
+  "https://www.google.co.in/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&ngs=1&ibt=1&tid=G-4YG936YT64&cid=324385542.1794318817&gtm=45je6b61v9170367008za208zd9170367008xf1&rcb=11&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123814183&z=91414123",
+  "https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&auid=1596085658.1794318817&dt=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&tid=AW-11506217340&en=page_view&dl=https%3A%2F%2Fwww.bolna.ai%2Fpricing&scrsrc=www.googletagmanager.com&rnd=506108134.1794318817&navt=n&npa=0&sdl=W3sibiI6IkJvbG5hIFZvaWNlIEFJIFBsYXRmb3JtIiwiYiI6IkJvbG5hIiwibyI6W3siY3UiOiJVU0QiLCJhIjoxLCJscCI6MTV9XX1d&_tu=QA&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&tft=1794318817415&tfd=1133&tids=AW-11506217340&fmt=8",
+  "https://ad.doubleclick.net/ccm/s/collect?auid=1596085658.1794318817&gtm=45je6b61v9170367008za208zd9170367008xecxf1&fmt=8",
+  "https://www.bolna.ai/pilots?_rsc=1ytjt",
+  "https://www.bolna.ai/book-demo?_rsc=1ytjt",
+  "https://connect.facebook.net/signals/config/2643166359437445?v=2.9.439&r=stable&domain=www.bolna.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://pthg.bolna.ai/static/posthog-recorder.js?v=1.372.9",
+  "https://pthg.bolna.ai/static/surveys.js?v=1.372.9",
+  "https://pthg.bolna.ai/static/dead-clicks-autocapture.js?v=1.372.9",
+  "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=oubpnzma",
+  "https://www.bolna.ai/_next/static/chunks/app/pilots/page-f9f29d69d434c6f1.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://analytics.ahrefs.com/analytics.js",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://www.bolna.ai/_next/static/chunks/8594-d378eca5fa79f5f5.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/1122-4bbf3599dfb8f226.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/5738-c1d1a191ed3b083a.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/book-demo/page-532b55d88fc90811.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.google.com/pagead/1p-user-list/11506217340/?random=1794318817388&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&rcb=11&frm=0&tiba=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1596085658.1794318817&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=QA&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dSakS9Ah59C0o7BFnNLwQUwPcPczkeDKgk2IOVnZ4HZMECehSgGVGxp8LM3jROQTT19x3JB8HWePjToWu_WkEwWSJd7ofAeMPLDBlsTiOdWCY5EWer0raiCpecaNFI3ze4C9ttA9dPHE3Vff9mJyA5UnkO4VgR9l7VQ742PEODkmmbB32PHfhVWMFLpN7O2wZRo26AbuBWUjfvhy86Oijy46oNC0Y5HpUPFw6rOGxwHZ4uNkpUFcYzdvw7H1m_MBZGp5sV2HjkZjcVkUGPLu_nqQ52F5TZVqe8-JSdpeVeX8Hbr7j1kStPEWBaNsK1DT032lAeKC&random=1928772344&rmt_tld=0&ipr=y",
+  "https://www.google.co.in/pagead/1p-user-list/11506217340/?random=1794318817388&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b61v9170367008za208zd9170367008xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&rcb=11&frm=0&tiba=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1596085658.1794318817&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=QA&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dSakS9Ah59C0o7BFnNLwQUwPcPczkeDKgk2IOVnZ4HZMECehSgGVGxp8LM3jROQTT19x3JB8HWePjToWu_WkEwWSJd7ofAeMPLDBlsTiOdWCY5EWer0raiCpecaNFI3ze4C9ttA9dPHE3Vff9mJyA5UnkO4VgR9l7VQ742PEODkmmbB32PHfhVWMFLpN7O2wZRo26AbuBWUjfvhy86Oijy46oNC0Y5HpUPFw6rOGxwHZ4uNkpUFcYzdvw7H1m_MBZGp5sV2HjkZjcVkUGPLu_nqQ52F5TZVqe8-JSdpeVeX8Hbr7j1kStPEWBaNsK1DT032lAeKC&random=1928772344&rmt_tld=1&ipr=y",
+  "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10217452&time=1794318817514&li_adsId=c3114656-cf21-49e7-8b02-b0daafe3c91a&pageLoadId=1585ec4a-dfc0-4471-a60e-d12f52255c44&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing",
+  "https://aplo-evnt.com/api/v1/intent_pixel/can_track_visitor?x_app_id=6784fdfaa392b302ce4e4f81",
+  "https://px4.ads.linkedin.com/collect?v=2&fmt=js&pid=10217452&time=1794318817514&li_adsId=c3114656-cf21-49e7-8b02-b0daafe3c91a&pageLoadId=1585ec4a-dfc0-4471-a60e-d12f52255c44&url=https%3A%2F%2Fwww.bolna.ai%2Fpricing&e_ipv6=AQKlL0TUvL7LYwAAAaHFvFuTzjRQoPv7DR_Ky7zBLfV3k7tlZJElcfNe83IaaimQNGe484jHb4LPajsZfb63y-TGvWAIUC1Vxg",
+  "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+  "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=6784fdfaa392b302ce4e4f81",
+  "https://www.bolna.ai/join-slack?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/introduction?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/agent/v2/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/calls/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/executions/overview?_rsc=1ytjt",
+  "https://join.slack.com/t/bolnabuilders/shared_invite/zt-4e72wdfch-F4k_Mnmrd_xn7rewvdElBw?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/tool-calling/introduction?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/knowledge-base?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/twilio?_rsc=1ytjt",
+  "https://www.bolna.ai/contact-us?_rsc=1ytjt",
+  "https://www.bolna.ai/partners?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/5836-1bac3d77a994cdaa.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/partners/page-463ff4a61ac2e6df.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/docs/api-reference/phone-numbers/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/app/contact-us/page-90c9ecec5145c810.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/docs/api-reference/inbound/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/plivo?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/cli/introduction?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/knowledgebase/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/batches/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/vobiz?_rsc=1ytjt",
+  "https://www.bolna.ai/blog?_rsc=1ytjt",
+  "https://www.bolna.ai/newsroom?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/sub-accounts/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/sip-trunks/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/customizations/multilingual-languages-support?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/outbound/batch-calling?_rsc=1ytjt",
+  "https://www.bolna.ai/llms.txt?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/llms-full.txt?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/api-reference/dispositions/overview?_rsc=1ytjt",
+  "https://www.bolna.ai/ai-outbound-calling?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/agent-templates?_rsc=1ytjt",
+  "https://www.bolna.ai/ai-voice-agent-companies-india?_rsc=1ytjt",
+  "https://www.bolna.ai/docs/integrations?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/310-dbf10a65ef1f17bf.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/ai-outbound-calling/page-36f11c2e578155d6.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/agents?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/app/ai-voice-agent-companies-india/page-a7322db7c68d5b8f.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/ai-voice-agent-platform?_rsc=1ytjt",
+  "https://www.bolna.ai/hindi-text-to-speech?_rsc=1ytjt",
+  "https://www.bolna.ai/agent-studio?_rsc=1ytjt",
+  "https://www.bolna.ai/beta-community?_rsc=1ytjt",
+  "https://www.bolna.ai/beta-terms?_rsc=1ytjt",
+  "https://www.bolna.ai/builders?_rsc=1ytjt",
+  "https://www.bolna.ai/terms-of-service?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/3054-269598d6703ea500.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/beta-community/page-9aafb03082984013.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/privacy-policy?_rsc=1ytjt",
+  "https://www.bolna.ai/_next/static/chunks/9789-84195cea3702c51f.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://www.bolna.ai/_next/static/chunks/app/agent-studio/page-2c0e44b36a1de949.js?dpl=dpl_9nkuP3kPr3DTPVq9fmaR2gH6Xe1L",
+  "https://analytics.google.com/g/collect?v=2&tid=G-4YG936YT64&gtm=45je6b61v9170367008za200zd9170367008xf1&_p=1794318817286&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAACQC&ae=a&cid=324385542.1794318817&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=11&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=2&tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183&sid=1794318817&sct=1&seg=0&dl=https%3A%2F%2Fwww.bolna.ai%2Fpricing&dt=Voice%20AI%20pricing%20and%20enterprise%20plans%20%7C%20Bolna%20AI%20Voice%20Agents&_tu=QA&en=scroll&epn.percent_scrolled=90&_et=3572&tfd=6766"
+ ],
+ "controls": [
+  "Integrations",
+  "Open main menu",
+  "Buy a pilot",
+  "Talk to sales",
+  "$15",
+  "$60",
+  "$150",
+  "$300",
+  "$600",
+  "$1.5K",
+  "$3K"
+ ],
+ "error": null
+}

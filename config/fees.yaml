@@ -1,0 +1,6 @@
+# Fee rates per sale. Edit freely; the audit reads these at run time.
+dodo:        { percent: 4.0, fixed_usd: 0.40, note: "Check dodopayments.com/pricing for current and international rates" }
+paddle:      { percent: 5.0, fixed_usd: 0.50 }
+lemonsqueezy: { percent: 5.0, fixed_usd: 0.50 }
+stripe:      { percent: 2.9, fixed_usd: 0.30, note: "Processing only. Tax, invoicing and MoR liability not included." }
+razorpay_intl_cards: { percent: 3.0, fixed_usd: 0.0, note: "Approximate. Plus GST. Not an MoR." }

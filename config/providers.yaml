@@ -1,0 +1,102 @@
+# Payment provider fingerprints.
+# patterns:          matched (case-insensitive substring) against script src, iframe src,
+#                    network request urls, <a>/<link> hrefs and inline html.
+# checkout_patterns: subset that only appears on a real checkout / payment link.
+#                    An <a href> that matches one of these counts as high confidence
+#                    and is never loaded.
+# names:             brand names searched in visible page text (low, or medium when the
+#                    page states "we use X" / "powered by X").
+# verified:          patterns confirmed against a live site's network log (see README).
+
+stripe:
+  is_mor: false
+  migrate_cmd: "dodo-migrate stripe"
+  patterns: ["js.stripe.com", "checkout.stripe.com", "buy.stripe.com", "billing.stripe.com"]
+  checkout_patterns: ["checkout.stripe.com", "buy.stripe.com", "billing.stripe.com"]
+  names: ["Stripe"]
+  verified: "not live-verified (demo page loads no Stripe.js); js.stripe.com is the documented Stripe.js host"
+paddle:
+  is_mor: true
+  migrate_cmd: "dodo-migrate paddle"
+  patterns: ["cdn.paddle.com", "checkout.paddle.com", "buy.paddle.com", "paddle.js", "Paddle.Initialize", "Paddle.Setup"]
+  checkout_patterns: ["checkout.paddle.com", "buy.paddle.com"]
+  names: ["Paddle"]
+  verified: "live 2026-11-10: cdn.paddle.com/paddle/paddle.js on tableplus.com/pricing"
+lemonsqueezy:
+  is_mor: true
+  migrate_cmd: "dodo-migrate lemonsqueezy"
+  patterns: ["lemonsqueezy.com", "lemon.js", "createLemonSqueezy"]
+  checkout_patterns: ["lemonsqueezy.com/checkout", "lemonsqueezy.com/buy"]
+  names: ["Lemon Squeezy", "LemonSqueezy"]
+  verified: "live 2026-11-10: assets.lemonsqueezy.com/lemon.js and <store>.lemonsqueezy.com/checkout/buy/<id> links on lemonsqueezy.com"
+polar:
+  is_mor: true
+  migrate_cmd: "dodo-migrate polar"
+  patterns: ["polar.sh/checkout", "buy.polar.sh", "@polar-sh/checkout"]
+  checkout_patterns: ["polar.sh/checkout", "buy.polar.sh"]
+  names: ["Polar.sh"]
+  verified: "not live-verified"
+dodo:
+  is_mor: true
+  migrate_cmd: null
+  patterns: ["checkout.dodopayments.com", "dodopayments.com/checkout"]
+  checkout_patterns: ["checkout.dodopayments.com", "dodopayments.com/checkout"]
+  names: ["Dodo Payments"]
+  verified: "not live-verified"
+razorpay:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["checkout.razorpay.com", "checkout-static-next.razorpay.com", "rzp.io", "razorpay.me", "api.razorpay.com"]
+  checkout_patterns: ["rzp.io", "razorpay.me", "pages.razorpay.com"]
+  names: ["Razorpay"]
+  verified: "live 2026-11-10: api.razorpay.com and checkout-static-next.razorpay.com on razorpay.com/demo"
+cashfree:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["sdk.cashfree.com", "payments.cashfree.com", "cashfree.com/pg"]
+  checkout_patterns: ["payments.cashfree.com"]
+  names: ["Cashfree"]
+  verified: "not live-verified"
+payu:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["secure.payu.in", "payu.in/_payment"]
+  checkout_patterns: ["secure.payu.in", "payu.in/_payment"]
+  names: ["PayU"]
+  verified: "not live-verified"
+juspay:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["juspay.in", "juspay.io", "hyperpg"]
+  checkout_patterns: []
+  names: ["Juspay"]
+  verified: "not live-verified"
+paypal:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["paypal.com/sdk/js", "paypalobjects.com"]
+  checkout_patterns: ["paypal.com/cgi-bin/webscr", "paypal.me"]
+  names: ["PayPal"]
+  verified: "partly: paypalobjects.com seen on developer.paypal.com; SDK url from docs"
+fastspring:
+  is_mor: true
+  migrate_cmd: null
+  patterns: ["onfastspring.com", "fastspring.com"]
+  checkout_patterns: ["onfastspring.com"]
+  names: ["FastSpring"]
+  verified: "not live-verified"
+gumroad:
+  is_mor: true
+  mor_note: "Gumroad acts as MoR for many sellers. Verify for this account."
+  migrate_cmd: null
+  patterns: ["gumroad.com/js", "gumroad.com/l/"]
+  checkout_patterns: ["gumroad.com/l/"]
+  names: ["Gumroad"]
+  verified: "live 2026-11-10: <seller>.gumroad.com/l/<slug> product links on gumroad.com/discover"
+chargebee:
+  is_mor: false
+  migrate_cmd: null
+  patterns: ["js.chargebee.com", "chargebee.com/hosted_pages"]
+  checkout_patterns: ["chargebee.com/hosted_pages"]
+  names: ["Chargebee"]
+  verified: "not live-verified"

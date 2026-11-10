@@ -1,0 +1,495 @@
+{
+ "requested_url": "https://smallest.ai/pricing",
+ "final_url": "https://smallest.ai/pricing/agents",
+ "title": "Voice Agent Pricing: Pay As You Go - Smallest.ai",
+ "meta_description": "Unlimited voice agents from $0.05 per minute, priced by the models you pick. Start with $10 in free credits and scale without long-term contracts.",
+ "text": "Agents\n\nModels\n\nResources \n\nPricing\n\nSign Up\n\nContact Sales\n\nPricing that scales with you\n\nAgents\n\nModels\n\nPay as you go\n\nFlexible\n\nStart with $10 in free credits, full access, and a pricing model that grows with you.\n\nPay only for what you use\n\nAccess to our full suite of APIs and models.\n\nNo commitments or long-term contracts.\n\nScale seamlessly from prototype to production.\n\nStart for free\n\nEnterprise plan\n\nBuilt for teams running production workloads at scale. \n\n\n\nTailored pricing for teams operating at scale.\n\nDedicated infrastructure with enterprise-grade SLAs.\n\nDedicated forward deployed engineers and priority support.\n\nAdvanced security, SSO, and compliance support.\n\nContact sales\n\nDetailed agent pricing\n\nNumber of Agents\n\nUnlimited Agents\n\nUnlimited Agents\n\nPrice per call\n\nPrice varies with \n\nmodels selected \n\nDepends on your architecture: cascading (Hosting + STT + LLM + TTS + Telephony) or speech-to-speech (Hosting + S2S + Telephony). \n\nDepending on the models $0.09 - $0.21/minute\n\nAs low as \n$0.05/minute\n\nCampaigns\n\nYes\n\nYes\n\nAdvanced Campaigns\n\nComing Soon\n\nNo\n\nYes\n\nText Message\n\nComing Soon\n\n$0.005 / Message\n\nCustom\n\nTesting Suite\n\nBasic\n\nYes\n\nSmallest Hosting Fees\n\n$0.01/min, Flat Rate\n\nCustom\n\nModels in use\n\nSpeech to Text Layer\n\n~$0.009/minute\n\nCustom\n\nLLM Layer\n\nAt cost\n\nCustom\n\nChatGPT 4.0\n\n~$0.0448/minute\n\nCustom\n\nChatGPT 4.1\n\n$0.045/minute\n\nCustom\n\nChatGPT 5.2\n\n$0.056/minute\n\nCustom\n\nText to Speech Layer\n\n~$0.09/minute\n\nAvailable\n\nAlternatively\n\nSpeech to Speech Layer\n\nAt Cost\n\nAvailable\n\nChatGPT Realtime\n\n~$0.10/minute\n\nCustom\n\nChatGPT Realtime Mini\n\n~$0.02/minute\n\nCustom\n\nNot Accessible\n\nAccessible\n\nElectron\n\nConcurrency\n\nConcurrency Included\n\n20 Included\n\nCustom\n\nAdditional Concurrency\n\nNo\n\nCustom\n\nTelephony\n\nRent a Phone Number\n\n$10/number/month\n\nCustom\n\nExternal Telephony Provider, BYOT\n\nAt Cost\n\nAt Cost\n\nAgent Add Ons\n\nKnowledge Base\n\n$3/GB/User\n\nCustom\n\nKnowledge Base Query\n\n$2/1K Query\n\nCustom\n\nPII Removal\n\n$0.01/minute\n\nCustom\n\nPost Call Analytics\n\n10 per agent\n\nYes\n\nWeb Widget\n\nYes\n\nYes\n\nCustom Integration\n\nNo\n\nYes\n\nAdvanced Denoising\n\nNo\n\nCustom\n\nCustom Branding\n\nNo\n\nYes\n\nReliability & Support\n\nEmail Support\n\nYes\n\nYes\n\nCommunity Support\n\nYes\n\nYes\n\nInfra SLA Guaranteed Uptime (SLA)\n\nNo\n\nEnterprise Grade, 99.99%\n\nExtra Custom Agent Setup\n\nNo\n\nCustom\n\nPriority Support\n\nNo\n\nYes\n\nPrompt Engineering Support\n\nNo\n\nYes\n\nOn-premise Deployment\n\nNo\n\nYes\n\nHIPAA Zero Data Retention\n\nAdd-on $1000/mo\n\nYes\n\nCompliance (SSO, SOC2)\n\nNo\n\nYes\n\nPay as you go\n\nLaunch instantly. Scale when you\u2019re ready. Ideal for builders, pilots, and small-scale deployments.\n\nEnterprise Plan\n\nBuilt for teams running production workloads at scale. Designed for reliability and security \n\nFrequently \nasked questions\n\nHow am I charged for voice agents?\n\nWhat counts as a billable minute?\n\nIs the model cost billed separately?\n\nIs there a cost to create an agent?\n\nHow many agents can I create?\n\nHow much do phone numbers cost?\n\nIs the platform suitable for regulated industries?\n\nBuild the future of voice agent orchestration \n\nContact sales\n\n311 California Street, Suite 320\nSan Francisco, CA 94104\n\nModels\n\nText to Speech\n\nSpeech to Text\n\nSpeech to Speech\n\nVoice cloning\n\nBenchmarks\n\nAgents\n\nOverview\n\nOn Prem\n\nProducts\n\nLazyVoice\n\nCapKit\n\nIndustries\n\nHealthcare\n\nReal Estate\n\nTravel & Hospitality\n\nAutomobile\n\nBanking\n\nE-commerce\n\nDocumentation\n\nFor Agents\n\nFor Models\n\nResources\n\nPricing\n\nBlogs\n\nResearch\n\nCareers\n\nVoice Library\n\nAlternatives\n\nVoice AI apps\n\nIntegrations\n\nDictionary\n\nAI Phone Automation\n\nPress kit\n\nCustomers\n\nInitiatives\n\nStartup Grants \n\nLegals\n\nPrivacy Policy\n\nPrivacy notice\n\nTerms and conditions\n\nTerms of service\n\nUser Policy\n\nTCPA compliance\n\nCopyright & IP Policy\n\nFollow us\n\nTwitter\n\nLinkedIn\n\nInstagram\n\nYouTube\n\nDiscord\n\nSubstack\n\nMedium\n\nSystem status operational\n\nWe are \n\nSOC 2,\n\nGDPR, and\n\nHIPAA compliant\n\n                                                 ",
+ "scripts": [
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://connect.facebook.net/signals/config/1489392025386988?v=2.9.439&r=stable&domain=smallest.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://ingest.promptwatch.com/js/client.min.js",
+  "https://static.ads-twitter.com/uwt.js",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://smallest.ai/metrics/ATgXEmCol97VGbLvlj-gqZXE4sj-tfBp65nBkdIw2azYx-_O",
+  "https://www.googletagmanager.com/gtm.js?id=GTM-T9S9PBGF&gtg_health=1",
+  "https://smallest.ai/metrics/ATgXEmCokaSzareQ8TqpxvTN85Og6-ty78vL2Ito26vYlB5K784",
+  "https://scripts.clarity.ms/0.8.77/clarity.js",
+  "https://js-na2.hscollectedforms.net/collectedforms.js",
+  "https://js-na2.hs-banner.com/v2/246267003/banner.js",
+  "https://js-na2.hsadspixel.net/pixels.js",
+  "https://js-na2.hs-analytics.net/analytics/1794318600000/246267003.js",
+  "https://www.clarity.ms/tag/sb6ay61q9a",
+  "https://us-assets.i.posthog.com/static/array.js",
+  "https://bzrcdn.openai.com/sdk/oaiq.min.js",
+  "https://smallest.ai/metrics/?id=",
+  "https://cdn.jsdelivr.net/gh/trysurface/scripts@latest/surface_tag.min.js",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17962057978/?random=1794318769472&cv=11&fst=1794318769472&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&rcb=17&frm=0&tiba=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=889999026.1794318769&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&gtb=1&data=event%3Dgtag.config&gap.gtb=1&ept=9&rfmt=3&fmt=4",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17962057978",
+  "https://us-assets.i.posthog.com/array/phc_vqBpz5cQHFjsmfFix6KuCjf8iwtH2hJaeReHPSq46PyH/config.js",
+  "https://us-assets.i.posthog.com/static/1.447.7/surveys.js",
+  "https://us-assets.i.posthog.com/static/1.447.7/dead-clicks-autocapture.js",
+  "https://us-assets.i.posthog.com/static/1.447.7/web-vitals-with-attribution.js",
+  "https://events.framer.com/script?v=2",
+  "https://js-na2.hs-scripts.com/246267003.js",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/script_main.Z9-uHt2y.mjs"
+ ],
+ "iframes": [
+  "https://forms.withsurface.com/s/cmov4i0pv000107hxhp0q41a2",
+  "https://framer.com/edit?framerSiteId=8a64bea7ad130a60e5b03072357c2b9d01e05249833ef669b5057bdadfcf1085&source=smallest.ai&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageRichTextBlockSelection%22%3Atrue%7D&loadStart=1794318769149"
+ ],
+ "links": [
+  {
+   "href": "https://smallest.ai/",
+   "text": ""
+  },
+  {
+   "href": "javascript:void(0);",
+   "text": "Agents"
+  },
+  {
+   "href": "javascript:void(0);",
+   "text": "Models"
+  },
+  {
+   "href": "javascript:void(0);",
+   "text": "Resources"
+  },
+  {
+   "href": "https://smallest.ai/pricing/agents",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://app.smallest.ai/login",
+   "text": "Sign Up"
+  },
+  {
+   "href": "https://smallest.ai/book-a-demo",
+   "text": "Contact Sales"
+  },
+  {
+   "href": "https://smallest.ai/pricing/models",
+   "text": "Models"
+  },
+  {
+   "href": "https://app.smallest.ai/login",
+   "text": "Start for free"
+  },
+  {
+   "href": "https://smallest.ai/book-a-demo",
+   "text": "Contact sales"
+  },
+  {
+   "href": "https://smallest.ai/book-a-demo",
+   "text": "Contact sales"
+  },
+  {
+   "href": "https://smallest.ai/text-to-speech",
+   "text": "Text to Speech"
+  },
+  {
+   "href": "https://smallest.ai/speech-to-text",
+   "text": "Speech to Text"
+  },
+  {
+   "href": "https://smallest.ai/hydra",
+   "text": "Speech to Speech"
+  },
+  {
+   "href": "https://smallest.ai/voice-cloning",
+   "text": "Voice cloning"
+  },
+  {
+   "href": "https://smallest.ai/benchmarks",
+   "text": "Benchmarks"
+  },
+  {
+   "href": "https://smallest.ai/voice-agents",
+   "text": "Overview"
+  },
+  {
+   "href": "https://smallest.ai/on-premise",
+   "text": "On Prem"
+  },
+  {
+   "href": "https://lazyvoice.ai/",
+   "text": "LazyVoice"
+  },
+  {
+   "href": "https://capkit.smallest.ai/",
+   "text": "CapKit"
+  },
+  {
+   "href": "https://smallest.ai/industry/healthcare",
+   "text": "Healthcare"
+  },
+  {
+   "href": "https://smallest.ai/industry/realestate",
+   "text": "Real Estate"
+  },
+  {
+   "href": "https://smallest.ai/industry/travelhospitality",
+   "text": "Travel & Hospitality"
+  },
+  {
+   "href": "https://smallest.ai/industry/automobile",
+   "text": "Automobile"
+  },
+  {
+   "href": "https://smallest.ai/industry/banking",
+   "text": "Banking"
+  },
+  {
+   "href": "https://smallest.ai/industry/industryecommerce",
+   "text": "E-commerce"
+  },
+  {
+   "href": "https://docs.smallest.ai/atoms/atoms-platform/get-started/quick-start?_gl=1*4sui3p*_gcl_au*NDg5Njc1MTkwLjE3NzE5OTIwNjQ.",
+   "text": "For Agents"
+  },
+  {
+   "href": "https://docs.smallest.ai/waves/v-4-0-0/documentation/getting-started/introduction?_gl=1*1yqtjd*_gcl_au*NDg5Njc1MTkwLjE3NzE5OTIwNjQ.",
+   "text": "For Models"
+  },
+  {
+   "href": "https://smallest.ai/pricing/agents",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://smallest.ai/blog",
+   "text": "Blogs"
+  },
+  {
+   "href": "https://smallest.ai/research",
+   "text": "Research"
+  },
+  {
+   "href": "https://jobs.ashbyhq.com/smallest",
+   "text": "Careers"
+  },
+  {
+   "href": "https://smallest.ai/voice-library",
+   "text": "Voice Library"
+  },
+  {
+   "href": "https://smallest.ai/alternatives",
+   "text": "Alternatives"
+  },
+  {
+   "href": "https://smallest.ai/voice-ai-apps",
+   "text": "Voice AI apps"
+  },
+  {
+   "href": "https://smallest.ai/integrations",
+   "text": "Integrations"
+  },
+  {
+   "href": "https://smallest.ai/dictionary",
+   "text": "Dictionary"
+  },
+  {
+   "href": "https://smallest.ai/voice-agents/ai-phone-automation",
+   "text": "AI Phone Automation"
+  },
+  {
+   "href": "https://smallest.ai/presskit",
+   "text": "Press kit"
+  },
+  {
+   "href": "https://smallest.ai/customer-stories",
+   "text": "Customers"
+  },
+  {
+   "href": "https://smallest.ai/grants",
+   "text": "Startup Grants"
+  },
+  {
+   "href": "https://smallest.ai/privacy-policy",
+   "text": "Privacy Policy"
+  },
+  {
+   "href": "https://smallest.ai/privacy-notice",
+   "text": "Privacy notice"
+  },
+  {
+   "href": "https://smallest.ai/terms-and-conditions",
+   "text": "Terms and conditions"
+  },
+  {
+   "href": "https://smallest.ai/terms-of-service",
+   "text": "Terms of service"
+  },
+  {
+   "href": "https://smallest.ai/prohibited-use-policy",
+   "text": "User Policy"
+  },
+  {
+   "href": "https://smallest.ai/tcpa-compliance",
+   "text": "TCPA compliance"
+  },
+  {
+   "href": "https://smallest.ai/copyright-and-ip-policy",
+   "text": "Copyright & IP Policy"
+  },
+  {
+   "href": "https://x.com/smallest_AI",
+   "text": "Twitter"
+  },
+  {
+   "href": "https://www.linkedin.com/company/smallest/",
+   "text": "LinkedIn"
+  },
+  {
+   "href": "https://www.instagram.com/smallest.ai/",
+   "text": "Instagram"
+  },
+  {
+   "href": "https://www.youtube.com/@smallest_ai",
+   "text": "YouTube"
+  },
+  {
+   "href": "https://discord.com/invite/xNBrdjdBa6",
+   "text": "Discord"
+  },
+  {
+   "href": "https://substack.com/@smallestai",
+   "text": "Substack"
+  },
+  {
+   "href": "https://medium.com/@smallestai",
+   "text": "Medium"
+  },
+  {
+   "href": "https://status.smallest.ai/",
+   "text": "System status operational"
+  },
+  {
+   "href": "https://security.smallest.ai/?tab=overview",
+   "text": "We are \n\nSOC 2,\n\nGDPR, and\n\nHIPAA compli"
+  }
+ ],
+ "resources": [
+  "https://framerusercontent.com/images/8aGg1mfHwnBJJYiECyUmneAyRVA.png",
+  "https://framerusercontent.com/images/8aGg1mfHwnBJJYiECyUmneAyRVA.png",
+  "https://framerusercontent.com/images/8aGg1mfHwnBJJYiECyUmneAyRVA.png",
+  "https://fonts.gstatic.com/",
+  "https://fonts.gstatic.com/",
+  "https://smallest.ai/pricing/agents",
+  "https://smallest.ai/pricing/agents",
+  "https://smallest.ai/hi/pricing/agents",
+  "https://smallest.ai/pricing/agents",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/rolldown-runtime.Bi-D_2cA.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/react.RfpYU-Ci.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/framer.ChKPUQNO.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/motion.Bz4dt2XE.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/toplevel-deps.CLiCgX5O.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/cMm13Wo_8OFKdu23MX83crsT6u_Bz_v96IQgst2dMus.DMoAU4AG.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/shared.D58purbQ.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/JRfHZmG_5.01FLzWLX.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/Ic6VqAtMt.BuV-cMCu.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/OIjZRBmWDcIE2B6qgG1j.Ed8CIOhb.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/B0HqS76TJ.0umMCZol.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/U0NWXiUrN.BUkeR2N6.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/UVEv0Dzml.B6pCGWEr.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/pHOprD8Lx.CMoUU7kw.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/store.js@_1.0.ABHOsuL6.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/n5GcThWi5.BsrNvuKK.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/reyody3ob.XcZtXdVm.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/lnfaMfj3F.DADfN8Gf.mjs"
+ ],
+ "network_urls": [
+  "https://smallest.ai/pricing",
+  "https://smallest.ai/pricing/agents",
+  "https://smallest.ai/metrics/?id=",
+  "https://bzrcdn.openai.com/sdk/oaiq.min.js",
+  "https://us-assets.i.posthog.com/static/array.js",
+  "https://www.clarity.ms/tag/sb6ay61q9a",
+  "https://cdn.jsdelivr.net/gh/trysurface/scripts@latest/surface_tag.min.js",
+  "https://events.framer.com/script?v=2",
+  "https://js-na2.hs-scripts.com/246267003.js",
+  "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOM4mJPby1QNtA.woff2",
+  "https://framerusercontent.com/assets/k5HykTtyg5skn7str4Xse7JNbVw.woff2",
+  "https://framerusercontent.com/assets/vnaL9rBM6b5S3aWm54I260AHU.woff2",
+  "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RruM4mJPby1QNtA.woff2",
+  "https://framerusercontent.com/assets/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2",
+  "https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/rolldown-runtime.Bi-D_2cA.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/react.RfpYU-Ci.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/framer.ChKPUQNO.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/motion.Bz4dt2XE.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/toplevel-deps.CLiCgX5O.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/cMm13Wo_8OFKdu23MX83crsT6u_Bz_v96IQgst2dMus.DMoAU4AG.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/shared.D58purbQ.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/JRfHZmG_5.01FLzWLX.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/Ic6VqAtMt.BuV-cMCu.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/OIjZRBmWDcIE2B6qgG1j.Ed8CIOhb.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/B0HqS76TJ.0umMCZol.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/U0NWXiUrN.BUkeR2N6.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/UVEv0Dzml.B6pCGWEr.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/pHOprD8Lx.CMoUU7kw.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/store.js@_1.0.ABHOsuL6.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/n5GcThWi5.BsrNvuKK.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/reyody3ob.XcZtXdVm.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/lnfaMfj3F.DADfN8Gf.mjs",
+  "https://framerusercontent.com/sites/663uEr5b39x1pLCONbK19D/script_main.Z9-uHt2y.mjs",
+  "https://bzrcdn.openai.com/pixel-config/v1/D8erXvvndyBwP6S67n3EAb.json",
+  "https://forms.withsurface.com/api/v1/lead/track",
+  "https://js-na2.hs-analytics.net/analytics/1794318600000/246267003.js",
+  "https://js-na2.hsadspixel.net/pixels.js",
+  "https://js-na2.hs-banner.com/v2/246267003/banner.js",
+  "https://js-na2.hscollectedforms.net/collectedforms.js",
+  "https://scripts.clarity.ms/0.8.77/clarity.js",
+  "https://framer.com/edit/init.mjs",
+  "https://smallest.ai/metrics/ATgXEmCokaSzareQ8TqpxvTN85Og6-ty78vL2Ito26vYlB5K784",
+  "https://www.googletagmanager.com/gtm.js?id=GTM-T9S9PBGF&gtg_health=1",
+  "https://smallest.ai/metrics/ATgXEmCol97VGbLvlj-gqZXE4sj-tfBp65nBkdIw2azYx-_O",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://static.ads-twitter.com/uwt.js",
+  "https://ingest.promptwatch.com/js/client.min.js",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&ae=g&auid=889999026.1794318769&dt=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&en=page_view&dl=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&scrsrc=smallest.ai&rnd=1319104513.1794318769&navt=n&npa=0&ep.ads_data_redaction=0&gdid=dODdlYz&gtb=1&gtm=45E92e6b61v9197037060za204zd9197037060xeaxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120385422~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123814185&tft=1794318769023&tfd=1000&_gsid=m7IAt-v1Q1GNFi8G72J57q0U955LeFcX-A&gap.gtb=1&fmt=8",
+  "https://ad.doubleclick.net/ccm/s/collect?_gsid=m7IAt-v1Q1GNFi8G72J57q0U955LeFcX-A&auid=889999026.1794318769&gtm=45E92e6b61v9197037060za204zd9197037060xeaxf4&fmt=8",
+  "https://app.framerstatic.com/chunk-HA3TJUCE.mjs",
+  "https://api-na2.hubapi.com/hs-script-loader-public/v2/config/pixels-and-events/json?portalId=246267003",
+  "https://forms-na2.hscollectedforms.net/collected-forms/v1/config/json?portalId=246267003&utk=",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17962057978/?random=1794318769472&cv=11&fst=1794318769472&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&rcb=17&frm=0&tiba=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=889999026.1794318769&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&gtb=1&data=event%3Dgtag.config&gap.gtb=1&ept=9&rfmt=3&fmt=4",
+  "https://www.google.com/rmkt/collect/17962057978/?random=1794318769472&cv=11&fst=1794318769472&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&rcb=17&frm=0&tiba=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=889999026.1794318769&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&gtb=1&data=event%3Dgtag.config&gap.gtb=1&ept=68&gcp=5",
+  "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=889999026.1794318769&dt=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&tid=AW-17962057978&en=page_view&dl=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&scrsrc=smallest.ai&rnd=1319104513.1794318769&navt=n&npa=0&gtb=1&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&tft=1794318769513&tfd=1490&_gsid=m7IAt-v1Q1GNFi8G72J57q0U955LeFcX-A&gap.gtb=1&tids=AW-17962057978&fmt=8",
+  "https://bzr.openai.com/v1/sdk/events?pid=D8erXvvndyBwP6S67n3EAb&st=oaiq-web&sv=0.1.100&t=1794318769629&ec=2",
+  "https://r.clarity.ms/collect",
+  "https://smallest.ai/metrics/ag/g/c?v=2&tid=G-KB2FQ79ZV0&gtm=45g92e6b61v9197035414za20szb9197037060zd9197037060xf4&_p=1794318768310&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1895720189&_eu=AAAAAGAC&_uip=%3A%3A&cid=1913528339.1794318770&ec_mode=a&fp=1&frm=0&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=IN-KA&_gsid=0l6Tjo4FhcM1VBSOrIiuI-0GslTEZCQOQQ&gaf=2&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794318769&sct=1&seg=0&dl=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&dt=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&gtb=1&en=page_view&_fv=1&_nsi=1&_ss=1&gap.gtb=1&tfd=1720",
+  "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-KB2FQ79ZV0&cid=1913528339.1794318770&gtm=45g92e6b61v9197035414za20szb9197037060zd9197037060xf4&rcb=10&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183",
+  "https://analytics.google.com/g/s/collect?_gsid=0l6Tjo4FhcM1VBSOrIiuI-0GslTEZCQOQQ&gtm=45g92e6b61v9197035414za20szb9197037060zd9197037060xf4",
+  "https://www.google.co.in/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-KB2FQ79ZV0&cid=1913528339.1794318770&gtm=45g92e6b61v9197035414za20szb9197037060zd9197037060xf4&rcb=10&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183&z=1254515669",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17962057978",
+  "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+  "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=7400444&time=1794318769778&li_adsId=c72974ba-0561-4941-a308-2e734e80005a&pageLoadId=cae63234-5dda-4503-8c33-6dc0e3597223&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&tm=gtmv2",
+  "https://connect.facebook.net/signals/config/1489392025386988?v=2.9.439&r=stable&domain=smallest.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://t.co/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=8f804d59-6e0a-4431-8406-7ad54a53ed6a&integration=gtm&p_id=Twitter&p_user_id=0&pl_id=265fcb4f-45ae-42a5-8554-433b8a0e0f75&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&tw_engaged_ms=1&tw_iframe_status=0&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318769816-505112678&tw_session_start=1&twpid=tw.1794318769816.900371269717530329&txn_id=pr7yo&type=javascript&version=2.4.12",
+  "https://analytics.twitter.com/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=8f804d59-6e0a-4431-8406-7ad54a53ed6a&integration=gtm&p_id=Twitter&p_user_id=0&pl_id=265fcb4f-45ae-42a5-8554-433b8a0e0f75&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&tw_engaged_ms=1&tw_iframe_status=0&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318769816-505112678&tw_session_start=1&twpid=tw.1794318769816.900371269717530329&txn_id=pr7yo&type=javascript&version=2.4.12",
+  "https://us-assets.i.posthog.com/array/phc_vqBpz5cQHFjsmfFix6KuCjf8iwtH2hJaeReHPSq46PyH/config.js",
+  "https://ingest.promptwatch.com/event",
+  "https://www.google.com/pagead/1p-user-list/17962057978/?random=1794318769472&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&rcb=17&frm=0&tiba=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=889999026.1794318769&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&gtb=1&data=event%3Dgtag.config&gap.gtb=1&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dRMjPsi4EtxkCGacyLkqWRiha_BVDDlUcAWcNS4L3lGi_-AeRfXftluQaXlmrEAPaDWqwz8mZAvt_Qjk2XIFnrVruaHP3XFZ4ACvaYbg_pguoKc1Lo5uginnEsubg-m3CJG46_JDsdZyxIGJkHHB47swkDdz2aYRY8e6YxYp-n84XNiDHfbhb1LDf0NUyGL4ZJNdbUE887LoB0TOFanArqfjPopi6fDWm5l6MWDs0LQgCcgnwTHbyrREi21uREe0Zm3mfe_HSGXMsQDjH5B6Y95PROJabDoFa2_cYRDAyxoITAqmzN_Ge-MAzWUYbsnmgUpmpNYn&random=1835397180&rmt_tld=0&ipr=y",
+  "https://www.google.co.in/pagead/1p-user-list/17962057978/?random=1794318769472&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45892e6b61v9244470476za20szb9197037060zd9197037060xecxf4&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~117776795~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&rcb=17&frm=0&tiba=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=889999026.1794318769&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&gtb=1&data=event%3Dgtag.config&gap.gtb=1&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dRMjPsi4EtxkCGacyLkqWRiha_BVDDlUcAWcNS4L3lGi_-AeRfXftluQaXlmrEAPaDWqwz8mZAvt_Qjk2XIFnrVruaHP3XFZ4ACvaYbg_pguoKc1Lo5uginnEsubg-m3CJG46_JDsdZyxIGJkHHB47swkDdz2aYRY8e6YxYp-n84XNiDHfbhb1LDf0NUyGL4ZJNdbUE887LoB0TOFanArqfjPopi6fDWm5l6MWDs0LQgCcgnwTHbyrREi21uREe0Zm3mfe_HSGXMsQDjH5B6Y95PROJabDoFa2_cYRDAyxoITAqmzN_Ge-MAzWUYbsnmgUpmpNYn&random=1835397180&rmt_tld=1&ipr=y",
+  "https://events.framer.com/anonymous",
+  "https://r.clarity.ms/collect",
+  "https://px4.ads.linkedin.com/collect?v=2&fmt=js&pid=7400444&time=1794318769778&li_adsId=c72974ba-0561-4941-a308-2e734e80005a&pageLoadId=cae63234-5dda-4503-8c33-6dc0e3597223&url=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&tm=gtmv2&e_ipv6=AQIhJup3zDrHtgAAAaHFu6C2q2HbsIqeaSV4pkztObux_Cbz4j6G_Otsc6bV5vfaP6mP0p4IQOgcIDdZU3Og708yZ_KD_3VQ6Q",
+  "https://us-assets.i.posthog.com/static/1.447.7/surveys.js",
+  "https://us-assets.i.posthog.com/static/1.447.7/dead-clicks-autocapture.js",
+  "https://us-assets.i.posthog.com/static/1.447.7/web-vitals-with-attribution.js",
+  "https://c.clarity.ms/c.gif",
+  "https://track-na2.hubspot.com/__ptq.gif?k=1&sd=1366x900&cd=24-bit&cs=UTF-8&ln=en-us&bfp=1d2c0738eab5969fa9c194d0114cbb33&v=1.1&a=246267003&rcu=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&pu=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&t=Voice+Agent+Pricing%3A+Pay+As+You+Go+-+Smallest.ai&cts=1794318770753&vi=9693efb56932584d29407779b0f74d72&nc=true&u=107309149.9693efb56932584d29407779b0f74d72.1794318770749.1794318770749.1794318770749.1&b=107309149.1.1794318770749&cc=15",
+  "https://framer.com/edit?framerSiteId=8a64bea7ad130a60e5b03072357c2b9d01e05249833ef669b5057bdadfcf1085&source=smallest.ai&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageRichTextBlockSelection%22%3Atrue%7D&loadStart=1794318769149",
+  "https://forms.withsurface.com/s/cmov4i0pv000107hxhp0q41a2",
+  "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=6C3C4C11175149A9954963F51477D8BF&RedC=c.clarity.ms&MXFR=1FE7DF52B0CD63382FD5C75FB4CD6DD0",
+  "https://forms.withsurface.com/_next/static/chunks/2xihpj2pm98ql.css",
+  "https://forms.withsurface.com/_next/static/chunks/1kt3oufdor7o7.css",
+  "https://forms.withsurface.com/_next/static/chunks/1dh-wiee9iv-c.css",
+  "https://forms.withsurface.com/_next/static/chunks/18q3zy2n7td80.css",
+  "https://forms.withsurface.com/_next/static/chunks/3o5r2eny56wq9.css",
+  "https://forms.withsurface.com/_next/static/chunks/2rzgy1j9zvge1.css",
+  "https://forms.withsurface.com/_next/static/chunks/0dakhjum2txgr.css",
+  "https://forms.withsurface.com/_next/static/chunks/330rwhdt-hvwf.css",
+  "https://framer.com/bootstrap.dda35a3c10533cddab7e4d39c988ef802095491e.js",
+  "https://app.framerstatic.com/chunk-BEAJFPMP.mjs",
+  "https://app.framerstatic.com/chunk-YRQ7G4QH.mjs",
+  "https://app.framerstatic.com/chunk-WOEOGJ2W.mjs",
+  "https://app.framerstatic.com/chunk-WLHSDIGQ.mjs",
+  "https://app.framerstatic.com/editorbar.OOM4EQEA.mjs",
+  "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=6C3C4C11175149A9954963F51477D8BF&MUID=037ADA224C5764BE2FE1C22F4D1365CE",
+  "https://yyzsiiitcbulecsvrxtd.supabase.co/storage/v1/object/public/assets/cmf355b7h003ilh0bp960mdcj/VuCNP07m_Smallest_logo_Teal.webp",
+  "https://yyzsiiitcbulecsvrxtd.supabase.co/storage/v1/object/public/assets/cmf355b7h003ilh0bp960mdcj/gu28XdLq_Frame_1.webp",
+  "https://yyzsiiitcbulecsvrxtd.supabase.co/storage/v1/object/public/assets/cmf355b7h003ilh0bp960mdcj/SMcygXuA_Logo_set.webp",
+  "https://forms.withsurface.com/_next/static/chunks/0nbomodqg5zgu.js",
+  "https://forms.withsurface.com/_next/static/chunks/1vl2h0nqj2u-a.js",
+  "https://forms.withsurface.com/_next/static/chunks/1nh8tuyu64xab.js",
+  "https://forms.withsurface.com/_next/static/chunks/3vltshc17r8kq.js",
+  "https://forms.withsurface.com/_next/static/chunks/turbopack-1byz1flvc-bu1.js",
+  "https://forms.withsurface.com/_next/static/chunks/2o896esrhcg99.js",
+  "https://forms.withsurface.com/_next/static/chunks/35sv26tjbuypx.js",
+  "https://forms.withsurface.com/_next/static/chunks/2-fi55465quz4.js",
+  "https://forms.withsurface.com/_next/static/chunks/3b999jntzvqtb.js",
+  "https://forms.withsurface.com/_next/static/chunks/0uq4hy_ddewtw.js",
+  "https://forms.withsurface.com/_next/static/chunks/2rmh_psxosquy.js",
+  "https://forms.withsurface.com/_next/static/chunks/1jtc-me41smuc.js",
+  "https://forms.withsurface.com/_next/static/chunks/2kf_yna_og1z-.js",
+  "https://forms.withsurface.com/_next/static/chunks/2w38-vfitujwo.js",
+  "https://forms.withsurface.com/_next/static/chunks/3ot5tuxmpcio3.js",
+  "https://forms.withsurface.com/_next/static/chunks/30_9yhyl8xucz.js",
+  "https://forms.withsurface.com/_next/static/chunks/0dena23bum1pl.js",
+  "https://forms.withsurface.com/_next/static/chunks/3qjad4w3491cl.js",
+  "https://forms.withsurface.com/_next/static/chunks/222ffqaepx_fi.js",
+  "https://forms.withsurface.com/_next/static/chunks/0q-vdaepi87h6.js",
+  "https://forms.withsurface.com/_next/static/chunks/1g-oqkzl3b2c9.js",
+  "https://forms.withsurface.com/_next/static/chunks/3go00id9zqzsc.js",
+  "https://forms.withsurface.com/_next/static/chunks/2f12fesmt8qqo.js",
+  "https://forms.withsurface.com/_next/static/chunks/2e0_sp711sjo2.js",
+  "https://forms.withsurface.com/_next/static/chunks/09gzm00m9d65z.js",
+  "https://forms.withsurface.com/_next/static/chunks/01-q-nve5ehn9.js",
+  "https://forms.withsurface.com/_next/static/chunks/12zxda_kv4q3w.js",
+  "https://forms.withsurface.com/_next/static/chunks/4523y0ucfp57r.js",
+  "https://forms.withsurface.com/_next/static/chunks/2phvwq6ixz15i.js",
+  "https://forms.withsurface.com/_next/static/chunks/1hjqr91js2x9d.js",
+  "https://forms.withsurface.com/_next/static/chunks/05gz9ng6jhzt0.js",
+  "https://forms.withsurface.com/_next/static/chunks/3tc1koh5w7oir.js",
+  "https://forms.withsurface.com/_next/static/chunks/2u-zburg7loox.js",
+  "https://forms.withsurface.com/_next/static/chunks/2yv8mtlq35ynz.js",
+  "https://forms.withsurface.com/_next/static/chunks/1kr6050qy2fi2.js",
+  "https://forms.withsurface.com/_next/static/chunks/3w16t6ccm_hau.js",
+  "https://forms.withsurface.com/_next/static/chunks/0c_kvyt0ptl1q.js",
+  "https://forms.withsurface.com/_next/static/chunks/2lugca0x2v2xo.js",
+  "https://forms.withsurface.com/_next/static/chunks/0qrn066gi42x6.js",
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+  "https://fonts.gstatic.com/s/worksans/v24/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2",
+  "https://forms.withsurface.com/api/v1/public/fonts?path=user_fonts%2Fcmf355b7h003ilh0bp960mdcj%2FGeist%2FAMK2fGYA_Geist-VariableFont_wght.ttf",
+  "https://forms.withsurface.com/api/v1/public/fonts?path=user_fonts%2Fcmf355b7h003ilh0bp960mdcj%2FCooper_Lt_BT%2FStzrHDmU_CooperLtBTBold.ttf",
+  "https://api.framer.com/auth/web/access-token?source=editorbar",
+  "https://us-assets.i.posthog.com/static/exception-autocapture.js?v=1.374.0",
+  "https://us-assets.i.posthog.com/array/phc_DaUA6AiS44AcUHWgWCDLdbTYRvhmEKRenSKC4eyShfC/config.js",
+  "https://forms.withsurface.com/_next/static/chunks/3rp2npi1aq4uf.js",
+  "https://forms.withsurface.com/_next/static/chunks/0fp1c5cd8_vmc.js",
+  "https://forms.withsurface.com/_next/static/chunks/1oe4yz9rc7f1_.js",
+  "https://forms.withsurface.com/_next/static/chunks/2o0qpc0b6wzuv.js",
+  "https://yyzsiiitcbulecsvrxtd.supabase.co/storage/v1/object/public/assets/cmf355b7h003ilh0bp960mdcj/GZyrHAvB_image_(12).webp",
+  "https://yyzsiiitcbulecsvrxtd.supabase.co/storage/v1/object/public/assets/cmf355b7h003ilh0bp960mdcj/jTgOs0IP_ChatGPT_Image_Jul_16,_2026,_01_09_54_PM.webp",
+  "https://forms.withsurface.com/api/v1/lead/identify",
+  "https://forms.withsurface.com/2d38174dc48b80d8/script.js",
+  "https://us.i.posthog.com/flags/?v=2&ip=0&_=1794318772276&ver=1.374.0&compression=base64",
+  "https://www.googletagmanager.com/gtm.js?id=GTM-T9S9PBGF&gtm_auth=&gtm_preview=&gtm_cookies_win=x",
+  "https://www.googletagmanager.com/gtag/js?id=G-KB2FQ79ZV0",
+  "https://forms.withsurface.com/_next/static/chunks/24tbfhhgnrgxg.js",
+  "https://us-assets.i.posthog.com/static/surveys.js?v=1.374.0",
+  "https://analytics.google.com/g/collect?v=2&tid=G-KB2FQ79ZV0&gtm=45je6b61v9197035414za208zd9197035414xf1&_p=1794318772391&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=2069044898&_eu=AAAAAGAC&cid=413572234.1794318773&ec_mode=a&frm=2&pscdl=noapi&rcb=3&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814185&sid=1794318772&sct=1&seg=0&dl=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&dr=https%3A%2F%2Fsmallest.ai%2F&dt=Contact%20Sales%20Form%20%7C%20Surface&_tu=QA&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.debug_mode=true&tfd=1934",
+  "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-KB2FQ79ZV0&cid=413572234.1794318773&gtm=45je6b61v9197035414za208zd9197035414xf1&rcb=3&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=2&tag_exp=115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814185",
+  "https://www.google.co.in/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-KB2FQ79ZV0&cid=413572234.1794318773&gtm=45je6b61v9197035414za208zd9197035414xf1&rcb=3&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=2&tag_exp=115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814185&z=670240648",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17962057978&cx=c&gtm=4e6b61",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://static.ads-twitter.com/uwt.js",
+  "https://ingest.promptwatch.com/js/client.min.js",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://www.google.com/ccm/collect?rcb=16&frm=2&apvc=1&ae=g&dt=Contact%20Sales%20Form%20%7C%20Surface&en=page_view&dl=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&dr=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&scrsrc=www.googletagmanager.com&rnd=1352976946.1794318773&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6b61v9197037060za200zd9197037060xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=100940090~115938465~115938469~118897920~118897930~119863601~120385422~120412528~120420416~120469145~120469153~121246026~121246034~121284208~123814183&tft=1794318772911&tfd=2121&fmt=8",
+  "https://r.clarity.ms/collect",
+  "https://connect.facebook.net/signals/config/1489392025386988?v=2.9.439&r=stable&domain=smallest.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+  "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=7400444&time=1794318772951&li_adsId=e104331d-5cb2-4eea-96b3-d0278ce7c916&pageLoadId=a41b96be-7e3d-4621-ba95-d52cb6f5553f&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&tm=gtmv2",
+  "https://t.co/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=1ae54f6c-992b-4c3b-a9f1-25fd5cf00c12&integration=gtm&p_id=Twitter&p_user_id=0&pl_id=fbf9a16f-7809-41ad-834b-7e11d3776224&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&tw_document_referrer=https%3A%2F%2Fsmallest.ai%2F&tw_engaged_ms=1&tw_iframe_status=1&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318772938-510989401&tw_session_start=1&twpid=tw.1794318772938.290191002801863011&txn_id=pr7yo&type=javascript&version=2.4.12",
+  "https://analytics.twitter.com/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=1ae54f6c-992b-4c3b-a9f1-25fd5cf00c12&integration=gtm&p_id=Twitter&p_user_id=0&pl_id=fbf9a16f-7809-41ad-834b-7e11d3776224&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&tw_document_referrer=https%3A%2F%2Fsmallest.ai%2F&tw_engaged_ms=1&tw_iframe_status=1&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318772938-510989401&tw_session_start=1&twpid=tw.1794318772938.290191002801863011&txn_id=pr7yo&type=javascript&version=2.4.12",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17962057978/?random=1794318773118&cv=11&fst=1794318773118&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9244470476za20ozb9197037060zd9197037060xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&ref=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&rcb=8&frm=2&tiba=Contact%20Sales%20Form%20%7C%20Surface&hn=www.googleadservices.com&npa=0&pscdl=noapi&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://www.google.com/rmkt/collect/17962057978/?random=1794318773118&cv=11&fst=1794318773118&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9244470476za20ozb9197037060zd9197037060xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&ref=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&rcb=8&frm=2&tiba=Contact%20Sales%20Form%20%7C%20Surface&hn=www.googleadservices.com&npa=0&pscdl=noapi&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+  "https://www.google.com/ccm/collect?rcb=8&frm=2&apvc=0&dt=Contact%20Sales%20Form%20%7C%20Surface&tid=AW-17962057978&en=page_view&dl=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&dr=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&scrsrc=www.googletagmanager.com&rnd=1352976946.1794318773&navt=n&npa=0&gtm=45be6b61v9244470476za20ozb9197037060zd9197037060xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&tft=1794318773186&tfd=2396&tids=AW-17962057978&fmt=8",
+  "https://ingest.promptwatch.com/event",
+  "https://px4.ads.linkedin.com/collect?v=2&fmt=js&pid=7400444&time=1794318772951&li_adsId=e104331d-5cb2-4eea-96b3-d0278ce7c916&pageLoadId=a41b96be-7e3d-4621-ba95-d52cb6f5553f&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&tm=gtmv2&e_ipv6=AQLeUGjMlx15GQAAAaHFu60o07U5XYN9qkaJR21mV1c8x1VET816Z_fpby4k6zx_O7uT7ld8iR_3qqX73G3Q0y_EAKidJwvcjg",
+  "https://www.google.com/pagead/1p-user-list/17962057978/?random=1794318773118&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9244470476za20ozb9197037060zd9197037060xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&ref=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&rcb=8&frm=2&tiba=Contact%20Sales%20Form%20%7C%20Surface&hn=www.googleadservices.com&npa=0&pscdl=noapi&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dbowLY8rm0KoL21j93ilo61-yLqZnkqhawf0hQrXAMxi2n54TZPej7lDZdwZIE3aDpwLTjD0rguG8NJ_iSs5LzLE5Se5KdL1JyCxfHa-th109moZfkzyHOh41WaF4k4d0bJ7U7ssamn8FvkRO2S-x0OyV5Pb0dDjpcu2vV5YJZqIdfszqWwOmyR1qvqwARguD_w_SBPyXCV6O8pbijGSuCXevXxpNapZiEnrDy701r8JtO4XRsmV1Zpl19BlTqDOp8HE0s2KGPsSmr4PuTqV__G3ZFUh4fPt7d8lz5AzcusWCmxYoFsZZZ-Awl8nlT_j7VGwXGhf&random=3724729167&rmt_tld=0&ipr=y",
+  "https://www.google.co.in/pagead/1p-user-list/17962057978/?random=1794318773118&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9244470476za20ozb9197037060zd9197037060xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fforms.withsurface.com%2Fs%2Fcmov4i0pv000107hxhp0q41a2&ref=https%3A%2F%2Fsmallest.ai%2F&top=https%3A%2F%2Fsmallest.ai%2F&rcb=8&frm=2&tiba=Contact%20Sales%20Form%20%7C%20Surface&hn=www.googleadservices.com&npa=0&pscdl=noapi&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dbowLY8rm0KoL21j93ilo61-yLqZnkqhawf0hQrXAMxi2n54TZPej7lDZdwZIE3aDpwLTjD0rguG8NJ_iSs5LzLE5Se5KdL1JyCxfHa-th109moZfkzyHOh41WaF4k4d0bJ7U7ssamn8FvkRO2S-x0OyV5Pb0dDjpcu2vV5YJZqIdfszqWwOmyR1qvqwARguD_w_SBPyXCV6O8pbijGSuCXevXxpNapZiEnrDy701r8JtO4XRsmV1Zpl19BlTqDOp8HE0s2KGPsSmr4PuTqV__G3ZFUh4fPt7d8lz5AzcusWCmxYoFsZZZ-Awl8nlT_j7VGwXGhf&random=3724729167&rmt_tld=1&ipr=y",
+  "https://forms.withsurface.com/api/v1/lead/identify",
+  "https://events.framer.com/anonymous",
+  "https://r.clarity.ms/collect",
+  "https://smallest.ai/metrics/ag/g/c?v=2&tid=G-KB2FQ79ZV0&gtm=45g92e6b61v9197035414za20kzb9197037060zd9197037060xf4&_p=1794318768310&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTQ1Zm.dODdlYz&ecid=1895720189&_eu=AEAAAGQC&_uip=%3A%3A&ae=a&cid=1913528339.1794318770&fp=1&frm=0&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=IN-KA&_gsid=0l6Tjo4FhcM1VBSOrIiuI-0GslTEZCQOQQ&gaf=2&_s=2&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794318769&sct=1&seg=0&dl=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&dt=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&gtb=2&en=scroll&gap.gtb=2&epn.percent_scrolled=90&_et=5683&tfd=9490",
+  "https://smallest.ai/metrics/ag/g/c?v=2&tid=G-KB2FQ79ZV0&gtm=45g92e6b61v9197035414za20kzb9197037060zd9197037060xf4&_p=1794318768310&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTQ1Zm.dODdlYz&ecid=1895720189&_eu=AAAAAGQC&_uip=%3A%3A&cid=1913528339.1794318770&fp=1&frm=0&pscdl=noapi&rcb=10&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=IN-KA&_gsid=0l6Tjo4FhcM1VBSOrIiuI-0GslTEZCQOQQ&gaf=2&_s=3&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794318769&sct=1&seg=0&dl=https%3A%2F%2Fsmallest.ai%2Fpricing%2Fagents&dt=Voice%20Agent%20Pricing%3A%20Pay%20As%20You%20Go%20-%20Smallest.ai&gtb=2&en=user_engagement&gap.gtb=2&_et=2074&tfd=9491",
+  "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=b",
+  "https://analytics.twitter.com/i/adsctp",
+  "https://events.framer.com/anonymous"
+ ],
+ "controls": [],
+ "error": null
+}

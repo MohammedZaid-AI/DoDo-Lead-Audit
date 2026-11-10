@@ -1,0 +1,379 @@
+{
+ "requested_url": "https://www.sarvam.ai/products/voice-agents/pricing",
+ "final_url": "https://www.sarvam.ai/products/voice-agents/pricing",
+ "title": "Voice Agents pricing: per-minute rates in INR | Sarvam",
+ "meta_description": "Sarvam Voice Agents pricing in rupees: \u20b93.50 per minute on pay as you go, down to \u20b93 on Business, and custom Enterprise pricing from 2 lakh minutes a month. Telephony and numbers listed separately.",
+ "text": "Products\nDevelopers\nResources\nCompany\nLog In\nContact Us\n\nVOICE AGENTS PRICING\n\nVoice Agents pricing\n\nVoice agents in 11 Indian languages and English, starting at \u20b93 a minute. From 2 lakh minutes a month, Enterprise pricing is set on your committed volume.\n\nHow many minutes a month will your agents be on calls?\nminutes a month\n25,000 min\nGrowth\n3,000\n16,000\n65,000\n2 lakh\nPay as you go\n\u20b93.50\nPro\n\u20b93.25\nGrowth\n\u20b93.15\nBusiness\n\u20b93.00\nEnterprise\nCustom\n\nYou save against pay as you go\n\n\u20b98,750\na month\n\nOver a year\n\n\u20b91,05,000\n\nTelephony and numbers are extra. See detailed pricing\nRecommended\n\nGrowth\n\n\u20b93.15\nper minute\n\nFor 16,000 to 65,000 minutes a month\n\nConcurrent calls\n30\nCalls per minute\n150\n\u20b949,999 minimum a month, all back as credits\nPrepaid. Minutes beyond your credits bill at the same rate\nChoose Growth\n\nEnterprise\n\nCustom pricing from 2 lakh minutes a month\n\nPricing set on your committed monthly volume, with the full platform. Postpaid, invoiced monthly for the minutes you use, with your commitment as the minimum.\n\nTalk to sales\nWorkflows and custom tool authoring\nCustom concurrency and calls per minute\nForward deployed engineering for very large deployments*\n\nPrices in rupees, excluding GST, and include the models that run your agent. A minute is one 60-second pulse, and each call is rounded up to whole pulses. Self-serve plans are prepaid. A paid plan has a minimum monthly subscription that comes back in full as credits, one per rupee, and minutes beyond those credits are billed at the plan rate. Enterprise is postpaid and invoiced monthly.\n\n*More than 10 lakh minutes a month\n\nDetailed pricing\n\nEvery rate on the Voice Agents rate card. Telephony, phone numbers, and test runs cost the same on every plan. Self-serve plans draw them from your credits, and Enterprise adds them to the monthly invoice.\n\nVoice Agents detailed pricing\nItem\tPrice\tBilled per\nVoice agent\n\nPay as you go plan\nAgent minutes, metered in 60-second pulses\n\t\u20b93.50\tminute\n\nPro plan\nAgent minutes, metered in 60-second pulses\n\t\u20b93.25\tminute\n\nGrowth plan\nAgent minutes, metered in 60-second pulses\n\t\u20b93.15\tminute\n\nBusiness plan\nAgent minutes, metered in 60-second pulses\n\t\u20b93.00\tminute\n\nEnterprise\nSet on your committed monthly volume\n\tCustom\tminute\nTelephony usage\n\nBring your own telephony\nExotel, Smartflo, Plivo, Twilio, Vobiz, InTalk, Pulse, or custom SIP on Business and Enterprise. Your provider bills you directly\n\tFree\tNo Sarvam charge\n\nSarvam telephony (Vobiz)\nCalls on a number rented from Sarvam\n\t\u20b90.20\t30-second pulse\n\nCall forwarding to a phone number\nTransfer to a PSTN number. Forwarded minutes are not charged as agent minutes\n\t\u20b90.40\t30-second pulse\n\nCall forwarding to a SIP destination\nTransfer to a SIP address. Forwarded minutes are not charged as agent minutes\n\t\u20b90.35\t30-second pulse\nPhone numbers\n\nPhone number rental, 11 series\nRenews every 30 days\n\t\u20b959\tnumber, per 30 days\n\nPhone number rental, 79 series\nRenews every 30 days\n\t\u20b959\tnumber, per 30 days\n\nPhone number rental, 80 series\nRenews every 30 days\n\t\u20b959\tnumber, per 30 days\nTesting\n\nSimulated test run\nRun an agent against a scripted scenario before it takes real calls\n\t\u20b92\trun\nRate limits\n\nLimits apply across your organisation: every campaign, instant outbound call, and inbound call counts toward them. A call that would go past a limit is rejected, so pace campaigns to stay under it.\n\nVoice Agents rate limits by plan\nPlan\tConcurrent calls\tCalls per minute\nPay as you go\t4\t20\nPro\t10\t50\nGrowth\t30\t150\nBusiness\t200\t800\nEnterprise\tCustom\tCustom\nFrequently asked questions\nHow much does a voice agent cost per minute?\n\u20b93.50 per minute on pay as you go, \u20b93.25 on Pro, \u20b93.15 on Growth, \u20b93.00 on Business. From 2 lakh minutes a month, Enterprise pricing is set on your committed volume. Prices are in rupees and exclude GST.\nIs there additional pricing for the models?\nNo. The per-minute rate is end-to-end pricing. It covers the application stack that runs your agent and the speech, language, and voice models behind it, so there is no separate model or token charge. The only items billed on top are telephony, phone numbers, and simulated test runs, listed under detailed pricing.\nWhat counts as a minute?\nA minute is one 60-second pulse. Each call is rounded up to whole pulses, so a 45-second call counts as 1 minute and a 61-second call counts as 2 minutes. On pay as you go, that is \u20b93.50 and \u20b97.00. The minutes on the slider are these pulses.\nHow are telephony pulses counted?\nTelephony is metered separately, in 30-second pulses, also rounded up. A 45-second call on Sarvam telephony is 1 agent minute and 2 telephony pulses, so on pay as you go it costs \u20b93.50 for the agent and \u20b90.40 for telephony.\nAm I charged for unanswered, busy, or voicemail calls?\nOnly calls that connect are charged. A call that is not answered, is busy, or fails to connect costs nothing, with no agent minutes and no telephony charge. A call answered by voicemail has connected, so it is billed like any other call, for as long as the agent stays on the line.\nWhich plan should I choose?\nPick the plan that costs least at your monthly volume: pay as you go below 3,000 minutes, then Pro at \u20b93.25 from 3,000 minutes, Growth at \u20b93.15 from 16,000 minutes, Business at \u20b93.00 from 65,000 minutes. From 2 lakh minutes a month, Enterprise is priced for you. The slider on this page does this calculation for you.\nHow is my monthly bill calculated?\nA paid plan is a minimum monthly subscription. You pay that minimum or your minutes multiplied by the plan rate, whichever is higher, and the subscription comes back in full as credits, one per rupee. Pay as you go has no minimum, so 10,000 minutes costs \u20b935,000. Calls are metered in 60-second pulses, each rounded up. Self-serve plans are prepaid. Enterprise is postpaid. You get a monthly invoice for the minutes you used, with your commitment as the minimum.\nIs telephony included in the per-minute rate?\nNo. Calls on a number rented from Sarvam cost \u20b90.20 per 30-second pulse, and each number costs \u20b959 every 30 days. Bringing your own telephony provider is free on Sarvam: you pay that provider directly.\nWhat happens if my credits run short when a number renews?\nA rented number renews every 30 days for \u20b959 from your credit balance. If your credits can't cover the renewal on the renewal date, the number is released, and the campaigns and deployments using it are cancelled. There is no grace period, so keep enough credits for every number before it renews. The Renews At column on your phone numbers page shows each date.\nWhich telephony providers can I use?\nUse Sarvam telephony, or bring your own: Exotel, Smartflo, Plivo, Twilio, Vobiz, InTalk, and Pulse connect self-serve. Custom SIP is available on Business and Enterprise, set up by our team. Bringing your own telephony is free on Sarvam, and your provider bills you directly.\nHow are forwarded calls charged?\nOnce the agent forwards a call, it is off the call, so the forwarded minutes are not charged as agent minutes. They are charged only as telephony: \u20b90.40 per 30-second pulse to a phone number, or \u20b90.35 per 30-second pulse to a SIP destination. The part of the call the agent handled before forwarding is billed as agent minutes as usual. For example, if the agent hands over after 50 seconds and the forwarded call lasts 2 minutes, you pay 1 agent minute and 4 forwarding pulses, which is \u20b91.60 to a phone number.\nWhat are the rate limits on each plan?\nPay as you go: 4 concurrent calls and 20 calls started per minute. Pro: 10 concurrent calls and 50 calls started per minute. Growth: 30 concurrent calls and 150 calls started per minute. Business: 200 concurrent calls and 800 calls started per minute. Enterprise limits are set for your traffic. Limits apply across your organisation, so every campaign, instant outbound call, and inbound call counts toward them.\nWhat rate limits will I need?\nEvery plan comes with generous rate limits. As a guide, the concurrent calls you need are roughly the calls you start per second, times your connect rate, times your average talk time in seconds. If your plan's limits are not enough, upgrade to the next plan, or talk to sales about Enterprise limits. If you hit a limit on concurrent campaigns, that limit is not part of your plan: it means too many campaigns are running at the same time. Pause or stop some campaigns to continue. Upgrading your plan will not raise it.\nWhat does Enterprise include?\nEnterprise starts at 2 lakh minutes a month, with pricing set on your committed volume. It adds workflows and custom tool authoring; custom concurrency and calls per minute; forward deployed engineering for very large deployments (more than 10 lakh minutes a month).\nWhich languages do the agents speak?\n11 Indian languages and English: Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, and Assamese. Agents also handle code-mixed speech.\n\nBuild your first voice agent\n\nfrom \u20b93.50 a minute\n\nStart building\n\nAI for all from India\n\nFind us at\n\n\u00a9 2026 Axonwise Private Limited. All rights reserved.\n\n732, Chinmaya Mission Hospital Road, Indiranagar Stage 1, Bengaluru, Karnataka 560038\n\nPRODUCTS\nContent Studio\nToken Factory\nDocument AI\nWork Agents\nCoding Agents\nSarvam Edge\nModel Training\nAPIS\nText to Speech\nSpeech to Text\nDoc Digitisation\nTranslation\nModels\nRESOURCES\nBlogs\nBuilding AI Agents\nEvents\nCustomer Stories\nDocumentation\nAPI Pricing\nIntegrations\nStartup Program\nSarvam Champions\nCOMPANY\nAbout Us\nCareers\nContact Us\nBrand\nBrand Guidelines\nPartnerships\nLEGAL\nTrust Center\nTerms of Service\nPrivacy Policy\nEULA\nWe value your privacy\n\nWe use cookies to operate the site securely, measure performance, and deliver relevant content. Learn more in our Privacy Policy.\n\nManage\nAccept all",
+ "scripts": [
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://connect.facebook.net/signals/config/1644973323880196?v=2.9.439&r=stable&domain=www.sarvam.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190%2C277%2C275%2C270%2C272%2C273%2C274%2C271%2C269%2C256%2C276%2C278%2C268%2C219%2C220%2C280%2C279%2C281%2C267%2C266%2C365%2C201%2C203%2C204%2C205%2C209%2C208%2C210%2C206%2C207%2C202%2C200%2C199%2C232%2C227%2C230%2C231%2C225%2C400%2C314%2C318%2C322%2C323%2C324%2C319%2C325%2C317%2C312%2C327%2C328%2C316%2C326%2C330%2C320%2C315%2C321%2C329%2C331%2C313%2C242%2C311%2C228%2C229%2C260%2C226%2C224%2C288%2C244%2C217%2C218%2C214%2C215%2C216%2C213%2C211%2C222%2C223%2C221%2C337%2C393%2C358%2C359%2C361%2C362%2C360%2C357%2C356%2C233%2C291%2C298%2C299%2C292%2C294%2C297%2C295%2C296%2C293%2C290%2C309%2C303%2C306%2C302%2C310%2C307%2C301%2C305%2C308%2C304%2C300%2C352%2C369",
+  "https://connect.facebook.net/signals/config/1492713775401572?v=2.9.439&r=stable&domain=www.sarvam.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17991375912&cx=c&gtm=4e6b61",
+  "https://js-eu1.hs-scripts.com/145251747.js",
+  "https://cdn.claydar.com/releases/latest/radar.min.js",
+  "https://js-eu1.hscollectedforms.net/collectedforms.js",
+  "https://js-eu1.hsadspixel.net/pixels.js",
+  "https://js-eu1.hs-analytics.net/analytics/1794318600000/145251747.js",
+  "https://js-eu1.hs-banner.com/v2/145251747/banner.js",
+  "https://www.sarvam.ai/_astro/PostHog.astro_astro_type_script_index_0_lang.8lWqqZ3h.js",
+  "https://www.sarvam.ai/_astro/Mixpanel.astro_astro_type_script_index_0_lang.BBsVAwuN.js",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_0_lang.Bpl4d_SB.js",
+  "https://www.sarvam.ai/_astro/page.BGiKEXrY.js",
+  "https://www.sarvam.ai/cdn-cgi/challenge-platform/scripts/precursor/main.js?ray=a58589ae4c91a91d",
+  "https://www.googletagmanager.com/gtag/js?id=G-7TL00J655C",
+  "https://js-eu1.hs-scripts.com/145251747.js",
+  "https://static.claydar.com/init.v1.js?id=ctH1lsleXu",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17991375912",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17991375912/?random=1794318748550&cv=11&fst=1794318748550&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&rcb=10&frm=0&tiba=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&did=dZTQ1Zm&gdid=dZTQ1Zm&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1559818534.1794318732&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://k.sarvam.ai/static/logs.js?v=1.413.3",
+  "https://k.sarvam.ai/static/surveys.js?v=1.413.3",
+  "https://k.sarvam.ai/array/phc_IRMGB5iaCEGGzGMyLDOwM1naPYFZG0IpXYcvlWkS0Ox/config.js",
+  "https://k.sarvam.ai/static/dead-clicks-autocapture.js?v=1.413.3",
+  "https://k.sarvam.ai/static/posthog-recorder.js?v=1.413.3",
+  "https://k.sarvam.ai/static/exception-autocapture.js?v=1.413.3",
+  "https://k.sarvam.ai/static/web-vitals.js?v=1.413.3",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_1_lang.CA2D9wON.js",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_2_lang.DB5YuQxH.js",
+  "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+ ],
+ "iframes": [],
+ "links": [
+  {
+   "href": "https://www.sarvam.ai/",
+   "text": ""
+  },
+  {
+   "href": "https://www.sarvam.ai/",
+   "text": ""
+  },
+  {
+   "href": "https://www.sarvam.ai/products/voice-agents/pricing#detailed-pricing",
+   "text": "Telephony and numbers are extra. See det"
+  },
+  {
+   "href": "https://indus.sarvam.ai/samvaad/pricing",
+   "text": "Choose Growth"
+  },
+  {
+   "href": "https://www.sarvam.ai/contact-us",
+   "text": "Talk to sales"
+  },
+  {
+   "href": "https://indus.sarvam.ai/samvaad/home",
+   "text": "Start building"
+  },
+  {
+   "href": "https://www.sarvam.ai/",
+   "text": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/sarvam-ai",
+   "text": ""
+  },
+  {
+   "href": "https://x.com/SarvamAI",
+   "text": ""
+  },
+  {
+   "href": "https://youtube.com/@sarvamai",
+   "text": ""
+  },
+  {
+   "href": "https://github.com/sarvamai",
+   "text": ""
+  },
+  {
+   "href": "https://discord.com/invite/5rAsykttcs",
+   "text": ""
+  },
+  {
+   "href": "https://www.instagram.com/sarvam.ai_official",
+   "text": ""
+  },
+  {
+   "href": "https://www.sarvam.ai/products/content-studio",
+   "text": "Content Studio"
+  },
+  {
+   "href": "https://www.sarvam.ai/token-factory",
+   "text": "Token Factory"
+  },
+  {
+   "href": "https://www.sarvam.ai/products/document-ai",
+   "text": "Document AI"
+  },
+  {
+   "href": "https://www.sarvam.ai/products/work-agents",
+   "text": "Work Agents"
+  },
+  {
+   "href": "https://www.sarvam.ai/products/coding-agents",
+   "text": "Coding Agents"
+  },
+  {
+   "href": "https://www.sarvam.ai/products/edge",
+   "text": "Sarvam Edge"
+  },
+  {
+   "href": "https://www.sarvam.ai/products/model-training",
+   "text": "Model Training"
+  },
+  {
+   "href": "https://www.sarvam.ai/apis/text-to-speech",
+   "text": "Text to Speech"
+  },
+  {
+   "href": "https://www.sarvam.ai/apis/speech-to-text",
+   "text": "Speech to Text"
+  },
+  {
+   "href": "https://www.sarvam.ai/apis/document-digitisation",
+   "text": "Doc Digitisation"
+  },
+  {
+   "href": "https://www.sarvam.ai/apis/translation",
+   "text": "Translation"
+  },
+  {
+   "href": "https://www.sarvam.ai/models",
+   "text": "Models"
+  },
+  {
+   "href": "https://www.sarvam.ai/blogs",
+   "text": "Blogs"
+  },
+  {
+   "href": "https://www.sarvam.ai/blogs/building-ai-agents",
+   "text": "Building AI Agents"
+  },
+  {
+   "href": "https://www.sarvam.ai/events",
+   "text": "Events"
+  },
+  {
+   "href": "https://www.sarvam.ai/stories",
+   "text": "Customer Stories"
+  },
+  {
+   "href": "https://docs.sarvam.ai/sarvam-api-docs",
+   "text": "Documentation"
+  },
+  {
+   "href": "https://www.sarvam.ai/api-pricing",
+   "text": "API Pricing"
+  },
+  {
+   "href": "https://www.sarvam.ai/integrations",
+   "text": "Integrations"
+  },
+  {
+   "href": "https://www.sarvam.ai/startup-program",
+   "text": "Startup Program"
+  },
+  {
+   "href": "https://www.sarvam.ai/sarvam-champions",
+   "text": "Sarvam Champions"
+  },
+  {
+   "href": "https://www.sarvam.ai/about-us",
+   "text": "About Us"
+  },
+  {
+   "href": "https://www.sarvam.ai/careers",
+   "text": "Careers"
+  },
+  {
+   "href": "https://www.sarvam.ai/contact-us",
+   "text": "Contact Us"
+  },
+  {
+   "href": "https://www.sarvam.ai/brand",
+   "text": "Brand"
+  },
+  {
+   "href": "https://www.sarvam.ai/brand-guidelines",
+   "text": "Brand Guidelines"
+  },
+  {
+   "href": "https://www.sarvam.ai/partnerships",
+   "text": "Partnerships"
+  },
+  {
+   "href": "https://www.sarvam.ai/trust-center",
+   "text": "Trust Center"
+  },
+  {
+   "href": "https://www.sarvam.ai/terms-of-service",
+   "text": "Terms of Service"
+  },
+  {
+   "href": "https://www.sarvam.ai/privacy-policy",
+   "text": "Privacy Policy"
+  },
+  {
+   "href": "https://www.sarvam.ai/eula",
+   "text": "EULA"
+  },
+  {
+   "href": "https://www.sarvam.ai/privacy-policy",
+   "text": "Privacy Policy"
+  }
+ ],
+ "resources": [
+  "https://www.sarvam.ai/favicon.ico",
+  "https://www.sarvam.ai/favicon.svg",
+  "https://www.sarvam.ai/favicon.svg",
+  "https://www.sarvam.ai/products/voice-agents/pricing",
+  "https://www.sarvam.ai/sitemap-index.xml",
+  "https://www.sarvam.ai/rss.xml",
+  "https://www.sarvam.ai/_astro/fonts/51f91abf4d5fa424.woff2",
+  "https://www.sarvam.ai/_astro/fonts/ed8cd4b03cbdf9e9.woff2",
+  "https://www.sarvam.ai/_astro/baseLayout.BAXtgE7N.css"
+ ],
+ "network_urls": [
+  "https://www.sarvam.ai/products/voice-agents/pricing",
+  "https://www.sarvam.ai/cdn-cgi/speculation",
+  "https://www.sarvam.ai/_astro/fonts/51f91abf4d5fa424.woff2",
+  "https://www.sarvam.ai/_astro/fonts/ed8cd4b03cbdf9e9.woff2",
+  "https://www.sarvam.ai/_astro/PostHog.astro_astro_type_script_index_0_lang.8lWqqZ3h.js",
+  "https://www.sarvam.ai/_astro/Mixpanel.astro_astro_type_script_index_0_lang.BBsVAwuN.js",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_0_lang.Bpl4d_SB.js",
+  "https://www.sarvam.ai/_astro/module.CIk6RM5N.js",
+  "https://www.sarvam.ai/_astro/links.config.BeQ4vZx5.js",
+  "https://www.sarvam.ai/_astro/posthogTracking.CuU2NTFG.js",
+  "https://www.sarvam.ai/_astro/consent.BgafI5oq.js",
+  "https://www.sarvam.ai/_astro/preferences.c6qobjJk.js",
+  "https://www.sarvam.ai/_astro/baseLayout.BAXtgE7N.css",
+  "https://www.sarvam.ai/_astro/page.BGiKEXrY.js",
+  "https://assets.sarvam.ai/assets/brand/logos/sarvam-wordmark-black.svg",
+  "https://assets.sarvam.ai/assets/brand/logos/sarvam-wordmark-white.svg",
+  "https://assets.sarvam.ai/assets/motifs/ui/motif.svg",
+  "https://www.sarvam.ai/_astro/Header.BuSR-zFw.js",
+  "https://www.sarvam.ai/_astro/client.B3N4hhPH.js",
+  "https://www.sarvam.ai/_astro/HeroHeading.BmjIHBav.js",
+  "https://www.sarvam.ai/_astro/VoiceAgentsPricingCalculator.D_whd24b.js",
+  "https://www.sarvam.ai/_astro/jsx-runtime.u17CrQMm.js",
+  "https://www.sarvam.ai/_astro/offline.CVkeLDrt.js",
+  "https://www.sarvam.ai/_astro/CustomButton.BI_j0Mi6.js",
+  "https://www.sarvam.ai/_astro/imagekit.BTq103FP.js",
+  "https://www.sarvam.ai/_astro/index.DUTUzmOK.js",
+  "https://www.sarvam.ai/_astro/filter-blocked-nav-links.BH35PS7q.js",
+  "https://www.sarvam.ai/_astro/Briefcase01Icon.A7u2I11S.js",
+  "https://www.sarvam.ai/_astro/Calendar03Icon.VF5PdmAV.js",
+  "https://www.sarvam.ai/_astro/AiVoiceIcon.BeTwRtfQ.js",
+  "https://www.sarvam.ai/_astro/LanguageSkillIcon.JN2oTGh8.js",
+  "https://www.sarvam.ai/_astro/AiVideoIcon.BS9bjp56.js",
+  "https://www.sarvam.ai/_astro/LanguageCircleIcon.D5_p6GPi.js",
+  "https://www.sarvam.ai/_astro/AlphabetHindiIcon.BmDy6pvX.js",
+  "https://www.sarvam.ai/_astro/index.m94NdMt1.js",
+  "https://www.sarvam.ai/_astro/AiBrain01Icon.BZ_0vged.js",
+  "https://www.sarvam.ai/_astro/SmartPhone01Icon.CrU33w_S.js",
+  "https://www.sarvam.ai/_astro/SparklesIcon.DVsnYo71.js",
+  "https://www.sarvam.ai/_astro/useAuthSession.DPlhqQYo.js",
+  "https://www.sarvam.ai/_astro/HugeiconsIcon.M9kuHKIB.js",
+  "https://www.sarvam.ai/_astro/ArrowUpRight01Icon.DIae61ji.js",
+  "https://www.sarvam.ai/_astro/use-reduced-motion.BKJi3CX9.js",
+  "https://www.sarvam.ai/_astro/index.BDVYgryn.js",
+  "https://www.sarvam.ai/_astro/proxy.ffro9tNW.js",
+  "https://www.sarvam.ai/_astro/ArrowDown01Icon.DJ3rel_9.js",
+  "https://www.sarvam.ai/_astro/index.DpjGmZZO.js",
+  "https://www.sarvam.ai/_astro/ShoppingBag01Icon.Bg-Bshhq.js",
+  "https://www.sarvam.ai/assets/misc/noise-light-v1.webp",
+  "https://www.sarvam.ai/_astro/index.FCE-GfMj.js",
+  "https://assets.sarvam.ai/assets/solutions/indian-art-mask.mp4/ik-thumbnail.jpg?tr=so-3%2Cw-1280%2Car-16-9%2Cc-at_least%2Cf-jpg",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_1_lang.CA2D9wON.js",
+  "https://www.sarvam.ai/_astro/baseLayout.astro_astro_type_script_index_2_lang.DB5YuQxH.js",
+  "https://www.sarvam.ai/_astro/CookieConsent.BbTyExd1.js",
+  "https://www.sarvam.ai/cdn-cgi/challenge-platform/scripts/precursor/main.js?ray=a58589ae4c91a91d",
+  "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+  "https://k.sarvam.ai/static/web-vitals.js?v=1.413.3",
+  "https://k.sarvam.ai/static/exception-autocapture.js?v=1.413.3",
+  "https://k.sarvam.ai/static/posthog-recorder.js?v=1.413.3",
+  "https://k.sarvam.ai/static/dead-clicks-autocapture.js?v=1.413.3",
+  "https://k.sarvam.ai/array/phc_IRMGB5iaCEGGzGMyLDOwM1naPYFZG0IpXYcvlWkS0Ox/config.js",
+  "https://www.googletagmanager.com/gtag/js?id=G-7TL00J655C",
+  "https://assets.sarvam.ai/assets/brand/logos/sarvam-wordmark-black.svg",
+  "https://www.sarvam.ai/_astro/fonts/c95efc164ce1a417.woff2",
+  "https://www.sarvam.ai/_astro/Spinner.DVn7TA5l.js",
+  "https://www.sarvam.ai/_astro/clsx.B-dksMZM.js",
+  "https://www.sarvam.ai/cdn-cgi/challenge-platform/h/b/scripts/precursor/8340802ab0bb/main.js?ray=a58589ae4c91a91d",
+  "https://www.sarvam.ai/_astro/reveal.Hp3KICqF.js",
+  "https://www.sarvam.ai/_astro/headerSpacing.EiHst-x4.js",
+  "https://k.sarvam.ai/static/surveys.js?v=1.413.3",
+  "https://k.sarvam.ai/static/logs.js?v=1.413.3",
+  "blob:https://www.sarvam.ai/7c1c481b-b61c-4a97-a2e3-a58f039000be",
+  "https://www.sarvam.ai/_astro/utils.CSngIamO.js",
+  "https://k.sarvam.ai/flags/?v=2&compression=base64",
+  "https://www.sarvam.ai/cdn-cgi/challenge-platform/h/b/precursor/8340802ab0bb/0.02002922191042722:1794316523:tQYRhF1T7dkdWdwlH8OjoCr31SVB7uoA2Ms2AX_TFlg/a58589ae4c91a91d",
+  "https://www.sarvam.ai/api/auth/session",
+  "https://www.sarvam.ai/api/ticker",
+  "https://www.sarvam.ai/api/navigation-config",
+  "https://analytics.google.com/g/collect?v=2&tid=G-7TL00J655C&gtm=45je6b61v9210166923za208zd9210166923xf1&_p=1794318747737&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&ecid=2144232618&_eu=AAAAAGQC&cid=1896298131.1794318729&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123329123~123814185&sid=1794318728&sct=1&seg=1&dl=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&dt=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&en=page_view&_ee=1&tfd=666",
+  "https://www.sarvam.ai/cdn-cgi/rum?",
+  "https://js-eu1.hs-scripts.com/145251747.js",
+  "https://static.claydar.com/init.v1.js?id=ctH1lsleXu",
+  "https://js-eu1.hs-banner.com/v2/145251747/banner.js",
+  "https://js-eu1.hs-analytics.net/analytics/1794318600000/145251747.js",
+  "https://js-eu1.hsadspixel.net/pixels.js",
+  "https://js-eu1.hscollectedforms.net/collectedforms.js",
+  "https://cdn.claydar.com/releases/latest/radar.min.js",
+  "https://api-eu1.hubapi.com/hs-script-loader-public/v2/config/pixels-and-events/json?portalId=145251747",
+  "https://api.claydar.com/bp/ctH1lsleXu/settings",
+  "https://api.claydar.com/tracker/event",
+  "https://track-eu1.hubspot.com/__ptq.gif?k=1&sd=1366x900&cd=24-bit&cs=UTF-8&ln=en-us&v=1.1&a=145251747&rcu=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&pu=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&t=Voice+Agents+pricing%3A+per-minute+rates+in+INR+%7C+Sarvam&cts=1794318748175&vi=0661fe44f166ff3c9cc2cc6d5ae3734a&nc=false&u=78211787.0661fe44f166ff3c9cc2cc6d5ae3734a.1794318730811.1794318730811.1794318730811.1&b=78211787.3.1794318730811&cc=15",
+  "https://forms-eu1.hscollectedforms.net/collected-forms/v1/config/json?portalId=145251747&utk=0661fe44f166ff3c9cc2cc6d5ae3734a",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17991375912",
+  "https://www.googletagmanager.com/gtag/js?id=AW-17991375912&cx=c&gtm=4e6b61",
+  "https://connect.facebook.net/en_US/fbevents.js",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10532009&time=1794318748454&li_adsId=dffdc3d4-d749-4d37-a914-35b5b2bbed94&pageLoadId=e605c798-c4a3-49f4-b8a0-dd47863d86c8&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing",
+  "https://connect.facebook.net/signals/config/1492713775401572?v=2.9.439&r=stable&domain=www.sarvam.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17991375912/?random=1794318748550&cv=11&fst=1794318748550&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&rcb=10&frm=0&tiba=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&did=dZTQ1Zm&gdid=dZTQ1Zm&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1559818534.1794318732&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://www.google.com/rmkt/collect/17991375912/?random=1794318748550&cv=11&fst=1794318748550&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&rcb=10&frm=0&tiba=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&did=dZTQ1Zm&gdid=dZTQ1Zm&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1559818534.1794318732&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+  "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=1559818534.1794318732&dt=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&tid=AW-17991375912&en=page_view&dl=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&scrsrc=www.googletagmanager.com&rnd=654532236.1794318749&navt=n&npa=0&sdl=W3sibiI6IlNhcnZhbSBWb2ljZSBBZ2VudHMiLCJiIjoiU2FydmFtIiwibyI6W3sicCI6IjMuNTAiLCJjdSI6IklOUiJ9LHsicCI6IjMuMjUiLCJjdSI6IklOUiJ9LHsicCI6IjMuMTUiLCJjdSI6IklOUiJ9XX1d&did=dZTQ1Zm&gdid=dZTQ1Zm&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcs=G111&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&tft=1794318748579&tfd=1143&tids=AW-17991375912&fmt=8",
+  "https://connect.facebook.net/signals/config/1644973323880196?v=2.9.439&r=stable&domain=www.sarvam.ai&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190%2C277%2C275%2C270%2C272%2C273%2C274%2C271%2C269%2C256%2C276%2C278%2C268%2C219%2C220%2C280%2C279%2C281%2C267%2C266%2C365%2C201%2C203%2C204%2C205%2C209%2C208%2C210%2C206%2C207%2C202%2C200%2C199%2C232%2C227%2C230%2C231%2C225%2C400%2C314%2C318%2C322%2C323%2C324%2C319%2C325%2C317%2C312%2C327%2C328%2C316%2C326%2C330%2C320%2C315%2C321%2C329%2C331%2C313%2C242%2C311%2C228%2C229%2C260%2C226%2C224%2C288%2C244%2C217%2C218%2C214%2C215%2C216%2C213%2C211%2C222%2C223%2C221%2C337%2C393%2C358%2C359%2C361%2C362%2C360%2C357%2C356%2C233%2C291%2C298%2C299%2C292%2C294%2C297%2C295%2C296%2C293%2C290%2C309%2C303%2C306%2C302%2C310%2C307%2C301%2C305%2C308%2C304%2C300%2C352%2C369",
+  "https://www.google.com/pagead/1p-user-list/17991375912/?random=1794318748550&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&rcb=10&frm=0&tiba=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&did=dZTQ1Zm&gdid=dZTQ1Zm&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1559818534.1794318732&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dTQWvDIPCgd8eeZuaPLiNpGXQKQwvxsUlgbf21dfjvBbNygx0RnaqEXz9BbpV7rT8MhFBSpOrHbbK7WBG8pLPY6rMHxJNNVkEyLHy_O2CIAL5D5sWxCLK88ZbpWBnfGPfAMJiyMMzcVRjHnnIQSNV7s9VnCvW7PQv7bIfDOhKWJ2cgOuGZhg8xRNwyxr4iwsbcCmWu4s3TcOukbcgYGHIKod1rL-7_iUQfUEoIM1KdwCd9wdZymBNDrxof_KTD9CmOn8WZrnfYjmmslrGllwKVAHCUylWw7U8pUJOVSdaieCjluoZO2l5ixoiUVlp2dL9Lq1PcBv&random=134324069&rmt_tld=0&ipr=y",
+  "https://www.google.co.in/pagead/1p-user-list/17991375912/?random=1794318748550&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9245951245za208zb9210166923zd9210166923xecxf1&gcd=13t3t3Z3t5l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123329123~123814185&u_w=1366&u_h=900&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&rcb=10&frm=0&tiba=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&did=dZTQ1Zm&gdid=dZTQ1Zm&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1559818534.1794318732&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dTQWvDIPCgd8eeZuaPLiNpGXQKQwvxsUlgbf21dfjvBbNygx0RnaqEXz9BbpV7rT8MhFBSpOrHbbK7WBG8pLPY6rMHxJNNVkEyLHy_O2CIAL5D5sWxCLK88ZbpWBnfGPfAMJiyMMzcVRjHnnIQSNV7s9VnCvW7PQv7bIfDOhKWJ2cgOuGZhg8xRNwyxr4iwsbcCmWu4s3TcOukbcgYGHIKod1rL-7_iUQfUEoIM1KdwCd9wdZymBNDrxof_KTD9CmOn8WZrnfYjmmslrGllwKVAHCUylWw7U8pUJOVSdaieCjluoZO2l5ixoiUVlp2dL9Lq1PcBv&random=134324069&rmt_tld=1&ipr=y",
+  "https://px4.ads.linkedin.com/collect?v=2&fmt=js&pid=10532009&time=1794318748454&li_adsId=dffdc3d4-d749-4d37-a914-35b5b2bbed94&pageLoadId=e605c798-c4a3-49f4-b8a0-dd47863d86c8&url=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&e_ipv6=AQLzB8nH9f-NHQAAAaHFu01t13bSB4FMlCHg19rERJkj84upR-qtGU86-qHWMVOvgupQAlZFzQKKWfv6OkRh7RiLy8jZ9AVqBw",
+  "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+  "https://www.sarvam.ai/_astro/SectionHeading.Bz1v1W8s.js",
+  "https://www.sarvam.ai/_astro/preload-helper.CVfkMyKi.js",
+  "https://assets.sarvam.ai/tr:w-40,q-70,f-auto,c-at_max/assets/misc/sec-iso.png",
+  "https://assets.sarvam.ai/tr:w-40,q-70,f-auto,c-at_max/assets/pages/content-agents/security-soc2.png",
+  "https://www.sarvam.ai/_astro/FaqAccordion.DntN294n.js",
+  "https://www.sarvam.ai/_astro/Accordion.v9oqtIgW.js",
+  "https://www.sarvam.ai/_astro/FinalCTA.BHP4J5O3.js",
+  "https://www.sarvam.ai/_astro/gsap.B_32UFSg.js",
+  "https://www.sarvam.ai/_astro/index.Crpphvpt.js",
+  "https://www.sarvam.ai/_astro/ScrollTrigger.Heh74mPD.js",
+  "https://www.sarvam.ai/_astro/Footer.Fe9dI2kI.js",
+  "https://www.sarvam.ai/_astro/responsiveImage.BOliHC9T.js",
+  "https://www.sarvam.ai/_astro/x.DuE_vtvR.js",
+  "https://www.sarvam.ai/_astro/useMediaVisibility.UKRMYaxK.js",
+  "https://www.sarvam.ai/_astro/useIsDesktopViewport.Z0qMviZh.js",
+  "https://k.sarvam.ai/i/v1/logs?token=phc_IRMGB5iaCEGGzGMyLDOwM1naPYFZG0IpXYcvlWkS0Ox",
+  "https://analytics.google.com/g/collect?v=2&tid=G-7TL00J655C&gtm=45je6b61v9210166923za200zd9210166923xf1&_p=1794318747737&gcs=G111&gcd=13t3t3Z3t5l1&npa=0&dma=0&gdid=dZTQ1Zm&ecid=2144232618&_eu=AAAAAGQC&cid=1896298131.1794318729&frm=0&pscdl=noapi&rcb=1&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123329123~123814185&sid=1794318728&sct=1&seg=1&dl=https%3A%2F%2Fwww.sarvam.ai%2Fproducts%2Fvoice-agents%2Fpricing&dt=Voice%20Agents%20pricing%3A%20per-minute%20rates%20in%20INR%20%7C%20Sarvam&en=user_engagement&_et=4364&tfd=5035",
+  "https://api.claydar.com/tracker/event",
+  "https://px.ads.linkedin.com/wa/?medium=beacon&fmt=b",
+  "https://www.sarvam.ai/cdn-cgi/rum?"
+ ],
+ "controls": [
+  "Products",
+  "Developers",
+  "Resources",
+  "Company",
+  "Log In",
+  "Contact Us",
+  "Log In",
+  "Pay as you go\n\u20b93.50",
+  "Pro\n\u20b93.25",
+  "Growth\n\u20b93.15",
+  "Business\n\u20b93.00",
+  "Enterprise\nCustom",
+  "What counts as a minute?",
+  "Manage",
+  "Accept all"
+ ],
+ "error": null
+}

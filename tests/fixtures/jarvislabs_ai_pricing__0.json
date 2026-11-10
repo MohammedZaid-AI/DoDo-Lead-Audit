@@ -1,0 +1,523 @@
+{
+ "requested_url": "https://jarvislabs.ai/pricing",
+ "final_url": "https://jarvislabs.ai/pricing",
+ "title": "Pricing: GPUs, CPU VMs and Token Factory | Jarvislabs",
+ "meta_description": "Jarvislabs pricing in one place: open-model APIs by the token, NVIDIA H200, H100, RTX Pro 6000, A100, A30 and L4 GPUs and CPU VMs by the minute, plus how clusters, storage and deployments are billed. No commitments.",
+ "text": "Inference\nModels\nCompute\nCLI\nPricing\nResources\nCONTACT SALES\nSign In\nGet Started\nPricing\n\nOpen models by the token, GPUs and CPU VMs by the minute. No commitments.\n\nLaunch an Instance\nRead the docs\nSHOW IN\n\u20b9\nINR\n$\nUSD\n\nMODEL APIS\n\nToken Factory\n\nCOMPUTE\n\nGPUs\nCPU VMs\nGPU Clusters\nStorage\n\nDEPLOY\n\nManaged Endpoints\nServerless\n\nNeed help choosing?\n\nTell us about your workload and we'll suggest a setup.\n\nContact us\n\nMODEL APIS\n\nToken Factory\n\nCall hosted open models through an OpenAI-compatible API. Pay per million tokens.\n\nMODEL\nCONTEXT\nINPUT\nCACHED INPUT\nOUTPUT\nDeepSeek V4.1 Flash\nDeepSeek\n1M\n$0.07\n$0.003\n$0.49\nDeepSeek V4.1 Flash Cyber\nDeepSeek\n1M\n$0.30\n$0.006\n$1.00\nGemma 4 26B A4B IT\nGoogle\n256K\n$0.11\n$0.05\n$0.37\nGemma 4 31B IT\nGoogle\n256K\n$0.14\n$0.05\n$0.40\nGLM-5.3\nZ.ai\n230K\n$0.70\n$0.13\n$2.20\nGLM-5.3 Flash\nZ.ai\n1M\n$0.075\n$0.015\n$0.25\nNemotron 3.5 Super VL 120B A12B NVFP4\nNVIDIA\n1M\n$0.15\n$0.02\n$0.50\nQwen 3.8 27B FP8\nAlibaba\n256K\n$0.30\n$0.08\n$2.35\n\nRates in USD per 1 million tokens. Input is the context you send; output is what the model generates. Cached input rates apply to verified cache hits. Sign in to see prices in your billing currency. Learn more about Token Factory \u2192\n\nCOMPUTE\n\nGPUs\n\nNVIDIA H200, H100, RTX Pro 6000 Blackwell, A100, A30 and L4. Pick 1, 2, 4 or 8 GPUs to price an instance.\n\nGPUs per instance\n1\u00d7\n2\u00d7\n4\u00d7\n8\u00d7\nGPU\nVRAM\nVCPUS\nRAM\nON-DEMAND / HR\nSPOT / HR\nNVIDIA H200 SXM\n141GB\n28\n300GB\n$4.59\n\u221250%\n$2.29\nNVIDIA H100 SXM\n80GB\n16\n200GB\n$3.49\n\u221256%\n$1.54\nNVIDIA RTX Pro 6000 Blackwell\n96GB\n28\n160GB\n$2.19\n\u221247%\n$1.15\nNVIDIA A100 80GB\n80GB\n16\n112GB\n$1.49\n\u221240%\n$0.89\nNVIDIA A100 40GB\n40GB\n16\n112GB\n$0.89\n\u221211%\n$0.79\nNVIDIA A30\n24GB\n16\n112GB\n$0.41\n\u221229%\n$0.29\nNVIDIA L4\n24GB\n32\n124GB\n$0.44\n\u221234%\n$0.29\n\nOn-demand instances are billed per minute; pause and resume any time. Spot instances cost less but can be interrupted when the capacity is needed, so save your work often. Customers outside India are billed in USD. Switch at the top right to see our India rates. Committing to a month or more? Talk to sales about a savings plan \u2192\n\nCPU VMs\n\nGeneral-purpose VMs with 4 GB of RAM per vCPU. On-demand only.\n\nCPU TIER\nVCPUS\nRAM\nPRICE\n2 vCPU \u00b7 8 GB\n2\n8GB\n$0.05\nOn-demand \u00b7 /hr\n4 vCPU \u00b7 16 GB\n4\n16GB\n$0.10\nOn-demand \u00b7 /hr\n8 vCPU \u00b7 32 GB\n8\n32GB\n$0.20\nOn-demand \u00b7 /hr\n16 vCPU \u00b7 64 GB\n16\n64GB\n$0.40\nOn-demand \u00b7 /hr\n32 vCPU \u00b7 128 GB\n32\n128GB\n$0.79\nOn-demand \u00b7 /hr\n\nCPU VMs are priced as $0.012 / vCPU + $0.0032 / GB RAM per hour. Available in the India (Noida) region.\n\nGPU Clusters\n\nMulti-node training over InfiniBand.\n\nInstant Clusters\n\nNVIDIA H200 SXM nodes, eight GPUs each, over InfiniBand. Create one yourself from the dashboard.\n\nPer minute\nrates shown before you launch\nLearn more\n\u2192\nReserved Clusters\n\n128 to 1,024+ GPUs for a planned project. We confirm the configuration, dates and pricing with you.\n\nCustom quote\nTalk to sales\n\u2192\nStorage\n\nOne rate for instance disks and filesystems.\n\nDisks & filesystems\n\nInstance disks and network filesystems, billed by the hour on provisioned capacity.\n\n$0.10\n/GB \u00b7 month ($0.00014 /GB \u00b7 hr)\nLearn more\n\u2192\nEgress\n\nMoving data out of your instances within the region.\n\nFree\nin-region\n\nDEPLOY\n\nDeploy your own model\n\nRun a model on dedicated GPU workers. Billed by the minute of worker runtime.\n\nManaged Endpoints\n\nDeploy a catalog model on a serving stack we maintain. Warm workers are billed even when idle.\n\nPer GPU-minute\nof worker runtime\nLearn more\n\u2192\nServerless\n\nDeploy your own model and serving stack. Workers scale with traffic; set minimum workers to zero to stop when idle.\n\nPer minute\nof worker runtime\nLearn more\n\u2192\n\nThe GPU rate for a deployment is shown in the dashboard before you deploy. Each worker also has a 50 GB root disk, and any filesystem holding model weights is billed at the storage rate above.\n\nNeed 25+ GPUs or a savings plan?\n\nDiscounted rates for one-month and longer commitments, reserved capacity, NVIDIA H200 InfiniBand clusters and custom quotes. Talk to us about a plan that fits your workload.\n\nContact Sales\n\nTrusted by 27,000+ AI developers \u00b7 50M+ GPU hours served\n\nPer-minute billing\nFree in-region egress\nIndia regions\nFrequently asked questions\nTESTIMONIALS\nWhat builders say\n\u201c\n\n\u201cI published a paper with the results from exps i did on your gpus when @googlecloud turned me down. Thanks a lot for the great product/service. Not to mention super competitive prices...\u201d\n\nCagri Demir\n@adnancagri\n\u201c\n\n\u201cAfter waiting for 3 days on AWS to provide capacity so I can continue on @fastdotai course, I switched to @jarvislabsai and it literally took me less than 5 min. Good stuff @vishnuvig\u201d\n\nHadi Curtay\n@hadicurtay\n\u201c\n\n\u201cJarvisLabs.ai has always been my go to for renting GPU for personal projects/Kaggle competitions. Trust me, it made my life easier. Kudos Vishnu for your dedication, and good luck for the future!\u201d\n\nAnshuman Mishra\nAnshuman Mishra\n\u201c\n\n\u201cI have had a great experience using the Jarvislabs platform. Within a couple of minutes you can have a machine up with multiple connection/interaction options like Jupyter, VS Code, and normal SSH\u201d\n\nVatsal Saglani\n@saglanivatsal\n\nJarvislabs makes it simple and affordable to rent GPUs for AI, ML, and deep learning tasks, delivered with top-notch support.\n\nPRODUCTS\nToken Factory\nVMs\nClusters\nSlurm Clusters\nTemplates\nServerless\nManaged Endpoints\nCLI\nFilesystems\nPricing\nCOMPANY\nGPU Cloud India\nUniversities\nCustomer Stories\nCompare Providers\nCareers\nBrand\nContact Sales\nContact Us\nTerms & Conditions\nSupported Countries\nSanctioned Country Policy\nGPUS\nH200 GPUs\nH100 GPUs\nA100 80GB GPUs\nA100 40GB GPUs\nL4 GPUs\nB200 Specs\nRTX 6000 Pro\nRESOURCES\nAI FAQs\nUpdates\n\u00a9 2026 Jarvislabs | All Rights Reserved | Made with \u2764\ufe0f in India",
+ "scripts": [
+  "https://static.ads-twitter.com/uwt.js",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://jarvislabs.ai/_next/static/chunks/b468fba8-2e1d2d0e21ea1604.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/4bd1b696-bad92808725a934a.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/31255-6ae6dc01bb2b077d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/main-app-661d6d9c4eb0ab06.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/52619-c48a18d6f62d2371.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/12441-c0a34748971e9837.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/1547-81dd448a3dd74d53.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/pricing/page-d6e3d37518aa4ac0.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/36630-f94448da586d9753.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5/dist/clerk.browser.js",
+  "https://jarvislabs.ai/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18010514286/?random=1794318756807&cv=11&fst=1794318756807&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&rcb=15&frm=0&tiba=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=84638957.1794318757&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://eu-assets.i.posthog.com/static/1.447.7/exception-autocapture.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/web-vitals-with-attribution.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/conversations.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/posthog-recorder.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/surveys.js",
+  "https://eu-assets.i.posthog.com/array/phc_Os59ukxddC4QF6maZizO1J19Cnqp1NYedm8OCajER6z/config.js",
+  "https://jarvislabs.ai/_next/static/chunks/webpack-69251f766aae50b2.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://www.googletagmanager.com/gtag/js?id=G-000MLTB7Y4",
+  "https://www.googletagmanager.com/gtag/js?id=AW-18010514286"
+ ],
+ "iframes": [],
+ "links": [
+  {
+   "href": "https://jarvislabs.ai/",
+   "text": ""
+  },
+  {
+   "href": "https://jarvislabs.ai/products/cli",
+   "text": "CLI"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://jarvislabs.ai/contact-sales",
+   "text": "CONTACT SALES"
+  },
+  {
+   "href": "https://docs.jarvislabs.ai/",
+   "text": "Read the docs"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#token-factory",
+   "text": "Token Factory"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#on_demand",
+   "text": "GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#cpu-vms",
+   "text": "CPU VMs"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#clusters",
+   "text": "GPU Clusters"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#storage",
+   "text": "Storage"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#managed-endpoints",
+   "text": "Managed Endpoints"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#serverless",
+   "text": "Serverless"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#token-factory",
+   "text": "Token Factory"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#on_demand",
+   "text": "GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#cpu-vms",
+   "text": "CPU VMs"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#clusters",
+   "text": "GPU Clusters"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#storage",
+   "text": "Storage"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#managed-endpoints",
+   "text": "Managed Endpoints"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing#serverless",
+   "text": "Serverless"
+  },
+  {
+   "href": "https://jarvislabs.ai/contact-sales",
+   "text": "Contact us"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/deepseek-v4.1-flash-1017",
+   "text": "DeepSeek V4.1 Flash\nDeepSeek"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/deepseek-v4.1-flash-1017-cyber",
+   "text": "DeepSeek V4.1 Flash Cyber\nDeepSeek"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/gemma-4-26b-a4b-it",
+   "text": "Gemma 4 26B A4B IT\nGoogle"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/gemma-4-31b-it",
+   "text": "Gemma 4 31B IT\nGoogle"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/glm-5.3",
+   "text": "GLM-5.3\nZ.ai"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/glm-5.3-flash",
+   "text": "GLM-5.3 Flash\nZ.ai"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/nemotron-3.5-super-vl-120b-a12b-nvfp4",
+   "text": "Nemotron 3.5 Super VL 120B A12B NVFP4\nNV"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/qwen-3.8-27b-fp8",
+   "text": "Qwen 3.8 27B FP8\nAlibaba"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/deepseek-v4.1-flash-1017",
+   "text": "DeepSeek V4.1 FlashDeepSeek \u00b7 1M context"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/deepseek-v4.1-flash-1017-cyber",
+   "text": "DeepSeek V4.1 Flash CyberDeepSeek \u00b7 1M c"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/gemma-4-26b-a4b-it",
+   "text": "Gemma 4 26B A4B ITGoogle \u00b7 256K context"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/gemma-4-31b-it",
+   "text": "Gemma 4 31B ITGoogle \u00b7 256K context"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/glm-5.3",
+   "text": "GLM-5.3Z.ai \u00b7 230K context"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/glm-5.3-flash",
+   "text": "GLM-5.3 FlashZ.ai \u00b7 1M context"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/nemotron-3.5-super-vl-120b-a12b-nvfp4",
+   "text": "Nemotron 3.5 Super VL 120B A12B NVFP4NVI"
+  },
+  {
+   "href": "https://jarvislabs.ai/dashboard/models/qwen-3.8-27b-fp8",
+   "text": "Qwen 3.8 27B FP8Alibaba \u00b7 256K context"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/token-factory",
+   "text": "Learn more about Token Factory \u2192"
+  },
+  {
+   "href": "mailto:sales@jarvislabs.ai?subject=Regarding%20a%20Jarvislabs%20savings%20plan",
+   "text": "Talk to sales about a savings plan \u2192"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/clusters",
+   "text": "Learn more\n\u2192"
+  },
+  {
+   "href": "mailto:sales@jarvislabs.ai?subject=Regarding%20Jarvislabs%20GPU%20clusters",
+   "text": "Talk to sales\n\u2192"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/filesystems",
+   "text": "Learn more\n\u2192"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/managed-endpoints",
+   "text": "Learn more\n\u2192"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/serverless",
+   "text": "Learn more\n\u2192"
+  },
+  {
+   "href": "https://jarvislabs.ai/contact-sales",
+   "text": "Contact Sales"
+  },
+  {
+   "href": "https://docs.jarvislabs.ai/faqs/",
+   "text": "Frequently asked questions"
+  },
+  {
+   "href": "https://x.com/adnancagri/status/1788637893046550818",
+   "text": "\u201c\n\n\u201cI published a paper with the results"
+  },
+  {
+   "href": "https://twitter.com/hadicurtay/status/1473936225291563008",
+   "text": "\u201c\n\n\u201cAfter waiting for 3 days on AWS to p"
+  },
+  {
+   "href": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7193534976175259648?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7193534976175259648%2C7193656935257108481%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287193656935257108481%2Curn%3Ali%3AugcPost%3A7193534976175259648%29",
+   "text": "\u201c\n\n\u201cJarvisLabs.ai has always been my go "
+  },
+  {
+   "href": "https://x.com/saglanivatsal/status/1788622527419580747",
+   "text": "\u201c\n\n\u201cI have had a great experience using "
+  },
+  {
+   "href": "https://jarvislabs.ai/products/token-factory",
+   "text": "Token Factory"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/vm",
+   "text": "VMs"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/clusters",
+   "text": "Clusters"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/slurm",
+   "text": "Slurm Clusters"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/templates",
+   "text": "Templates"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/serverless",
+   "text": "Serverless"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/managed-endpoints",
+   "text": "Managed Endpoints"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/cli",
+   "text": "CLI"
+  },
+  {
+   "href": "https://jarvislabs.ai/products/filesystems",
+   "text": "Filesystems"
+  },
+  {
+   "href": "https://jarvislabs.ai/pricing",
+   "text": "Pricing"
+  },
+  {
+   "href": "https://jarvislabs.ai/in",
+   "text": "GPU Cloud India"
+  },
+  {
+   "href": "https://jarvislabs.ai/universities",
+   "text": "Universities"
+  },
+  {
+   "href": "https://jarvislabs.ai/customer-stories",
+   "text": "Customer Stories"
+  },
+  {
+   "href": "https://jarvislabs.ai/compare",
+   "text": "Compare Providers"
+  },
+  {
+   "href": "https://jarvislabs.ai/careers",
+   "text": "Careers"
+  },
+  {
+   "href": "https://jarvislabs.ai/brand",
+   "text": "Brand"
+  },
+  {
+   "href": "https://jarvislabs.ai/contact-sales",
+   "text": "Contact Sales"
+  },
+  {
+   "href": "https://jarvislabs.ai/contactus",
+   "text": "Contact Us"
+  },
+  {
+   "href": "https://jarvislabs.ai/termsandservice",
+   "text": "Terms & Conditions"
+  },
+  {
+   "href": "https://jarvislabs.ai/supported-countries",
+   "text": "Supported Countries"
+  },
+  {
+   "href": "https://jarvislabs.ai/policies/sanctioned-country-policy",
+   "text": "Sanctioned Country Policy"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-h200",
+   "text": "H200 GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-h100",
+   "text": "H100 GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-a100-80gb",
+   "text": "A100 80GB GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-a100-40gb",
+   "text": "A100 40GB GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-l4",
+   "text": "L4 GPUs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-b200",
+   "text": "B200 Specs"
+  },
+  {
+   "href": "https://jarvislabs.ai/gpu/nvidia-rtx-6000-pro-blackwell",
+   "text": "RTX 6000 Pro"
+  },
+  {
+   "href": "https://jarvislabs.ai/ai-faqs",
+   "text": "AI FAQs"
+  },
+  {
+   "href": "https://jarvislabs.ai/updates",
+   "text": "Updates"
+  },
+  {
+   "href": "mailto:engineering@jarvislabs.ai",
+   "text": ""
+  },
+  {
+   "href": "https://www.youtube.com/channel/UCAMo8bfMjeMyY_CTkcN9fcA",
+   "text": ""
+  },
+  {
+   "href": "https://www.linkedin.com/company/jarvislabsai/",
+   "text": ""
+  },
+  {
+   "href": "https://github.com/jarvislabsai",
+   "text": ""
+  },
+  {
+   "href": "https://twitter.com/jarvislabsai",
+   "text": ""
+  }
+ ],
+ "resources": [
+  "https://jarvislabs.ai/_next/static/media/22a5144ee8d83bca-s.p.woff2",
+  "https://jarvislabs.ai/_next/static/media/7d4881bb7e1bf84d-s.p.woff2",
+  "https://jarvislabs.ai/_next/static/css/96b95908fb12f53a.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/css/15730e9f7c5c55ef.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/webpack-69251f766aae50b2.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://www.googletagmanager.com/gtag/js?id=G-000MLTB7Y4",
+  "https://www.googletagmanager.com/gtag/js?id=AW-18010514286",
+  "https://jarvislabs.ai/pricing",
+  "https://jarvislabs.ai/favicon.ico?v=4",
+  "https://jarvislabs.ai/img/jarvislabs-app-icon.png?v=4",
+  "https://jarvislabs.ai/_next/static/css/f6b12505cb19088c.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/css/475c4de84722da30.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go"
+ ],
+ "network_urls": [
+  "https://jarvislabs.ai/pricing",
+  "https://jarvislabs.ai/_next/static/media/22a5144ee8d83bca-s.p.woff2",
+  "https://jarvislabs.ai/_next/static/media/7d4881bb7e1bf84d-s.p.woff2",
+  "https://jarvislabs.ai/_next/image?url=%2Fimg%2Fjarvislabs-logo-light.png&w=1200&q=75",
+  "https://jarvislabs.ai/_next/image?url=%2Fimg%2Fjarvislabs-logo-dark.png&w=1200&q=75",
+  "https://jarvislabs.ai/_next/static/css/96b95908fb12f53a.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/css/15730e9f7c5c55ef.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/webpack-69251f766aae50b2.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/b468fba8-2e1d2d0e21ea1604.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/4bd1b696-bad92808725a934a.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/31255-6ae6dc01bb2b077d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/main-app-661d6d9c4eb0ab06.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/94018-edb6f1e5a20275d7.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/52619-c48a18d6f62d2371.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/12441-c0a34748971e9837.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/73758-1672c9fcdb337c2d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/81356-e0eb594f9a467141.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/3100-e3a50973e55a0c8e.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/1547-81dd448a3dd74d53.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/21177-d09f1221c32229b4.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/pricing/page-d6e3d37518aa4ac0.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/94554-6fc80cda528bb265.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/32110-5be0ac442df079ad.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/66093-f114a55efd30fd4d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/36630-f94448da586d9753.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/54821-3ded851d53524512.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/37241-508fd05f361493e8.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/27980-902f59b1a6508fc2.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/89742-79984f25ce576c2c.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/layout-7d7b7010029219b5.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5/dist/clerk.browser.js",
+  "https://www.googletagmanager.com/gtag/js?id=G-000MLTB7Y4",
+  "https://www.googletagmanager.com/gtag/js?id=AW-18010514286",
+  "https://jarvislabs.ai/_next/static/media/2b5b02fc7e511755-s.woff2",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5.128.0/dist/clerk.browser.js",
+  "https://eu-assets.i.posthog.com/array/phc_Os59ukxddC4QF6maZizO1J19Cnqp1NYedm8OCajER6z/config.js",
+  "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+  "https://static.ads-twitter.com/uwt.js",
+  "https://analytics.google.com/g/collect?v=2&tid=G-000MLTB7Y4&gtm=45je6b61v9105900182za208zd9105900182xf1&_p=1794318756662&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=584573678.1794318757&frm=0&pscdl=noapi&rcb=6&sr=1366x900&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123329124~123814183&sid=1794318756&sct=1&seg=0&dl=https%3A%2F%2Fjarvislabs.ai%2Fpricing&dt=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1045",
+  "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-000MLTB7Y4&cid=584573678.1794318757&gtm=45je6b61v9105900182za208zd9105900182xf1&rcb=6&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123329124~123814183",
+  "https://www.google.co.in/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-000MLTB7Y4&cid=584573678.1794318757&gtm=45je6b61v9105900182za208zd9105900182xf1&rcb=6&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123329124~123814183&z=499745270",
+  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18010514286/?random=1794318756807&cv=11&fst=1794318756807&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&rcb=15&frm=0&tiba=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=84638957.1794318757&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+  "https://www.google.com/rmkt/collect/18010514286/?random=1794318756807&cv=11&fst=1794318756807&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&rcb=15&frm=0&tiba=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=84638957.1794318757&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+  "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&auid=84638957.1794318757&dt=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&tid=AW-18010514286&en=page_view&dl=https%3A%2F%2Fjarvislabs.ai%2Fpricing&scrsrc=www.googletagmanager.com&rnd=1004329090.1794318757&navt=n&npa=0&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&tft=1794318756829&tfd=1083&tids=AW-18010514286&fmt=8",
+  "https://ad.doubleclick.net/ccm/s/collect?auid=84638957.1794318757&gtm=45be6b61v9254378900za208zd9254378900xecxf1&fmt=8",
+  "blob:https://jarvislabs.ai/8cf825c9-18e1-4409-ae27-b3c0f3c80269",
+  "https://clerk.jarvislabs.ai/v1/environment?__clerk_api_version=2025-11-10&_clerk_js_version=5.128.0",
+  "https://clerk.jarvislabs.ai/v1/client?__clerk_api_version=2025-11-10&_clerk_js_version=5.128.0",
+  "https://jarvislabs.ai/?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/products/cli?_rsc=yrzGVZEURCHTUGxG",
+  "https://eu-assets.i.posthog.com/static/1.447.7/surveys.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/posthog-recorder.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/conversations.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/web-vitals-with-attribution.js",
+  "https://eu-assets.i.posthog.com/static/1.447.7/exception-autocapture.js",
+  "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=9295484&time=1794318756877&li_adsId=22d0b4be-8fec-4e6c-913e-e4f72b68c708&pageLoadId=f464ba90-fe7b-4d1f-bf7b-457509b9d808&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing",
+  "https://t.co/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=7c39fdf6-24b3-432d-b34f-9dfa57869744&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=79000ab1-5f72-4c1c-9bbf-2af94276a0b1&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fjarvislabs.ai%2Fpricing&tw_engaged_ms=1&tw_iframe_status=0&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318756882-855181327&tw_session_start=1&twpid=tw.1794318756882.766280274856624724&txn_id=rcawn&type=javascript&version=2.4.12",
+  "https://analytics.twitter.com/1/i/adsct?bci=4&dv=Asia%2FCalcutta%26en-US%26Google%20Inc.%26Win32%26255%261366%26900%268%2624%261366%26900%260%26na%261&eci=3&event=%7B%7D&event_id=7c39fdf6-24b3-432d-b34f-9dfa57869744&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=79000ab1-5f72-4c1c-9bbf-2af94276a0b1&tw_ch_fvl=Chromium%2F158.0.8127.18%2CNot.A%2FBrand%2F24.0.0.0%2CHeadlessChrome%2F158.0.8127.18&tw_ch_pv=10.0&tw_document_href=https%3A%2F%2Fjarvislabs.ai%2Fpricing&tw_engaged_ms=1&tw_iframe_status=0&tw_pid_src=1&tw_session_count=1&tw_session_id=1794318756882-855181327&tw_session_start=1&twpid=tw.1794318756882.766280274856624724&txn_id=rcawn&type=javascript&version=2.4.12",
+  "https://www.google.com/pagead/1p-user-list/18010514286/?random=1794318756807&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&rcb=15&frm=0&tiba=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=84638957.1794318757&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dZEN1y2IIVCg7i429wlGJgdkFtx6cKfkKF428O8vyqx3VgDPf2I6P1y1ErMOGvD0l1P1AO4gHqUaFirnBFeJ4eQHl984Ncfbhea-O3zXuBrQAMGSj0cZjZ7fVsR_POZkzB8k_V52cnjo9FqTl3eBdKTbhsstreCxn43_9s_qzv2HzRJfkyIwc5MsNw9Z7Y1QtcV9Yqkn_o78XpjFhUvkTbHm0RefDIvaDytsPB0TMqfTnGysqp_1MvhyTwUUW7aXSg9CB8VhCICAxswEX6WuLKKawfulwTwJ17Vhywy3WtzqOaTSN2UznjeipZBgKDrw5NCOUZsK&random=4146283975&rmt_tld=0&ipr=y",
+  "https://www.google.co.in/pagead/1p-user-list/18010514286/?random=1794318756807&cv=11&fst=1794315600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b61v9254378900za208zd9254378900xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~117628655~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123329124~123814183&u_w=1366&u_h=900&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&rcb=15&frm=0&tiba=Pricing%3A%20GPUs%2C%20CPU%20VMs%20and%20Token%20Factory%20%7C%20Jarvislabs&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=84638957.1794318757&uaa=x86&uab=64&uafvl=Chromium%3B158.0.8127.18%7CNot.A%252FBrand%3B24.0.0.0%7CHeadlessChrome%3B158.0.8127.18&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS-gEAogo4dZEN1y2IIVCg7i429wlGJgdkFtx6cKfkKF428O8vyqx3VgDPf2I6P1y1ErMOGvD0l1P1AO4gHqUaFirnBFeJ4eQHl984Ncfbhea-O3zXuBrQAMGSj0cZjZ7fVsR_POZkzB8k_V52cnjo9FqTl3eBdKTbhsstreCxn43_9s_qzv2HzRJfkyIwc5MsNw9Z7Y1QtcV9Yqkn_o78XpjFhUvkTbHm0RefDIvaDytsPB0TMqfTnGysqp_1MvhyTwUUW7aXSg9CB8VhCICAxswEX6WuLKKawfulwTwJ17Vhywy3WtzqOaTSN2UznjeipZBgKDrw5NCOUZsK&random=4146283975&rmt_tld=1&ipr=y",
+  "https://jarvislabs.ai/_next/static/chunks/8721-11bf5c4130bdcd8e.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/page-43075e517fa67f44.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/css/f6b12505cb19088c.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://px4.ads.linkedin.com/collect?v=2&fmt=js&pid=9295484&time=1794318756877&li_adsId=22d0b4be-8fec-4e6c-913e-e4f72b68c708&pageLoadId=f464ba90-fe7b-4d1f-bf7b-457509b9d808&url=https%3A%2F%2Fjarvislabs.ai%2Fpricing&e_ipv6=AQLKstZkkMEbgwAAAaHFu25RhL47nax2paTHLBwtGEJLx1DKjuv8nT0rA8bxoNgms0EpwR2I_RDS7TWlYvBZajm-CZ_agmhmWA",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/cli/page-1e864bbf370df727.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "blob:https://jarvislabs.ai/6762d598-2966-49d5-b75e-34b441139417",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5.128.0/dist/framework_clerk.browser_70f75e_5.128.0.js",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5.128.0/dist/vendors_clerk.browser_70f75e_5.128.0.js",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5.128.0/dist/ui-common_clerk.browser_70f75e_5.128.0.js",
+  "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+  "https://clerk.jarvislabs.ai/npm/@clerk/clerk-js@5.128.0/dist/subscriptionDetails_clerk.browser_70f75e_5.128.0.js",
+  "https://jarvislabs.ai/_next/image?url=https%3A%2F%2Fcdn.jarvislabs.net%2Fjarvislabs_website%2Flanding%2Fmain%2Favatars%2FCagri.jpeg&w=48&q=75",
+  "https://jarvislabs.ai/_next/image?url=https%3A%2F%2Fcdn.jarvislabs.net%2Fjarvislabs_website%2Flanding%2Fmain%2Favatars%2FHadi.avif&w=48&q=75",
+  "https://jarvislabs.ai/_next/image?url=https%3A%2F%2Fcdn.jarvislabs.net%2Fjarvislabs_website%2Flanding%2Fmain%2Favatars%2FAnshuman.jpeg&w=48&q=75",
+  "https://jarvislabs.ai/_next/image?url=https%3A%2F%2Fcdn.jarvislabs.net%2Fjarvislabs_website%2Flanding%2Fmain%2Favatars%2Fvatsal.jpeg&w=48&q=75",
+  "https://jarvislabs.ai/products/token-factory?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/products/vm?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/products/clusters?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/products/slurm?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/products/templates?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/slurm/page-1d8decf5634645c8.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/products/serverless?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/59347-9badbd600867b46d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/token-factory/page-2403da2581c6b41a.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/products/managed-endpoints?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/vm/page-934796030c87892f.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/products/filesystems?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/clusters/page-f25000bfb81ed9dd.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/in?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/in/page-1e679916a9d2376d.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/universities?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/css/475c4de84722da30.css?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/59648-0409366b0ada2b8b.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/71089-ad815ffb7809f13c.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/universities/page-f7bdd5f2b4edb862.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/customer-stories?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/products/templates/page-9dad55a50dddf386.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/compare?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/compare/page-54196f9983d95e5f.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/careers?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/customer-stories/page-b1c280a08e184ccb.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/brand?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/contactus?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/termsandservice?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/supported-countries?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/brand/page-653dff0b2cc79817.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/policies/sanctioned-country-policy?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/38577-7b4a15785ca4f03f.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/23312-005593f0f9213563.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/_next/static/chunks/app/termsandservice/page-61a1ecaaa9765d40.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go",
+  "https://jarvislabs.ai/gpu/nvidia-h200?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-h100?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-a100-80gb?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-a100-40gb?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-l4?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-b200?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/gpu/nvidia-rtx-6000-pro-blackwell?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/ai-faqs?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/updates?_rsc=yrzGVZEURCHTUGxG",
+  "https://jarvislabs.ai/_next/static/chunks/app/policies/sanctioned-country-policy/page-edf220abbde6d0d2.js?dpl=dpl_7kFEahESnTVaCGMWa6HWE9iPe8Go"
+ ],
+ "controls": [
+  "Inference",
+  "Models",
+  "Compute",
+  "Resources",
+  "Sign In",
+  "Get Started",
+  "Launch an Instance",
+  "\u20b9\nINR",
+  "$\nUSD",
+  "1\u00d7",
+  "2\u00d7",
+  "4\u00d7",
+  "8\u00d7"
+ ],
+ "error": null
+}
