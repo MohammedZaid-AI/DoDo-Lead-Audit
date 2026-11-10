@@ -72,6 +72,17 @@ def test_wallet_balance_is_not_a_method():
 
 # --- the five hand-checked sites (offline fixtures) ---
 
+def test_tax_at_checkout_hint():
+    assert "taxes shown at checkout" in analyze_pricing("Final pricing, taxes and offers are shown at checkout.").tax_hints
+
+
+def test_scalio_inr_only(site):
+    p = site("scalio_app").pricing
+    assert p.currency_mode == "INR only"
+    assert any(s.amount == 999 and s.period == "month" for s in p.price_samples)
+    assert "taxes shown at checkout" in p.tax_hints
+
+
 def test_sarvam_inr_only(site):
     p = site("sarvam_ai_api_pricing").pricing
     assert p.currency_mode == "INR only"

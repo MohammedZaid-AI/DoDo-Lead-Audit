@@ -49,6 +49,7 @@ TAX_PATTERNS = {
     "excl. tax": r"\bexcl" + _TAX_TAIL,
     "plus taxes": r"(?:\bplus|\+)\s*(?:applicable\s+)?(?:tax|taxes|GST|VAT)\b",
     "inclusive of taxes": r"\bincl" + _TAX_TAIL,
+    "taxes shown at checkout": r"\btax(?:es)?\b[^.\n]{0,40}\bat checkout\b",
 }
 
 LOCAL_METHOD_PATTERNS = {

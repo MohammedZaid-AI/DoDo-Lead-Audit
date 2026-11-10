@@ -76,7 +76,8 @@ def test_nothing_found():
 # --- the five hand-checked sites (offline fixtures) ---
 
 def test_scalio_not_verified(site):
-    r = site("scalio_ai")
+    # Checkout (Juspay) only loads after login, so the public pages cannot verify it.
+    r = site("scalio_app")
     assert r.provider.primary is None and r.provider.has_mor is None
 
 
