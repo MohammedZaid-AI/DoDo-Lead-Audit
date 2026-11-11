@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment audit: {{ a.company_name }}</title>
+<style>
+  :root { --ink: #1a1a1a; --muted: #6b6b6b; --line: #e6e6e6; --soft: #f6f6f4; --accent: #2f5d50; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--ink);
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+  .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 4px; }
+  h2 { font-size: 18px; margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  a { color: var(--accent); }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .summary { background: var(--soft); border-left: 3px solid var(--accent); padding: 14px 16px; margin: 20px 0 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  .kv th { width: 34%; font-weight: 500; color: var(--muted); }
+  .num { text-align: right; white-space: nowrap; }
+  tr.dodo td { font-weight: 600; }
+  ol.issues { padding-left: 20px; } ol.issues li { margin-bottom: 12px; }
+  .issue-ev { display: block; font-size: 13px; color: var(--muted); }
+  .note { font-size: 14px; color: var(--muted); }
+  pre { background: var(--soft); padding: 10px 12px; overflow-x: auto; font-size: 14px; }
+  blockquote { margin: 0; padding: 12px 16px; background: var(--soft); border-radius: 4px; }
+  .evidence { margin-top: 48px; font-size: 12.5px; color: var(--muted); }
+  .evidence h2 { font-size: 14px; color: var(--muted); }
+  .evidence li { margin-bottom: 4px; word-break: break-all; }
+  .tag { display: inline-block; font-size: 11px; padding: 0 6px; border: 1px solid var(--line); border-radius: 3px; }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Payment audit · {{ a.created_at[:10] }}</p>
+  <h1>{{ a.company_name }}</h1>
+  <p class="sub"><a href="{{ a.url }}">{{ a.domain }}</a> · {{ a.what_they_sell }}</p>
+  <p class="summary">{{ a.summary }}</p>
+
+  <h2>Current setup</h2>
+  <table class="kv">
+    <tr><th>Payment provider</th><td>{{ a.setup.provider_label }}{% if a.setup.provider %} <span class="tag">{{ a.setup.confidence }} confidence</span>{% endif %}</td></tr>
+    <tr><th>Merchant of Record</th><td>{{ a.setup.has_mor }}</td></tr>
+    <tr><th>Currencies seen</th><td>{{ a.setup.currencies | join(", ") or "none found" }} ({{ a.setup.currency_mode }})</td></tr>
+    <tr><th>Price sample</th><td>{{ a.setup.price_sample }}</td></tr>
+    <tr><th>Tax wording</th><td>{{ a.setup.tax_hints | join(", ") or "none found" }}</td></tr>
+    <tr><th>Local payment methods</th><td>{{ a.setup.local_methods | join(", ") or "none named" }}</td></tr>
+  </table>
+
+  <h2>What breaks when they sell abroad</h2>
+  {% if a.issues %}
+  <ol class="issues">
+    {% for i in a.issues %}
+    <li><strong>{{ i.title }}.</strong> {{ i.detail }}
+      <span class="issue-ev">Evidence: {{ i.evidence }}</span></li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>No issues could be confirmed from public pages.</p>
+  {% endif %}
+
+  <h2>Fee per sale</h2>
+  <p class="note">Sale basis: {{ a.fee_table.basis.label }}{% if a.fee_table.basis.is_subscription %} Treated as a subscription.{% endif %}</p>
+  <div class="wrap">
+  <table>
+    <tr><th>Provider</th><th>Rate</th><th>MoR</th><th class="num">US buyer</th><th class="num">Non-US buyer</th></tr>
+    {% for r in a.fee_table.rows %}
+    <tr class="{{ r.role }}">
+      <td>{{ r.label }}{% if r.role == "current" %} <span class="tag">current</span>{% elif r.role == "reference" %} <span class="tag">reference</span>{% endif %}</td>
+      <td>{{ r.rate_text }}</td>
+      <td>{{ {True: "yes", False: "no", None: "not verified"}[r.is_mor] }}</td>
+      <td class="num">{{ r.us_fee | money }}</td>
+      <td class="num">{{ r.intl_fee | money }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+  {% for line in a.fee_table.comparison %}<p>{{ line }}</p>{% endfor %}
+  {% for r in a.fee_table.rows %}{% for n in r.notes %}<p class="note">{{ r.label }}: {{ n }}</p>{% endfor %}{% endfor %}
+
+  <h2>Switch effort</h2>
+  <p>{{ a.switch_effort.text }}</p>
+  {% if a.switch_effort.commands %}<pre>{% for c in a.switch_effort.commands %}{{ c }}
+{% endfor %}</pre>{% endif %}
+
+  <h2>Opening message</h2>
+  <blockquote>{{ a.opener }}</blockquote>
+  <p class="note">Draft for a human to review and send. Nothing is sent automatically.</p>
+
+  {% if a.signal %}
+  <h2>Source signal</h2>
+  <p><a href="{{ a.signal.url }}">{{ a.signal.title or a.signal.url }}</a> ({{ a.signal.source }}{% if a.signal.author %}, u/{{ a.signal.author }}{% endif %})</p>
+  {% if a.signal.quote %}<blockquote>“{{ a.signal.quote }}”</blockquote>{% endif %}
+  {% endif %}
+
+  <section class="evidence">
+    <h2>Evidence</h2>
+    <p>Checked {{ a.checked_at[:16].replace("T", " ") }} UTC. Pages: {{ a.pages_checked | join(", ") or "none loaded" }}.</p>
+    {% if a.evidence %}
+    <ul>
+      {% for e in a.evidence %}
+      <li>[{{ e.confidence }}{% if e.confidence == "low" %}, mention only, not verified{% endif %}] {{ e.provider }}: “{{ e.pattern }}” in {{ e.location }} on {{ e.page_url }} → {{ e.matched[:160] }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No payment provider fingerprints matched on the pages checked.</p>
+    {% endif %}
+    {% for u, err in a.page_errors.items() %}<p>Could not load {{ u }}: {{ err }}</p>{% endfor %}
+  </section>
+</main>
+</body>
+</html>

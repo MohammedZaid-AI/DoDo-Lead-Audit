@@ -7,8 +7,11 @@ from pathlib import Path
 
 import typer
 
-from app.detect import DetectionResult, detect
-from app.detect.browser import Browser
+from app import db
+from app.audit.builder import build_audit
+from app.audit.render import save_audit
+from app.detect import DetectionResult, analyze_pages, detect
+from app.detect.browser import Browser, PageData
 from app.settings import OUTPUT_DIR, ROOT
 
 cli = typer.Typer(add_completion=False, help="Find and audit leads for Dodo Payments. Read only.")
@@ -39,10 +42,37 @@ def print_summary(r: DetectionResult) -> None:
     typer.echo(f"  local pay:  {pr.local_methods or '-'}")
 
 
-def _run_urls(urls: list[str], save_fixtures: bool) -> list[DetectionResult]:
+def _fixture_pages(url: str) -> list[PageData]:
+    stems = sorted({p.with_suffix("") for p in FIXTURE_DIR.glob(f"{slugify(url)}__*.json")})
+    if not stems:
+        raise typer.BadParameter(f"no fixtures for {url}; run once with --save-fixtures")
+    return [PageData.load(s) for s in stems]
+
+
+def audit_detection(result: DetectionResult, signal: dict | None = None) -> Path:
+    """Build, render and store the audit for one detection. Returns the html path."""
+    audit = build_audit(result, signal)
+    path = save_audit(audit)
+    with db.session() as s:
+        company = db.upsert_company(s, audit.company_name, audit.url, audit.domain)
+        db.save_detection(s, company.id, result)
+        db.save_audit(s, company.id, audit, str(path))
+    typer.echo(f"  issues:     {[i.key for i in audit.issues] or '-'}")
+    typer.secho(f"  audit:      {path}", fg="green")
+    return path
+
+
+def _run_urls(urls: list[str], save_fixtures: bool, from_fixtures: bool = False) -> list[DetectionResult]:
     results = []
     out = OUTPUT_DIR / "detections"
     out.mkdir(parents=True, exist_ok=True)
+    if from_fixtures:
+        for url in urls:
+            result = analyze_pages(url, _fixture_pages(url))
+            results.append(result)
+            print_summary(result)
+            audit_detection(result)
+        return results
     with Browser() as browser:
         for url in urls:
             result, pages = detect(url, browser)
@@ -54,20 +84,23 @@ def _run_urls(urls: list[str], save_fixtures: bool) -> list[DetectionResult]:
                 FIXTURE_DIR.mkdir(parents=True, exist_ok=True)
                 for i, page in enumerate(p for p in pages if p.ok):
                     page.save(FIXTURE_DIR / f"{slug}__{i}")
+            audit_detection(result)
     return results
 
 
 @cli.command()
-def audit(url: str, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures")) -> None:
-    """Run detection on one url and print a summary."""
-    _run_urls([url], save_fixtures)
+def audit(url: str, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures"),
+          from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the site")) -> None:
+    """Run detection and audit on one url. Saves html to output/audits/."""
+    _run_urls([url], save_fixtures, from_fixtures)
 
 
 @cli.command("audit-file")
-def audit_file(path: Path, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures")) -> None:
-    """Run detection on every url in a text file (one per line)."""
+def audit_file(path: Path, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures"),
+               from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the sites")) -> None:
+    """Run detection and audit on every url in a text file (one per line)."""
     urls = [l.strip() for l in path.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
-    _run_urls(urls, save_fixtures)
+    _run_urls(urls, save_fixtures, from_fixtures)
 
 
 if __name__ == "__main__":

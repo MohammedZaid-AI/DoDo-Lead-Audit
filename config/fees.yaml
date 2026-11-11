@@ -1,6 +1,34 @@
-# Fee rates per sale. Edit freely; the audit reads these at run time.
-dodo:        { percent: 4.0, fixed_usd: 0.40, note: "Check dodopayments.com/pricing for current and international rates" }
-paddle:      { percent: 5.0, fixed_usd: 0.50 }
-lemonsqueezy: { percent: 5.0, fixed_usd: 0.50 }
-stripe:      { percent: 2.9, fixed_usd: 0.30, note: "Processing only. Tax, invoicing and MoR liability not included." }
-razorpay_intl_cards: { percent: 3.0, fixed_usd: 0.0, note: "Approximate. Plus GST. Not an MoR." }
+# Fee rates per sale. Edit freely; audits read these at run time.
+# percent / fixed_usd: base rate. international_pct / subscription_pct: surcharges added on top.
+# A provider without surcharge fields gets its base rate in both columns, with its note shown.
+
+defaults:
+  reference_sale_usd: 20   # used only when no clear monthly price is found; labelled as an example
+
+dodo:
+  percent: 4.0
+  fixed_usd: 0.40
+  international_pct: 1.5   # "International payments (cards and APMs outside the US) add +1.5%"
+  subscription_pct: 0.5    # "Subscriptions, addons, and usage-based billing add +0.5%"
+  source: "dodopayments.com/pricing, checked 2026-11-11"
+  note: "Check dodopayments.com/pricing for current and international rates"
+paddle:
+  percent: 5.0
+  fixed_usd: 0.50
+  international_pct: 0.0
+  subscription_pct: 0.0
+  source: "paddle.com/pricing, checked 2026-11-11 (all-inclusive, no listed surcharges)"
+lemonsqueezy:
+  percent: 5.0
+  fixed_usd: 0.50
+  source: "lemonsqueezy.com/pricing, checked 2026-11-11"
+  intl_note: "Lemon Squeezy says transactions outside the US may add small fees (amount not stated)."
+stripe:
+  percent: 2.9
+  fixed_usd: 0.30
+  intl_note: "International card and currency conversion fees not included."
+  note: "Processing only. Tax, invoicing and MoR liability not included."
+razorpay_intl_cards:
+  percent: 3.0
+  fixed_usd: 0.0
+  note: "Approximate. Plus GST. Not an MoR."
