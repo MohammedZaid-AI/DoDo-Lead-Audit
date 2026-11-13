@@ -75,6 +75,7 @@ class PriceSample:
     period: str | None
     raw_text: str
     amount_max: float | None = None
+    context: str = ""  # the page line the price appeared on, e.g. "Speech to text at ₹0.49 per minute"
 
 
 @dataclass
@@ -149,7 +150,7 @@ def find_prices(text: str, limit: int = 20) -> list[PriceSample]:
             amt = _to_float(m.group("amt")) * (1000 if m.group("suffix") else 1)
             amt2 = _to_float(m.group("amt2")) if m.group("amt2") else None
             out.append(PriceSample(amt, _norm_currency(m.group("cur")),
-                                   _normalize_period(m.group("period")), raw, amt2))
+                                   _normalize_period(m.group("period")), raw, amt2, " ".join(line.split())[:140]))
             if len(out) >= limit:
                 return out
     return out

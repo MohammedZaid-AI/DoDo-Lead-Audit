@@ -36,6 +36,7 @@ class SetupInfo:
     currencies: list[str]
     currency_mode: str
     price_sample: str
+    price_context: str  # page line the sample came from; empty when the unit is unclear
     confidence: str
     tax_hints: list[str]
     local_methods: list[str]
@@ -105,12 +106,16 @@ def _mor_text(provider: str | None, has_mor: bool | None) -> str:
 def build_setup(d: DetectionResult) -> SetupInfo:
     p, pr = d.provider, d.pricing
     priced = [s for s in pr.price_samples if s.amount > 0]
-    with_unit = next((s.raw_text for s in priced if s.period), None)
-    sample = with_unit or (f"{priced[0].raw_text} (unit not clear on the page)" if priced else None)
+    with_unit = next((s for s in priced if s.period), None)
+    if with_unit:
+        sample, context = with_unit.raw_text, with_unit.context
+    else:
+        sample = f"{priced[0].raw_text} (unit not clear on the page)" if priced else None
+        context = ""
     return SetupInfo(
         provider=p.primary, provider_label=provider_label(p.primary), has_mor=_mor_text(p.primary, p.has_mor),
         currencies=pr.currencies_seen, currency_mode=pr.currency_mode,
-        price_sample=sample or "not verified (no price found)", confidence=p.confidence,
+        price_sample=sample or "not verified (no price found)", price_context=context, confidence=p.confidence,
         tax_hints=pr.tax_hints, local_methods=pr.local_methods,
     )
 

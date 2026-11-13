@@ -25,6 +25,7 @@ DASH_RE = re.compile(r"[-‐‑‒–—―]")
 HARD_ASK_RE = re.compile(r"\b(?:quick chat|a chat|hop on|jump on|a call|book|schedule|demo|meeting|"
                          r"open to exploring|exploring how)\b", re.I)
 NUMBER_RE = re.compile(r"\d[\d,]*(?:\.\d+)?")
+PRICE_UNIT_RE = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*(?:/|per|a|an)\s*([A-Za-z]{2,})", re.I)
 
 SYSTEM = """You draft the first message a sales rep at Dodo Payments could send to a software founder.
 Dodo Payments is a Merchant of Record for SaaS, AI and digital products: as the legal seller it handles
@@ -41,7 +42,9 @@ Rules:
 6. Use only what is in FACTS. Do not state any number, provider, country or feature that is not in FACTS.
    Anything marked "not verified" must not be stated as fact.
 7. Friendly, not an audit or an accusation. Tax points are "worth checking", never "you are non compliant".
-8. Get roles right. A payment processor such as Stripe or Razorpay is NOT the seller of record. When
+8. If you quote a price, quote it exactly as in price_on_page, with what that line says it is for.
+   Never attach a unit or product to a price that the line does not give it. Do not mix prices from different facts.
+9. Get roles right. A payment processor such as Stripe or Razorpay is NOT the seller of record. When
    merchant_of_record is "no", the company itself is the seller of record and owns the tax work.
 
 Return {"opener": "<message>"}. Respond only with JSON."""
@@ -67,7 +70,8 @@ def build_facts(audit: dict, signal: dict | None = None) -> dict:
         "payment_provider": s["provider_label"] if s["provider"] else "not verified",
         "merchant_of_record": s["has_mor"],
         "pricing_currency": s["currency_mode"],
-        "price_sample": s["price_sample"],
+        # Only a price whose unit and purpose are clear, with the page line it came from.
+        "price_on_page": s["price_context"] or "not verified",
         "tax_wording_on_pricing_page": s["tax_hints"] or "none found",
         "local_payment_methods_named": s["local_methods"] or "none named",
         "issues": [f"{i['title']}. {i['detail']}" for i in audit["issues"]],
@@ -80,6 +84,11 @@ def build_facts(audit: dict, signal: dict | None = None) -> dict:
 
 def _numbers(text: str) -> set[str]:
     return {n.replace(",", "").rstrip(".") for n in NUMBER_RE.findall(text)}
+
+
+def _price_units(text: str) -> set[tuple[str, str]]:
+    """(number, unit stem) pairs such as ('0.49', 'min') from '₹0.49 per minute'."""
+    return {(n.replace(",", "").rstrip("."), u.lower()[:3]) for n, u in PRICE_UNIT_RE.findall(text)}
 
 
 def check_opener(text: str, facts: dict) -> list[str]:
@@ -110,6 +119,9 @@ def check_opener(text: str, facts: dict) -> list[str]:
             if re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:seller|merchant) of record", text, re.I) and \
                     not re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:not|isn't|is not)\b", text, re.I):
                 problems.append(f"calls {brand} the seller of record; {brand} only processes payments")
+    bad_units = _price_units(text) - _price_units(facts_text)
+    if bad_units:
+        problems.append("price units not in facts: " + ", ".join(f"{n} per {u}" for n, u in sorted(bad_units)))
     extra_numbers = _numbers(text) - _numbers(facts_text)
     if extra_numbers:
         problems.append(f"numbers not in facts: {', '.join(sorted(extra_numbers))}")

@@ -93,6 +93,23 @@ def test_bad_openers_flagged(text, problem):
     assert any(problem in p for p in check_opener(text, FACTS))
 
 
+def test_invented_price_unit_flagged():
+    problems = check_opener("Your pricing shows $0.07 per token. How is tax going?", FACTS)
+    assert any("price units not in facts: 0.07 per tok" in p for p in problems)
+
+
+def test_price_with_context_is_given_to_model(site):
+    facts = build_facts(build_audit(site("sarvam_ai_api_pricing"), with_opener=False).to_dict())
+    assert facts["price_on_page"] == "Speech to text at ₹0.49 per minute"
+    assert check_opener("Sarvam lists speech to text at ₹0.49 per minute. Where are most of your buyers?", facts) == []
+
+
+def test_price_without_unit_is_not_given(site):
+    facts = build_facts(build_audit(site("jarvislabs_ai_pricing"), with_opener=False).to_dict())
+    assert facts["price_on_page"] == "not verified"
+    assert any("0.07" in p for p in check_opener("Your $0.07 price is neat. How is tax going?", facts))
+
+
 def test_stripe_not_mor_phrasing_passes():
     text = "Saw Jarvislabs uses Stripe, which is not a merchant of record. How do you handle VAT today?"
     assert check_opener(text, FACTS) == []
