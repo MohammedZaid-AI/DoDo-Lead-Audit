@@ -6,7 +6,7 @@ import pytest
 from pydantic import BaseModel
 
 from app.audit.builder import build_audit
-from app.audit.opener import build_facts, check_opener, draft_opener
+from app.audit.opener import DASH_RE, build_facts, check_opener, draft_opener
 from app.llm import LLMError, chat_json
 
 
@@ -108,6 +108,17 @@ def test_price_without_unit_is_not_given(site):
     facts = build_facts(build_audit(site("jarvislabs_ai_pricing"), with_opener=False).to_dict())
     assert facts["price_on_page"] == "not verified"
     assert any("0.07" in p for p in check_opener("Your $0.07 price is neat. How is tax going?", facts))
+
+
+def test_facts_have_no_dashes(site):
+    for slug in ["bolna_ai_pricing", "smallest_ai_pricing", "scalio_app"]:
+        facts = build_facts(build_audit(site(slug), with_opener=False).to_dict())
+        text = json.dumps({k: v for k, v in facts.items() if k != "switching"}, ensure_ascii=False)
+        assert not DASH_RE.search(text), slug
+    bolna = build_facts(build_audit(site("bolna_ai_pricing"), with_opener=False).to_dict())
+    assert "pay as you go" in bolna["price_on_page"]
+    smallest = build_facts(build_audit(site("smallest_ai_pricing"), with_opener=False).to_dict())
+    assert "$0.09 to $0.21" in smallest["price_on_page"]
 
 
 def test_stripe_not_mor_phrasing_passes():

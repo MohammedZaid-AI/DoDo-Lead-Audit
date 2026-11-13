@@ -79,7 +79,20 @@ def build_facts(audit: dict, signal: dict | None = None) -> dict:
     }
     if signal:
         facts["their_post"] = {"title": signal.get("title"), "quote": signal.get("quote") or (signal.get("body") or "")[:400]}
-    return facts
+    return _strip_dashes(facts)
+
+
+def _strip_dashes(value: Any) -> Any:
+    """Remove dashes from facts so the model does not copy them ('pay-as-you-go' -> 'pay as you go',
+    '$0.09 - $0.21' -> '$0.09 to $0.21'). URLs are left alone."""
+    if isinstance(value, dict):
+        return {k: _strip_dashes(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_strip_dashes(v) for v in value]
+    if not isinstance(value, str) or value.startswith("http"):
+        return value
+    value = re.sub(r"\s+[-‐‑‒–—―]\s+", " to " if re.search(r"\d\s+[-–—]\s+\S?\d", value) else ", ", value)
+    return re.sub(r"(?<=\w)[-‐‑‒–—―](?=\w)", " ", value)
 
 
 def _numbers(text: str) -> set[str]:
