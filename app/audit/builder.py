@@ -120,7 +120,7 @@ def _primary_evidence(d: DetectionResult) -> str:
     return f"'{e.matched[:140]}' ({e.location}, {e.page_url})" if e else ""
 
 
-def find_issues(d: DetectionResult, fees: FeeTable) -> list[Issue]:
+def find_issues(d: DetectionResult, fees: FeeTable, company: str = "The company") -> list[Issue]:
     """Issues backed by evidence, in the order a rep would raise them."""
     p, pr = d.provider, d.pricing
     issues: list[Issue] = []
@@ -139,7 +139,8 @@ def find_issues(d: DetectionResult, fees: FeeTable) -> list[Issue]:
                             "; ".join(f"'{pr.local_method_evidence[m][:120]}'" for m in india)))
     if p.has_mor is False:
         issues.append(Issue("not_mor", f"{name} is not a Merchant of Record",
-                            "They are the seller of record, so they own tax registration, filing and compliance "
+                            f"{name} only processes the payment. {company} itself is the seller of record, so "
+                            f"{company} owns tax registration, filing and compliance "
                             "in every market where they cross a threshold.", _primary_evidence(d)))
     if p.primary == "lemonsqueezy" and p.has_mor is not None:
         issues.append(Issue("ls_stripe", "Lemon Squeezy is moving into Stripe Managed Payments",
@@ -197,7 +198,7 @@ def build_audit(d: DetectionResult, signal: dict | None = None, with_opener: boo
     name = company_name(d.title, domain)
     setup = build_setup(d)
     fees = build_fee_table(d.provider.primary, setup.provider_label, d.pricing.price_samples)
-    issues = find_issues(d, fees)
+    issues = find_issues(d, fees, name)
     audit = Audit(
         company_name=name, url=d.url, domain=domain, what_they_sell=what_they_sell(d.title, d.meta_description),
         summary=build_summary(name, setup, issues), setup=setup, issues=issues, fee_table=fees,

@@ -22,6 +22,8 @@ HYPE_WORDS = ["revolutionary", "game changer", "game-changer", "seamless", "seam
               "unlock", "cutting edge", "best in class", "world class", "amazing", "incredible", "skyrocket",
               "leverage", "synergy", "disrupt", "10x", "turbocharge", "hassle free", "magic"]
 DASH_RE = re.compile(r"[-‐‑‒–—―]")
+HARD_ASK_RE = re.compile(r"\b(?:quick chat|a chat|hop on|jump on|a call|book|schedule|demo|meeting|"
+                         r"open to exploring|exploring how)\b", re.I)
 NUMBER_RE = re.compile(r"\d[\d,]*(?:\.\d+)?")
 
 SYSTEM = """You draft the first message a sales rep at Dodo Payments could send to a software founder.
@@ -31,12 +33,16 @@ payments, global tax, invoices and compliance.
 Rules:
 1. At most 60 words.
 2. Plain, friendly English. No hype words. No dashes or hyphens of any kind (write "pay as you go", not "pay-as-you-go").
-3. Open with one specific fact from FACTS about their setup or their post.
+3. Open with one specific, concrete detail from FACTS: their payment provider, a real price, their currency,
+   or a line from their post. Use the company or product name. Do not start with "I noticed".
 4. Mention Dodo at most once. Not mentioning it is fine.
-5. End with one soft question. No hard call to action, no links, no sign off.
+5. End with one soft question about their situation, for example where most of their buyers are or how they
+   handle tax today. Do not ask for a call, chat, demo or meeting. No links, no sign off.
 6. Use only what is in FACTS. Do not state any number, provider, country or feature that is not in FACTS.
    Anything marked "not verified" must not be stated as fact.
 7. Friendly, not an audit or an accusation. Tax points are "worth checking", never "you are non compliant".
+8. Get roles right. A payment processor such as Stripe or Razorpay is NOT the seller of record. When
+   merchant_of_record is "no", the company itself is the seller of record and owns the tax work.
 
 Return {"opener": "<message>"}. Respond only with JSON."""
 
@@ -95,6 +101,15 @@ def check_opener(text: str, facts: dict) -> list[str]:
         problems.append(f"hype words: {', '.join(hype)}")
     if not text.rstrip().endswith("?"):
         problems.append("does not end with a question")
+    if HARD_ASK_RE.search(text):
+        problems.append(f"asks for a meeting ('{HARD_ASK_RE.search(text).group(0)}'); ask about their situation instead")
+    for name, fp in fingerprints().items():
+        if fp.get("is_mor"):
+            continue
+        for brand in fp.get("names", []):
+            if re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:seller|merchant) of record", text, re.I) and \
+                    not re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:not|isn't|is not)\b", text, re.I):
+                problems.append(f"calls {brand} the seller of record; {brand} only processes payments")
     extra_numbers = _numbers(text) - _numbers(facts_text)
     if extra_numbers:
         problems.append(f"numbers not in facts: {', '.join(sorted(extra_numbers))}")

@@ -85,9 +85,23 @@ def test_good_opener_passes():
     ("Saw your pricing. Let's book a call.", "question"),
     ("Your $49 plan looks good. How do you handle tax?", "numbers not in facts: 49"),
     ("Moving off Paddle soon?", "Paddle"),
+    ("Saw Stripe is the seller of record for Bolna. How is tax going?", "calls Stripe the seller of record"),
+    ("Saw your USD pricing. Would you be open to a quick chat?", "asks for a meeting"),
+    ("Saw your USD pricing. Open to exploring how that could fit?", "asks for a meeting"),
 ])
 def test_bad_openers_flagged(text, problem):
     assert any(problem in p for p in check_opener(text, FACTS))
+
+
+def test_stripe_not_mor_phrasing_passes():
+    text = "Saw Jarvislabs uses Stripe, which is not a merchant of record. How do you handle VAT today?"
+    assert check_opener(text, FACTS) == []
+
+
+def test_not_mor_issue_names_company_as_seller(site):
+    a = build_audit(site("bolna_ai_pricing"), with_opener=False)
+    detail = next(i.detail for i in a.issues if i.key == "not_mor")
+    assert "Stripe only processes the payment. Bolna itself is the seller of record" in detail
 
 
 def test_opener_retries_with_feedback_then_passes(site):
