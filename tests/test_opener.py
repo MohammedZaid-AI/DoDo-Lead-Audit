@@ -153,3 +153,37 @@ def test_facts_exclude_unverified_provider(site):
     facts = build_facts(build_audit(site("scalio_app"), with_opener=False).to_dict())
     assert facts["payment_provider"] == "not verified"
     assert any("Stripe" in p for p in check_opener("Are you on Stripe today?", facts))
+
+
+def test_token_pacer_waits_when_budget_is_used():
+    from app.llm import TokenPacer
+    now = [0.0]
+    waits = []
+
+    def sleep(s):
+        waits.append(round(s, 1))
+        now[0] += s
+
+    p = TokenPacer(8000, clock=lambda: now[0], sleep=sleep)
+    p.wait_for(3000); p.record(3000)
+    p.wait_for(3000); p.record(3000)
+    assert waits == []          # 6000 used, fits
+    now[0] = 10
+    p.wait_for(3000)            # 9000 would exceed 8000: wait until the first call ages out
+    assert waits == [50.1]
+
+
+def test_daily_limit_stops_without_retrying():
+    from app.llm import DailyLimitError
+
+    class DayCap(Exception):
+        status_code = 429
+        response = SimpleNamespace(headers={"retry-after": "150"})
+
+        def __str__(self):
+            return "Rate limit reached on tokens per day (TPD): Limit 200000. Please try again in 2m30.3s."
+
+    waits = []
+    with pytest.raises(DailyLimitError, match="try again in 2m30.3s"):
+        chat_json("s", "u", Out, client=FakeClient(DayCap()), sleep=waits.append)
+    assert waits == []

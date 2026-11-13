@@ -87,26 +87,35 @@ class Politeness:
     def __init__(self, ua: str, delay: float) -> None:
         self.ua = ua
         self.delay = delay
-        self._robots: dict[str, RobotFileParser | None] = {}
+        self._robots: dict[str, RobotFileParser | str] = {}
         self._last: dict[str, float] = {}
 
-    def allowed(self, url: str) -> bool:
+    def check(self, url: str) -> str | None:
+        """None if the url may be loaded, else the reason it may not."""
         p = urlparse(url)
         base = f"{p.scheme}://{p.netloc}"
         if base not in self._robots:
             self._robots[base] = self._fetch_robots(base)
         rp = self._robots[base]
-        return True if rp is None else rp.can_fetch("DodoLeadAudit", url)
+        if rp == "allow_all":
+            return None
+        if isinstance(rp, str):
+            return rp
+        return None if rp.can_fetch("DodoLeadAudit", url) else "blocked by robots.txt"
 
-    def _fetch_robots(self, base: str) -> RobotFileParser | None:
+    def _fetch_robots(self, base: str) -> RobotFileParser | str:
+        """Rules, 'allow_all' (no robots.txt, 4xx), or a reason string when it cannot be read.
+        Fails closed: if robots.txt cannot be read (network error, 5xx) the site is skipped."""
         self.wait(base)
         try:
             r = httpx.get(f"{base}/robots.txt", headers={"User-Agent": self.ua},
                           timeout=10, follow_redirects=True)
-        except httpx.HTTPError:
-            return None  # unreachable robots.txt: treat as no rules
+        except httpx.HTTPError as e:
+            return f"robots.txt unreachable ({type(e).__name__}); skipped to be safe"
+        if r.status_code >= 500:
+            return f"robots.txt returned {r.status_code}; skipped to be safe"
         if r.status_code >= 400:
-            return None
+            return "allow_all"
         rp = RobotFileParser()
         rp.parse(r.text.splitlines())
         return rp
@@ -151,8 +160,9 @@ class Browser:
         """Render one page. Never raises: errors are recorded on the result."""
         data = PageData(requested_url=url)
         assert self._context and self.politeness
-        if not self.politeness.allowed(url):
-            data.error = "blocked by robots.txt"
+        reason = self.politeness.check(url)
+        if reason:
+            data.error = reason
             return data
         self.politeness.wait(url)
         page = self._context.new_page()

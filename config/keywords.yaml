@@ -1,4 +1,8 @@
+# Listener search phrases. Each phrase is searched as an exact phrase.
+# Reddit was dropped (new API apps need approval); subreddits kept for reference only.
 subreddits: [SaaS, indiehackers, microsaas, SideProject, startups, IndianStartups, developersIndia, Entrepreneur]
+
+# Hacker News (Algolia): stories and comments.
 phrases:
   - "stripe india"
   - "stripe invite only"
@@ -14,3 +18,23 @@ phrases:
   - "vat digital products"
   - "razorpay international"
   - "sell globally from india"
+
+# GitHub issues: founders and devs planning payments inside their own product repos.
+# GitHub phrase search is loose, so broad phrases ("payment provider", "sales tax") were dropped: mostly ERP noise.
+github_phrases:
+  - "merchant of record"
+  - "stripe not available"
+  - "stripe alternative"
+  - "stripe managed payments"
+  - "lemon squeezy"
+  - "lemonsqueezy"
+  - "paddle billing"
+  - "razorpay international"
+  - "international payments"
+  - "stripe india"
+  - "payment gateway"
+
+# Accounts / orgs that are payment companies themselves: their posts are skipped.
+payment_companies: [stripe, stripe-samples, paddle, paddlehq, paddlelabs, lemonsqueezy, lmsqueezy, razorpay,
+  cashfree, cashfreedev, juspay, payu, paypal, polarsource, polar-sh, dodopayments, dodo-payments,
+  fastspring, gumroad, antiwork, chargebee, adyen, checkout, braintree, mollie, square]

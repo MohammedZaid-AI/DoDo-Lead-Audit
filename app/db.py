@@ -40,7 +40,7 @@ class Detection(SQLModel, table=True):
 
 class Signal(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    source: str  # reddit | hn
+    source: str  # hn | github
     url: str = Field(index=True, unique=True)
     author: str | None = None
     title: str | None = None
@@ -51,6 +51,10 @@ class Signal(SQLModel, table=True):
     product_url: str | None = None
     company_id: int | None = Field(default=None, foreign_key="company.id")
     classification: dict | None = Field(default=None, sa_column=Column(JSON))
+    context: dict = Field(default_factory=dict, sa_column=Column(JSON))  # phrase, repo, story url
+    is_payment_pain: bool | None = None
+    status: str = "pending"  # pending | classified | failed
+    fetched_at: datetime = Field(default_factory=_now)
 
 
 class Audit(SQLModel, table=True):
@@ -120,3 +124,18 @@ def save_audit(s: Session, company_id: int, audit: Any, html_path: str,
     s.commit()
     s.refresh(row)
     return row
+
+
+def store_signals(s: Session, raws: list[Any]) -> int:
+    """Insert RawSignals (app.listen) not already stored, deduplicated by url. Returns new count."""
+    known = set(s.exec(select(Signal.url)).all())
+    new = 0
+    for r in raws:
+        if r.url in known:
+            continue
+        known.add(r.url)
+        s.add(Signal(source=r.source, url=r.url, author=r.author, title=r.title, body=r.body,
+                     created_at=r.created_at, context=r.context))
+        new += 1
+    s.commit()
+    return new
