@@ -88,7 +88,7 @@
 {% endfor %}</pre>{% endif %}
 
   <h2>Opening message</h2>
-  <blockquote>{{ a.opener }}</blockquote>
+  {% if a.opener %}<blockquote>{{ a.opener }}</blockquote>{% else %}<p class="note">{{ a.opener_note or "No opener drafted." }}</p>{% endif %}
   <p class="note">Draft for a human to review and send. Nothing is sent automatically.</p>
 
   {% if a.signal %}

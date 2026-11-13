@@ -59,6 +59,7 @@ class Audit:
     page_errors: dict[str, str]
     checked_at: str
     created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    opener_note: str = ""
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -191,7 +192,7 @@ def build_summary(name: str, s: SetupInfo, issues: list[Issue]) -> str:
     return f"{name} takes payments through {provider}, {mor}. Pricing: {mode}. {found.capitalize()}."
 
 
-def build_audit(d: DetectionResult, signal: dict | None = None) -> Audit:
+def build_audit(d: DetectionResult, signal: dict | None = None, with_opener: bool = True) -> Audit:
     domain = domain_of(d.pages_checked[0] if d.pages_checked else d.url)
     name = company_name(d.title, domain)
     setup = build_setup(d)
@@ -204,5 +205,10 @@ def build_audit(d: DetectionResult, signal: dict | None = None) -> Audit:
         evidence=[asdict(e) for e in d.provider.evidence], pages_checked=d.pages_checked,
         page_errors=d.page_errors, checked_at=d.checked_at,
     )
-    audit.opener = draft_opener(audit.to_dict(), signal)
+    if with_opener:
+        result = draft_opener(audit.to_dict(), signal)
+        audit.opener = result.text if result.ok else ""
+        audit.opener_note = "" if result.ok else "Opener failed checks: " + "; ".join(result.problems)
+    else:
+        audit.opener_note = "Opener not drafted (skipped)."
     return audit

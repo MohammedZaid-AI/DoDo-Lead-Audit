@@ -80,19 +80,19 @@ def test_no_provider_has_no_current_row():
 # --- audit issue rules on the hand-checked sites ---
 
 def test_scalio_audit(site):
-    a = build_audit(site("scalio_app"))
+    a = build_audit(site("scalio_app"), with_opener=False)
     assert [i.key for i in a.issues] == ["inr_only"]
     assert a.setup.has_mor == "not verified" and a.setup.price_sample == "₹999/month"
     assert a.switch_effort["kind"] == "unknown"
 
 
 def test_jarvislabs_audit(site):
-    a = build_audit(site("jarvislabs_ai_pricing"))
+    a = build_audit(site("jarvislabs_ai_pricing"), with_opener=False)
     keys = [i.key for i in a.issues]
     assert "not_mor" in keys and "no_tax_line" in keys and "india_methods" not in keys
     assert a.switch_effort["commands"] == ["npm install -g dodo-migrate", "dodo-migrate stripe"]
 
 
 def test_sarvam_has_tax_line_so_no_tax_issue(site):
-    a = build_audit(site("sarvam_ai_api_pricing"))
+    a = build_audit(site("sarvam_ai_api_pricing"), with_opener=False)
     assert "no_tax_line" not in [i.key for i in a.issues]

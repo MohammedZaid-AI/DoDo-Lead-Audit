@@ -49,20 +49,24 @@ def _fixture_pages(url: str) -> list[PageData]:
     return [PageData.load(s) for s in stems]
 
 
-def audit_detection(result: DetectionResult, signal: dict | None = None) -> Path:
+def audit_detection(result: DetectionResult, signal: dict | None = None, with_opener: bool = True) -> Path:
     """Build, render and store the audit for one detection. Returns the html path."""
-    audit = build_audit(result, signal)
+    audit = build_audit(result, signal, with_opener)
     path = save_audit(audit)
     with db.session() as s:
         company = db.upsert_company(s, audit.company_name, audit.url, audit.domain)
         db.save_detection(s, company.id, result)
         db.save_audit(s, company.id, audit, str(path))
     typer.echo(f"  issues:     {[i.key for i in audit.issues] or '-'}")
+    if audit.opener:
+        typer.echo(f"  opener ({len(audit.opener.split())} words): {audit.opener}")
+    else:
+        typer.secho(f"  opener:     {audit.opener_note}", fg="yellow")
     typer.secho(f"  audit:      {path}", fg="green")
     return path
 
 
-def _run_urls(urls: list[str], save_fixtures: bool, from_fixtures: bool = False) -> list[DetectionResult]:
+def _run_urls(urls: list[str], save_fixtures: bool, from_fixtures: bool = False, opener: bool = True) -> list[DetectionResult]:
     results = []
     out = OUTPUT_DIR / "detections"
     out.mkdir(parents=True, exist_ok=True)
@@ -71,7 +75,7 @@ def _run_urls(urls: list[str], save_fixtures: bool, from_fixtures: bool = False)
             result = analyze_pages(url, _fixture_pages(url))
             results.append(result)
             print_summary(result)
-            audit_detection(result)
+            audit_detection(result, with_opener=opener)
         return results
     with Browser() as browser:
         for url in urls:
@@ -84,23 +88,25 @@ def _run_urls(urls: list[str], save_fixtures: bool, from_fixtures: bool = False)
                 FIXTURE_DIR.mkdir(parents=True, exist_ok=True)
                 for i, page in enumerate(p for p in pages if p.ok):
                     page.save(FIXTURE_DIR / f"{slug}__{i}")
-            audit_detection(result)
+            audit_detection(result, with_opener=opener)
     return results
 
 
 @cli.command()
 def audit(url: str, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures"),
-          from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the site")) -> None:
+          from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the site"),
+                  opener: bool = typer.Option(True, help="Draft the LLM opener (needs GROQ_API_KEY)")) -> None:
     """Run detection and audit on one url. Saves html to output/audits/."""
-    _run_urls([url], save_fixtures, from_fixtures)
+    _run_urls([url], save_fixtures, from_fixtures, opener)
 
 
 @cli.command("audit-file")
 def audit_file(path: Path, save_fixtures: bool = typer.Option(False, help="Save rendered pages to tests/fixtures"),
-               from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the sites")) -> None:
+               from_fixtures: bool = typer.Option(False, help="Use saved fixtures instead of loading the sites"),
+                       opener: bool = typer.Option(True, help="Draft the LLM opener (needs GROQ_API_KEY)")) -> None:
     """Run detection and audit on every url in a text file (one per line)."""
     urls = [l.strip() for l in path.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
-    _run_urls(urls, save_fixtures, from_fixtures)
+    _run_urls(urls, save_fixtures, from_fixtures, opener)
 
 
 if __name__ == "__main__":
