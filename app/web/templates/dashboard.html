@@ -42,6 +42,18 @@
   input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
   .empty { padding: 28px; text-align: center; color: var(--muted); }
   .saved { font-size: 11px; color: var(--muted); display: block; min-height: 14px; }
+  .run { border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin-bottom: 18px; }
+  .run form { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: flex-end; }
+  .run label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); gap: 4px; }
+  .run label.check { flex-direction: row; align-items: center; gap: 6px; font-size: 14px; color: var(--ink); padding-bottom: 6px; }
+  .run label.check input { width: 16px; height: 16px; }
+  .run button:disabled { opacity: .55; cursor: default; }
+  .run-state { font-size: 14px; margin: 10px 0 0; }
+  .run-state.failed { color: #a33; }
+  .run-log { display: none; margin: 10px 0 0; max-height: 220px; overflow: auto; background: var(--soft);
+             border-radius: 4px; padding: 10px 12px; font: 12px/1.45 ui-monospace, Consolas, monospace;
+             white-space: pre-wrap; word-break: break-word; }
+  .hint { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
 </style>
 </head>
 <body>
@@ -49,6 +61,24 @@
   <h1>Leads</h1>
   <p class="sub">{{ total }} audited companies, sorted by score. {{ reviewed_count }} reviewed by hand.
     Drafts only: nothing is ever sent from here.</p>
+
+  <section class="run" aria-label="Find new leads">
+    <form id="run-form">
+      <label>Days back
+        <input type="number" name="days" min="1" max="30" value="7">
+      </label>
+      <label>Audit top
+        <input type="number" name="top" min="1" max="50" value="20">
+      </label>
+      <label class="check"><input type="checkbox" name="fetch" checked> Fetch new posts</label>
+      <label class="check"><input type="checkbox" name="opener" checked> Draft openers</label>
+      <button type="submit" id="run-btn">Run</button>
+    </form>
+    <p class="hint">Reads Hacker News, GitHub and the companies' public pages, then rewrites the audits. A full run
+      takes several minutes. Untick "Fetch new posts" to re-score what is already stored.</p>
+    <p class="run-state" id="run-state" aria-live="polite"></p>
+    <pre class="run-log" id="run-log"></pre>
+  </section>
 
   <form class="filters" method="get" action="/">
     <label>Provider
@@ -124,6 +154,58 @@ document.querySelectorAll('input[type=checkbox][data-id]').forEach(function (box
     });
   });
 });
+
+(function () {
+  var form = document.getElementById('run-form'), btn = document.getElementById('run-btn'),
+      state = document.getElementById('run-state'), log = document.getElementById('run-log'),
+      timer = null, wasRunning = false;
+
+  function show(s) {
+    var running = s.state === 'running';
+    btn.disabled = running;
+    btn.textContent = running ? 'Running…' : 'Run';
+    state.className = 'run-state' + (s.state === 'failed' ? ' failed' : '');
+    if (running) state.textContent = 'Running since ' + s.started + ' (days ' + s.params.days + ', top ' + s.params.top + ').';
+    else if (s.state === 'done') state.textContent = 'Finished at ' + s.finished + '. ' + s.summary;
+    else if (s.state === 'failed') state.textContent = s.summary;
+    else state.textContent = '';
+    if (s.log && s.log.length) {
+      var atEnd = log.scrollTop + log.clientHeight >= log.scrollHeight - 4;
+      log.style.display = 'block';
+      log.textContent = s.log.join('\n');
+      if (atEnd) log.scrollTop = log.scrollHeight;
+    }
+    if (running) { wasRunning = true; poll(); }
+    else if (wasRunning) { wasRunning = false; state.textContent += ' Reloading the list…'; setTimeout(function () { location.reload(); }, 1500); }
+  }
+
+  function poll() {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fetch('/run/status').then(function (r) { return r.json(); }).then(show).catch(poll);
+    }, 2000);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var body = {days: +form.days.value || 7, top: +form.top.value || 20,
+                fetch: form.fetch.checked, opener: form.opener.checked};
+    btn.disabled = true;
+    fetch('/run', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
+      .then(function (r) {
+        if (r.status === 409) return fetch('/run/status').then(function (x) { return x.json(); });
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      })
+      .then(show)
+      .catch(function (err) { btn.disabled = false; state.className = 'run-state failed'; state.textContent = 'Could not start: ' + err.message; });
+  });
+
+  fetch('/run/status').then(function (r) { return r.json(); }).then(function (s) {
+    if (s.state === 'running') show(s);
+    else if (s.state !== 'idle') { show(s); }
+  }).catch(function () {});
+})();
 </script>
 </body>
 </html>

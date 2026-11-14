@@ -63,3 +63,55 @@ def test_mark_reviewed_saves(client):
     with db.session() as s:
         assert not s.get(db.Audit, 1).reviewed
     assert client.post("/audit/999/reviewed", json={"reviewed": True}).status_code == 404
+
+
+def test_run_button_starts_one_run_at_a_time(client, monkeypatch):
+    import threading
+    import time
+    from types import SimpleNamespace
+
+    from app.web import main
+    from app.web.runner import Runner
+
+    gate, calls = threading.Event(), []
+
+    def fake_run(days, top, fetch, sources, opener, log):
+        calls.append((days, top, fetch, opener))
+        log("listening")
+        gate.wait(5)
+        return SimpleNamespace(candidates=4, sites=3, openers=2), [1, 2]
+
+    monkeypatch.setattr(main, "runner", Runner(target=fake_run))
+    r = client.post("/run", json={"days": 3, "top": 5, "fetch": False, "opener": True})
+    assert r.status_code == 200 and r.json()["state"] == "running"
+    assert client.post("/run", json={}).status_code == 409  # second click while busy
+    gate.set()
+    for _ in range(50):
+        s = client.get("/run/status").json()
+        if s["state"] != "running":
+            break
+        time.sleep(0.05)
+    assert s["state"] == "done" and "2 leads audited" in s["summary"] and "listening" in s["log"]
+    assert calls == [(3, 5, False, True)]
+    assert client.post("/run", json={"days": 99}).status_code == 422  # out of range
+    assert client.post("/run", data={"days": "3"}).status_code == 422  # plain form posts are refused
+    assert 'id="run-btn"' in client.get("/").text
+
+
+def test_run_failure_is_reported(client, monkeypatch):
+    import time
+
+    from app.web import main
+    from app.web.runner import Runner
+
+    def boom(*a, **k):
+        raise RuntimeError("Groq daily limit")
+
+    monkeypatch.setattr(main, "runner", Runner(target=boom))
+    client.post("/run", json={})
+    for _ in range(50):
+        s = client.get("/run/status").json()
+        if s["state"] != "running":
+            break
+        time.sleep(0.05)
+    assert s["state"] == "failed" and "Groq daily limit" in s["summary"]

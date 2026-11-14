@@ -63,6 +63,8 @@ Output:
 - `output/audits/*.html`: one audit per lead. Each is a standalone file you can open or share.
 - `output/leads.db`: SQLite database with posts, companies, audits and reviewed ticks.
 
+The dashboard has a **Run** button that does the same thing as `python cli.py run`. You can set the days and the top N. It shows the run's log as it happens and reloads the list when it finishes. Only one run can go at a time. Untick "Fetch new posts" to re-score what is already stored without fetching anything new.
+
 The dashboard lists leads by score, filters by provider, pain type, minimum score and reviewed state, opens each audit, and saves the "Mark reviewed" ticks to the database.
 
 Other commands:

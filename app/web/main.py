@@ -1,6 +1,7 @@
 """Dashboard: leads sorted by score, filters, audit pages, and a 'Mark reviewed' checkbox.
 
-Read only towards the outside world: it only reads the local database and the saved audit files.
+The Run button starts the same read-only pipeline as the CLI: it reads public posts and pages and drafts
+audits. Nothing is ever posted or sent.
 """
 from __future__ import annotations
 
@@ -9,11 +10,12 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlmodel import select
 
 from app import db
 from app.audit.render import TEMPLATES
+from app.web.runner import Runner
 
 app = FastAPI(title="Dodo Lead Audit", docs_url=None, redoc_url=None)
 templates = Jinja2Templates(directory=str(TEMPLATES))
@@ -93,6 +95,29 @@ def audit_page(audit_id: int):
         raise HTTPException(404, "Audit not found. Run 'python cli.py run' to create audits.")
     html = Path(audit.html_path).read_text(encoding="utf-8")
     return html.replace("<body>", "<body>" + BACK_BAR, 1)
+
+
+runner = Runner()
+
+
+class RunIn(BaseModel):
+    days: int = Field(7, ge=1, le=30)
+    top: int = Field(20, ge=1, le=50)
+    fetch: bool = True
+    opener: bool = True
+
+
+@app.post("/run")
+def start_run(body: RunIn):
+    """Start the same pipeline as 'python cli.py run'. JSON only, so a form on another site cannot trigger it."""
+    if not runner.start(body.days, body.top, body.fetch, body.opener):
+        raise HTTPException(409, "A run is already in progress")
+    return runner.status()
+
+
+@app.get("/run/status")
+def run_status():
+    return runner.status()
 
 
 class ReviewedIn(BaseModel):
