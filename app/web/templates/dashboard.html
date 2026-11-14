@@ -194,6 +194,7 @@ document.querySelectorAll('input[type=checkbox][data-id]').forEach(function (box
     fetch('/run', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
       .then(function (r) {
         if (r.status === 409) return fetch('/run/status').then(function (x) { return x.json(); });
+        if (r.status === 404) throw new Error('the server is running older code. Stop it with Ctrl+C and start "python cli.py serve" again.');
         if (!r.ok) throw new Error(r.status);
         return r.json();
       })
