@@ -131,6 +131,25 @@ def listen(days: int = typer.Option(7, help="How many days back to search"),
     typer.secho(f"  total signals in database: {total}", bold=True)
 
 
+@cli.command()
+def run(days: int = typer.Option(7, help="How many days back to search"),
+        top: int = typer.Option(20, help="How many leads to audit and export"),
+        listen_first: bool = typer.Option(True, "--listen/--no-listen", help="Fetch new posts first (else use the database)"),
+        sources: str = typer.Option("hn,github", help="Comma separated: hn, github"),
+        opener: bool = typer.Option(True, help="Draft the LLM opener for each audit")) -> None:
+    """Listen, classify, find product sites, detect, score, audit the top N, export output/leads.csv."""
+    st, leads = pipeline.run(days, top, listen_first, [x.strip() for x in sources.split(",") if x.strip()],
+                             opener, log=typer.echo)
+    typer.secho("\nTop leads", bold=True)
+    for i, l in enumerate(leads, 1):
+        det = l.detection
+        typer.echo(f"  {i:>2}. {l.score:>4g}  {l.domain:32} {det.provider.primary or 'not verified':14} "
+                   f"{det.pricing.currency_mode:15} {'; '.join(l.reasons)[:90]}")
+    typer.echo(f"\n  pain posts: {st.candidates}  without product url: {st.no_url}  sites: {st.sites}  "
+               f"unreachable: {st.site_errors}  audited: {st.audited}  openers ok: {st.openers}")
+    typer.secho(f"  leads csv: {st.csv}", fg="green")
+
+
 @cli.command("classify")
 def classify_cmd(recheck_pain: bool = typer.Option(False, help="Re-check posts already marked as payment pain"),
                  recheck_all: bool = typer.Option(False, help="Re-check every classified post (after a prompt change)"),

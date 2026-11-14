@@ -114,12 +114,13 @@ def save_detection(s: Session, company_id: int, d: Any) -> Detection:
 
 
 def save_audit(s: Session, company_id: int, audit: Any, html_path: str,
-               signal_id: int | None = None, score: float | None = None) -> Audit:
-    """Store an audit (app.audit.builder.Audit)."""
-    data = audit.to_dict()
-    row = Audit(company_id=company_id, signal_id=signal_id, summary=audit.summary, issues=data["issues"],
-                fee_table=data["fee_table"], switch_effort=audit.switch_effort, opener=audit.opener,
-                score=score, html_path=html_path, data=data)
+               signal_id: int | None = None, score: float | None = None, extra: dict | None = None) -> Audit:
+    """Store an audit (app.audit.builder.Audit). One row per company: a re-run updates it and keeps 'reviewed'."""
+    data = audit.to_dict() | (extra or {})
+    row = s.exec(select(Audit).where(Audit.company_id == company_id)).first() or Audit(company_id=company_id)
+    row.signal_id, row.summary, row.issues = signal_id, audit.summary, data["issues"]
+    row.fee_table, row.switch_effort, row.opener = data["fee_table"], audit.switch_effort, audit.opener
+    row.score, row.html_path, row.data, row.created_at = score, html_path, data, _now()
     s.add(row)
     s.commit()
     s.refresh(row)
