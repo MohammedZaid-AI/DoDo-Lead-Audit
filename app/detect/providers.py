@@ -57,13 +57,13 @@ def _is_own_site(provider_patterns: list[str], page_url: str) -> bool:
     return any(dom and dom in p.lower() for p in provider_patterns)
 
 
-def _first_match(value: str, patterns: list[str]) -> str | None:
-    low = value.lower()
+def _first_match(value: str, patterns: list[str], low: str | None = None) -> str | None:
+    low = value.lower() if low is None else low
     return next((p for p in patterns if p.lower() in low), None)
 
 
-def _snippet(html: str, pattern: str, width: int = 60) -> str:
-    i = html.lower().find(pattern.lower())
+def _snippet(html: str, pattern: str, width: int = 60, low: str | None = None) -> str:
+    i = (html.lower() if low is None else low).find(pattern.lower())
     return " ".join(html[max(0, i - width): i + len(pattern) + width].split())
 
 
@@ -73,6 +73,7 @@ def match_page(page: PageData, fps: dict[str, dict] | None = None) -> list[Evide
     url = page.final_url or page.requested_url
     sents = sentences(page.text)
     found: list[Evidence] = []
+    html_low: str | None = None  # lowercased once, only if a provider needs the inline html check
     for name, fp in fps.items():
         patterns: list[str] = fp.get("patterns", [])
         checkout: list[str] = fp.get("checkout_patterns", [])
@@ -93,9 +94,11 @@ def match_page(page: PageData, fps: dict[str, dict] | None = None) -> list[Evide
             found += _match_values(name, "link", hrefs, patterns, url, "medium")
         found += _match_text(name, fp.get("names", []), sents, url)
         if not any(e.provider == name for e in found):
-            pat = _first_match(page.html, patterns)
+            if html_low is None:
+                html_low = page.html.lower()
+            pat = _first_match(page.html, patterns, html_low)
             if pat:
-                found.append(Evidence(name, pat, "inline_html", _snippet(page.html, pat), url, "low"))
+                found.append(Evidence(name, pat, "inline_html", _snippet(page.html, pat, low=html_low), url, "low"))
     return found
 
 
