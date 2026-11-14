@@ -115,3 +115,25 @@ def test_run_failure_is_reported(client, monkeypatch):
             break
         time.sleep(0.05)
     assert s["state"] == "failed" and "Groq daily limit" in s["summary"]
+
+
+def test_redraft_only_touches_failed_openers(client, monkeypatch, site):
+    from app import pipeline
+
+    monkeypatch.setattr(pipeline, "detect_sites", lambda urls, **k: {d: site("bolna_ai_pricing") for d in urls})
+    real_build = pipeline.build_audit
+
+    def build(det, signal, with_opener):
+        a = real_build(det, signal, False)
+        a.opener = "Fresh opener?"
+        return a
+
+    monkeypatch.setattr(pipeline, "build_audit", build)
+    monkeypatch.setattr(pipeline, "save_audit", lambda a: "x.html")
+    client.post("/audit/1/reviewed", json={"reviewed": True})
+    assert pipeline.redraft(log=lambda *_: None) == (1, 1)  # bolna had no opener; scalio has no signal
+    with db.session() as s:
+        row = s.get(db.Audit, 1)
+        assert row.opener == "Fresh opener?" and row.score == 8 and row.reviewed
+        assert row.data["score_reasons"] == ["+3 real payment pain in their post"]
+    assert pipeline.redraft(log=lambda *_: None) == (0, 0)  # nothing missing now

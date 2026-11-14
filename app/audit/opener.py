@@ -24,6 +24,7 @@ HYPE_WORDS = ["revolutionary", "game changer", "game-changer", "seamless", "seam
 DASH_RE = re.compile(r"[-‐‑‒–—―]")
 HARD_ASK_RE = re.compile(r"\b(?:quick chat|a chat|hop on|jump on|a call|book|schedule|demo|meeting|"
                          r"open to exploring|exploring how)\b", re.I)
+ATTEMPTS = 3  # first draft plus two rewrites that are told which rules they broke
 COPY_WORDS = 7  # a run of this many words shared with their post counts as pasting it
 MOR_ROLE_RE = re.compile(r"\bhelps?\s+(?:\w+\s+){0,2}(?:merchants? of record|become (?:the |a |your )?"
                          r"(?:legal seller|seller of record|merchant of record))", re.I)
@@ -196,7 +197,7 @@ def draft_opener(audit: dict, signal: dict | None = None, client: Any = None) ->
     user = "FACTS:\n" + json.dumps(facts, ensure_ascii=False, indent=1)
     problems: list[str] = []
     text = ""
-    for _ in range(2):
+    for _ in range(ATTEMPTS):
         prompt = user if not problems else (
             f"{user}\n\nYour previous draft was:\n{text}\nIt broke these rules: {'; '.join(problems)}. "
             "Write a new one that follows every rule.")

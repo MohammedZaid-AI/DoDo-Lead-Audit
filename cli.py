@@ -164,6 +164,13 @@ def serve(host: str = typer.Option("127.0.0.1", help="Address to bind (local onl
     uvicorn.run("app.web.main:app", host=host, port=port, log_level="warning")
 
 
+@cli.command()
+def redraft(all_leads: bool = typer.Option(False, "--all", help="Redraft every lead, not only failed openers")) -> None:
+    """Draft openers again for leads whose opener failed its checks. Keeps scores and 'reviewed'."""
+    tried, ok = pipeline.redraft(only_missing=not all_leads, log=typer.echo)
+    typer.secho(f"  redrafted: {tried}  openers ok: {ok}", bold=True)
+
+
 @cli.command("classify")
 def classify_cmd(recheck_pain: bool = typer.Option(False, help="Re-check posts already marked as payment pain"),
                  recheck_all: bool = typer.Option(False, help="Re-check every classified post (after a prompt change)"),

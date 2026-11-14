@@ -417,3 +417,28 @@ def export_leads(s, leads: list[Lead], path: Path) -> Path:
                         "; ".join(lead.reasons), lead.opener,
                         lead.audit_path])
     return path
+
+
+def redraft(only_missing: bool = True, log=print) -> tuple[int, int]:
+    """Draft openers again for audited leads (by default only those whose opener failed its checks).
+    Uses the cached pages and keeps each lead's score, reasons, signal and 'reviewed'. Returns (tried, ok)."""
+    tried = ok = 0
+    with db.session() as s:
+        rows = s.exec(select(db.Audit).where(db.Audit.signal_id != None)).all()  # noqa: E711
+        rows = [r for r in rows if not (only_missing and r.opener)]
+        for i, row in enumerate(rows, 1):
+            company, sig = s.get(db.Company, row.company_id), s.get(db.Signal, row.signal_id)
+            det = detect_sites({company.domain: company.url}, log=log,
+                               max_hours={company.domain: YC_CACHE_DAYS * 24})[company.domain]
+            if not det.pages_checked:
+                log(f"  [{i}/{len(rows)}] {company.domain}: site did not load, skipped")
+                continue
+            audit = build_audit(det, signal_dict(sig), True)
+            path = save_audit(audit)
+            data = row.data or {}
+            db.save_audit(s, company.id, audit, str(path), signal_id=sig.id, score=row.score,
+                          extra={k: data[k] for k in ("score", "score_reasons") if k in data})
+            tried += 1
+            ok += int(bool(audit.opener))
+            log(f"  [{i}/{len(rows)}] {company.domain}  opener: {'ok' if audit.opener else audit.opener_note[:90]}")
+    return tried, ok
