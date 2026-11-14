@@ -172,7 +172,8 @@ def product_url_for(sig: db.Signal, homepage: Callable[[str], str | None] = repo
 
 def signal_quote(sig: db.Signal, limit: int = 240) -> str:
     """The sentence from the post that talks about payments, else the title. Bodies were redacted at fetch."""
-    body = re.sub(r"\s+", " ", sig.body or "").strip()
+    body = re.sub(r"\*\*|__|`", "", sig.body or "")  # drop Markdown emphasis and code marks
+    body = re.sub(r"\s+", " ", body).strip()
     for sent in re.split(r"(?<=[.!?])\s+", body):
         if PAYMENT_TERMS.search(sent) and len(sent) > 20:
             return sent[:limit].rstrip() + ("..." if len(sent) > limit else "")

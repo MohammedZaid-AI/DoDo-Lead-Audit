@@ -33,6 +33,8 @@ def test_quote_prefers_the_payment_sentence():
     s = sig(body="We build a notes app. Stripe is not available in Pakistan so we need another way to get paid. Thanks!")
     assert signal_quote(s) == "Stripe is not available in Pakistan so we need another way to get paid."
     assert signal_quote(sig(body="No payment words here.")) == "t"
+    assert signal_quote(sig(body="**Lemon Squeezy** is the approved `merchant of record` now.")) == \
+        "Lemon Squeezy is the approved merchant of record now."
 
 
 def test_pick_leads_ranks_and_keeps_best_post_per_site(site):

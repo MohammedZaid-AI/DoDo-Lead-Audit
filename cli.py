@@ -150,6 +150,15 @@ def run(days: int = typer.Option(7, help="How many days back to search"),
     typer.secho(f"  leads csv: {st.csv}", fg="green")
 
 
+@cli.command()
+def serve(host: str = typer.Option("127.0.0.1", help="Address to bind (local only by default)"),
+          port: int = typer.Option(8000, help="Port")) -> None:
+    """Start the dashboard at http://127.0.0.1:8000."""
+    import uvicorn
+    typer.secho(f"Dashboard: http://{host}:{port}  (Ctrl+C to stop)", fg="green")
+    uvicorn.run("app.web.main:app", host=host, port=port, log_level="warning")
+
+
 @cli.command("classify")
 def classify_cmd(recheck_pain: bool = typer.Option(False, help="Re-check posts already marked as payment pain"),
                  recheck_all: bool = typer.Option(False, help="Re-check every classified post (after a prompt change)"),
