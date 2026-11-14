@@ -44,3 +44,13 @@ def test_pick_leads_ranks_and_keeps_best_post_per_site(site):
     leads = pick_leads(by_domain, urls, {"bolna.ai": bolna, "scalio.app": scalio}, NOW, RunStats(), log=lambda *_: None)
     assert [l.domain for l in leads] == ["bolna.ai", "scalio.app"]
     assert leads[0].signal_id == 2 and leads[0].score > leads[1].score
+
+
+def test_readme_lookup_runs_once_after_homepage():
+    calls = []
+    s = sig()
+    url = product_url_for(s, lambda r: None, lambda r: calls.append(r) or "https://acme.app")
+    assert url == "https://acme.app" and s.context["readme_checked"] and calls == ["me/app"]
+    s2 = sig()
+    s2.context["homepage_checked"] = s2.context["readme_checked"] = True
+    assert product_url_for(s2, lambda r: 1 / 0, lambda r: 1 / 0) is None  # both already tried: no lookups

@@ -18,7 +18,7 @@ from app.detect import analyze_pages, detect
 from app.detect.browser import Browser, PageData
 from app.listen import RawSignal
 from app.listen.classify import PAYMENT_TERMS, classify, worth_classifying
-from app.listen.github import fetch_github, repo_homepage
+from app.listen.github import fetch_github, repo_homepage, repo_readme_site
 from app.listen.hn import fetch_hn
 from app.listen.yc import batch_year, fetch_directory
 from app.llm import DailyLimitError
@@ -159,14 +159,19 @@ def site_domain(url: str) -> str:
     return domain_of(url if url.startswith("http") else "https://" + url)
 
 
-def product_url_for(sig: db.Signal, homepage: Callable[[str], str | None] = repo_homepage) -> str | None:
-    """The product site for a pain signal: the classifier's url, else the GitHub repo homepage (checked once)."""
+def product_url_for(sig: db.Signal, homepage: Callable[[str], str | None] = repo_homepage,
+                    readme: Callable[[str], str | None] = repo_readme_site) -> str | None:
+    """The product site for a pain signal: the classifier's url, else the GitHub repo homepage field,
+    else a link in the README that is clearly the product site. Each lookup runs once per post."""
     url = sig.product_url
     ctx = sig.context or {}
     if not url and sig.source == "github" and ctx.get("repo") and not ctx.get("homepage_checked"):
         url = homepage(ctx["repo"])
-        sig.context = {**ctx, "homepage_checked": True}
-        sig.product_url = url
+        ctx = {**ctx, "homepage_checked": True}
+        sig.context, sig.product_url = ctx, url
+    if not url and sig.source == "github" and ctx.get("repo") and not ctx.get("readme_checked"):
+        url = readme(ctx["repo"])
+        sig.context, sig.product_url = {**ctx, "readme_checked": True}, url
     if not url:
         return None
     url = url if url.startswith("http") else "https://" + url
