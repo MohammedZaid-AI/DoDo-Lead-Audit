@@ -22,21 +22,21 @@ class Runner:
         self.summary = ""
         self.log: deque[str] = deque(maxlen=MAX_LOG)
 
-    def start(self, days: int, top: int, fetch: bool, opener: bool) -> bool:
+    def start(self, days: int, top: int, fetch: bool, opener: bool, yc: int = 0) -> bool:
         """Start a run. False if one is already running."""
         with self._lock:
             if self.state == "running":
                 return False
             self.state, self.summary, self.finished = "running", "", None
-            self.params = {"days": days, "top": top, "fetch": fetch, "opener": opener}
+            self.params = {"days": days, "top": top, "fetch": fetch, "opener": opener, "yc": yc}
             self.started = _now()
             self.log.clear()
-        threading.Thread(target=self._work, args=(days, top, fetch, opener), daemon=True).start()
+        threading.Thread(target=self._work, args=(days, top, fetch, opener, yc), daemon=True).start()
         return True
 
-    def _work(self, days: int, top: int, fetch: bool, opener: bool) -> None:
+    def _work(self, days: int, top: int, fetch: bool, opener: bool, yc: int) -> None:
         try:
-            st, leads = self._target(days, top, fetch, None, opener, log=self._say)
+            st, leads = self._target(days, top, fetch, None, opener, log=self._say, yc=yc)
             self.summary = (f"{len(leads)} leads audited from {st.candidates} pain posts and {st.sites} sites. "
                             f"Openers ok: {st.openers}.")
             self.state = "done"

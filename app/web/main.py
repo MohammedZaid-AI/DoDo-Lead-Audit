@@ -22,7 +22,7 @@ templates = Jinja2Templates(directory=str(TEMPLATES))
 
 PAIN_LABELS = {"stripe_access": "Stripe access", "mor_switch": "MoR switch", "tax_confusion": "Tax confusion",
                "choosing_gateway": "Choosing a gateway", "payout_issue": "Payouts", "other": "Other"}
-SOURCE_LABELS = {"hn": "Hacker News", "github": "GitHub"}
+SOURCE_LABELS = {"hn": "Hacker News", "github": "GitHub", "yc": "YC directory"}
 
 
 def lead_rows() -> list[dict]:
@@ -105,12 +105,13 @@ class RunIn(BaseModel):
     top: int = Field(20, ge=1, le=50)
     fetch: bool = True
     opener: bool = True
+    yc: int = Field(0, ge=0, le=100)
 
 
 @app.post("/run")
 def start_run(body: RunIn):
     """Start the same pipeline as 'python cli.py run'. JSON only, so a form on another site cannot trigger it."""
-    if not runner.start(body.days, body.top, body.fetch, body.opener):
+    if not runner.start(body.days, body.top, body.fetch, body.opener, body.yc):
         raise HTTPException(409, "A run is already in progress")
     return runner.status()
 

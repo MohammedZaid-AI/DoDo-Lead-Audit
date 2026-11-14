@@ -57,6 +57,20 @@ python cli.py serve                   # dashboard at http://127.0.0.1:8000
 - Site pages are cached for 24 hours.
 - "Reviewed" ticks survive a re-run for companies still in the top N. A company that drops out of the top N has its audit removed.
 
+### YC startup directory
+
+Add `--yc 20` to also check companies from the Y Combinator startup directory. In the dashboard, set the "New YC sites" box.
+
+```powershell
+python cli.py run --days 7 --top 20 --yc 20
+python cli.py run --yc 20 --yc-lists location/india,industry/saas
+```
+
+- **What it reads:** the public directory pages, such as `/companies/location/india`. It respects robots.txt, which only blocks the search page. It never reads founder profiles.
+- **Filter:** set in [config/yc.yaml](config/yc.yaml). It keeps active software companies from 2019 onwards with a website. It leaves out payment and finance companies, and companies selling physical goods or services. Edit that file to change the lists or the filter.
+- **Score:** these companies didn't post about a problem, so they get no pain or urgency points. They're scored only on what their site shows: provider, merchant of record and currency, so 0 to about 4. They rank below real pain posts, which is intended. Their audit cites their YC profile instead of a post, and the opener doesn't pretend they wrote anything.
+- **How many per run:** each run loads up to `--yc` YC sites that haven't been checked yet, newest batch first. Sites checked in the last 14 days are scored again from the cache at no cost. Running daily with `--yc 20` gets through the India list (about 50 companies) in three days.
+
 Output:
 
 - `output/leads.csv`: the ranked leads.

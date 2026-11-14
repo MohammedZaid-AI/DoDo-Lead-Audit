@@ -93,7 +93,7 @@
 
   {% if a.signal %}
   <h2>Source signal</h2>
-  <p><a href="{{ a.signal.url }}">{{ a.signal.title or a.signal.url }}</a> ({{ {"hn": "Hacker News", "github": "GitHub"}.get(a.signal.source, a.signal.source) }}{% if a.signal.author %}, posted by {{ a.signal.author }}{% endif %}{% if a.signal.posted %} on {{ a.signal.posted }}{% endif %})</p>
+  <p><a href="{{ a.signal.url }}">{{ a.signal.title or a.signal.url }}</a> ({{ {"hn": "Hacker News", "github": "GitHub", "yc": "YC startup directory, no pain post"}.get(a.signal.source, a.signal.source) }}{% if a.signal.author %}, posted by {{ a.signal.author }}{% endif %}{% if a.signal.posted %} on {{ a.signal.posted }}{% endif %})</p>
   {% if a.signal.quote %}<blockquote>“{{ a.signal.quote }}”</blockquote>{% endif %}
   {% endif %}
 

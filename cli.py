@@ -136,10 +136,13 @@ def run(days: int = typer.Option(7, help="How many days back to search"),
         top: int = typer.Option(20, help="How many leads to audit and export"),
         listen_first: bool = typer.Option(True, "--listen/--no-listen", help="Fetch new posts first (else use the database)"),
         sources: str = typer.Option("hn,github", help="Comma separated: hn, github"),
-        opener: bool = typer.Option(True, help="Draft the LLM opener for each audit")) -> None:
+        opener: bool = typer.Option(True, help="Draft the LLM opener for each audit"),
+        yc: int = typer.Option(0, help="YC directory companies to newly check this run (0 = off; see config/yc.yaml)"),
+        yc_lists: str = typer.Option("", help="Comma separated YC lists, e.g. location/india,industry/saas")) -> None:
     """Listen, classify, find product sites, detect, score, audit the top N, export output/leads.csv."""
     st, leads = pipeline.run(days, top, listen_first, [x.strip() for x in sources.split(",") if x.strip()],
-                             opener, log=typer.echo)
+                             opener, log=typer.echo, yc=yc,
+                             yc_lists=[x.strip() for x in yc_lists.split(",") if x.strip()] or None)
     typer.secho("\nTop leads", bold=True)
     for i, l in enumerate(leads, 1):
         det = l.detection
@@ -147,6 +150,8 @@ def run(days: int = typer.Option(7, help="How many days back to search"),
                    f"{det.pricing.currency_mode:15} {'; '.join(l.reasons)[:90]}")
     typer.echo(f"\n  pain posts: {st.candidates}  without product url: {st.no_url}  sites: {st.sites}  "
                f"unreachable: {st.site_errors}  audited: {st.audited}  openers ok: {st.openers}")
+    if st.yc_sites:
+        typer.echo(f"  YC companies scored: {st.yc_sites}  newly loaded: {st.yc_new}")
     typer.secho(f"  leads csv: {st.csv}", fg="green")
 
 
