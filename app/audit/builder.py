@@ -78,13 +78,36 @@ def domain_of(url: str) -> str:
     return host[4:] if host.startswith("www.") else host
 
 
+SHARED_HOSTS = ("vercel.app", "netlify.app", "github.io", "pages.dev", "onrender.com", "herokuapp.com",
+                "fly.dev", "web.app", "firebaseapp.com", "railway.app")
+GENERIC_LABELS = {"www", "app", "docs", "doc", "portal", "admin", "dashboard", "my", "go", "get", "try", "api",
+                  "shop", "store", "health", "web", "site", "home", "beta", "dev", "staging"}
+
+
+def _brand_label(domain: str) -> str:
+    """The part of the host that names the product: 'docs.agno.com' -> 'agno', 'lumina.vercel.app' -> 'lumina'."""
+    parts = domain.split(".")
+    if any(domain.endswith("." + h) for h in SHARED_HOSTS):
+        return parts[0]
+    labels = parts[:-1] if len(parts) > 1 else parts
+    for label in labels:
+        if label not in GENERIC_LABELS:
+            return label
+    return labels[0]
+
+
 def company_name(title: str, domain: str) -> str:
-    """Brand name from the page title, matched against the domain label."""
-    label = domain.split(".")[0]
-    m = re.search(rf"\b({re.escape(label)}(?:\.[a-z]{{2,4}})?)\b", title, re.I)
-    if m:
-        return m.group(1)
-    return label.capitalize()
+    """Brand name from the page title, matched against the domain's product label."""
+    label = _brand_label(domain)
+    for candidate in dict.fromkeys([label, label.replace("-", " "), label.replace("-", "")]):
+        m = re.search(rf"\b({re.escape(candidate)}(?:\.[a-z]{{2,4}})?)\b", title or "", re.I)
+        if m:
+            return m.group(1)
+    if domain.endswith(".github.io") and title:
+        first = re.split(r"\s+[|:–—-]\s+", title.strip())[0].strip()
+        if 0 < len(first) <= 40:
+            return first
+    return " ".join(w.capitalize() for w in label.split("-"))
 
 
 def what_they_sell(title: str, meta: str) -> str:

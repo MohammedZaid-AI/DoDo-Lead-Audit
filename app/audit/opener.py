@@ -15,7 +15,7 @@ from typing import Any
 from pydantic import BaseModel
 
 from app.detect.providers import fingerprints
-from app.llm import LLMError, chat_json
+from app.llm import LLMError, chat_json, opener_model
 
 MAX_WORDS = 60
 HYPE_WORDS = ["revolutionary", "game changer", "game-changer", "seamless", "seamlessly", "effortless", "supercharge",
@@ -24,6 +24,14 @@ HYPE_WORDS = ["revolutionary", "game changer", "game-changer", "seamless", "seam
 DASH_RE = re.compile(r"[-‐‑‒–—―]")
 HARD_ASK_RE = re.compile(r"\b(?:quick chat|a chat|hop on|jump on|a call|book|schedule|demo|meeting|"
                          r"open to exploring|exploring how)\b", re.I)
+COPY_WORDS = 7  # a run of this many words shared with their post counts as pasting it
+MOR_ROLE_RE = re.compile(r"\bhelps?\s+(?:\w+\s+){0,2}(?:merchants? of record|become (?:the |a |your )?"
+                         r"(?:legal seller|seller of record|merchant of record))", re.I)
+# What Dodo offers. A sentence where Dodo ("we", "Dodo") offers something else is an invented claim.
+DODO_OFFER_RE = re.compile(r"\b(?:dodo|we)\b[^.?!]{0,30}\b(?:can |will )?(?:help|handle|handles|manage|act|take care|"
+                           r"cap|keep|fix|solve|offer)\b[^.?!]*", re.I)
+DODO_SCOPE_RE = re.compile(r"\b(?:tax|vat|gst|invoice|invoic\w+|compliance|payment|payments|seller|merchant of record|"
+                           r"checkout|billing|refund|chargeback|currenc\w+|payout)", re.I)
 NUMBER_RE = re.compile(r"\d[\d,]*(?:\.\d+)?")
 PRICE_UNIT_RE = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*(?:/|per|a|an)\s*([A-Za-z]{2,})", re.I)
 
@@ -46,6 +54,9 @@ Rules:
    Never attach a unit or product to a price that the line does not give it. Do not mix prices from different facts.
 9. Get roles right. A payment processor such as Stripe or Razorpay is NOT the seller of record. When
    merchant_of_record is "no", the company itself is the seller of record and owns the tax work.
+   Dodo itself is the merchant of record; never write that Dodo helps merchants of record.
+10. Refer to their post in your own words. Never paste its title or copy its sentences.
+11. Say where a detail comes from correctly: their_post is a post or issue they wrote, not their website.
 
 Return {"opener": "<message>"}. Respond only with JSON."""
 
@@ -104,6 +115,26 @@ def _price_units(text: str) -> set[tuple[str, str]]:
     return {(n.replace(",", "").rstrip("."), u.lower()[:3]) for n, u in PRICE_UNIT_RE.findall(text)}
 
 
+def _words(text: str) -> list[str]:
+    return re.findall(r"[\w']+", text.lower())
+
+
+def _shared_run(text: str, source: str, n: int = COPY_WORDS) -> str:
+    """The first run of n words that appears in both texts, or ''."""
+    src = _words(source)
+    grams = {tuple(src[i:i + n]) for i in range(len(src) - n + 1)}
+    w = _words(text)
+    for i in range(len(w) - n + 1):
+        if tuple(w[i:i + n]) in grams:
+            return " ".join(w[i:i + n])
+    return ""
+
+
+def tidy_dashes(text: str) -> str:
+    """Mechanical fix before checking: 'cross-border' -> 'cross border', ' — ' -> ', '. Meaning is unchanged."""
+    return _strip_dashes(text)
+
+
 def check_opener(text: str, facts: dict) -> list[str]:
     """Problems with a drafted opener. Empty list means it passes."""
     problems: list[str] = []
@@ -125,6 +156,15 @@ def check_opener(text: str, facts: dict) -> list[str]:
         problems.append("does not end with a question")
     if HARD_ASK_RE.search(text):
         problems.append(f"asks for a meeting ('{HARD_ASK_RE.search(text).group(0)}'); ask about their situation instead")
+    if MOR_ROLE_RE.search(text):
+        problems.append("gets Dodo's role wrong; Dodo is the merchant of record (the legal seller) itself")
+    for m in DODO_OFFER_RE.finditer(text):
+        if not DODO_SCOPE_RE.search(m.group(0)):
+            problems.append(f"claims Dodo does something outside payments and tax ('{m.group(0).strip()[:60]}')")
+    post = facts.get("their_post") or {}
+    copied = _shared_run(text, f"{post.get('title') or ''} {post.get('quote') or ''}")
+    if copied:
+        problems.append(f"copies their post word for word ('{copied}'); say it in your own words")
     for name, fp in fingerprints().items():
         if fp.get("is_mor"):
             continue
@@ -161,7 +201,7 @@ def draft_opener(audit: dict, signal: dict | None = None, client: Any = None) ->
             f"{user}\n\nYour previous draft was:\n{text}\nIt broke these rules: {'; '.join(problems)}. "
             "Write a new one that follows every rule.")
         try:
-            text = chat_json(SYSTEM, prompt, OpenerOut, client=client).opener.strip()
+            text = tidy_dashes(chat_json(SYSTEM, prompt, OpenerOut, client=client, model=opener_model()).opener.strip())
         except LLMError as e:
             return OpenerResult("", False, [str(e)])
         problems = check_opener(text, facts)

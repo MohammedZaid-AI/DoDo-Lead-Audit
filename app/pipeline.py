@@ -286,11 +286,12 @@ def run(days: int = 7, top: int = 20, do_listen: bool = True, sources: list[str]
             stats.openers += int(bool(audit.opener))
             note = "ok" if audit.opener else audit.opener_note[:90]
             log(f"  [{i}/{len(chosen)}] score {lead.score:g}  {lead.domain}  opener: {note}")
-        # sites scored this run but outside the top N: drop their old audit rows so scores are never stale
-        dropped = {l.domain for l in leads[top:]}
-        for row in s.exec(select(db.Audit, db.Company).join(db.Company)).all():
-            if row[1].domain in dropped:
-                s.delete(row[0])
+        # lead audits from earlier runs that are not in this run's top N: drop them so the list is current.
+        # Audits made by hand with 'audit <url>' have no signal and are kept.
+        kept = {l.audit_id for l in chosen}
+        for row in s.exec(select(db.Audit).where(db.Audit.signal_id != None)).all():  # noqa: E711
+            if row.id not in kept:
+                s.delete(row)
         s.commit()
         stats.csv = str(export_leads(s, chosen, csv_path))
     return stats, chosen

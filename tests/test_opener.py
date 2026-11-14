@@ -187,3 +187,64 @@ def test_daily_limit_stops_without_retrying():
     with pytest.raises(DailyLimitError, match="try again in 2m30.3s"):
         chat_json("s", "u", Out, client=FakeClient(DayCap()), sleep=waits.append)
     assert waits == []
+
+
+# --- fixes after the first full run ---
+
+POST_FACTS = {**FACTS, "their_post": {"title": "[P0 OWNER ACTION] First paid planning customer, Stripe eligibility",
+                                      "quote": "We need Stripe eligibility before the first paid planning customer."}}
+
+
+def test_copying_their_post_is_flagged():
+    text = "[P0 OWNER ACTION] First paid planning customer, Stripe eligibility. How do you handle tax today?"
+    assert any("copies their post" in p for p in check_opener(text, POST_FACTS))
+    own_words = "Saw you are getting Stripe ready for your first paying customer. How do you handle tax today?"
+    assert check_opener(own_words, POST_FACTS) == []
+
+
+def test_dodo_helping_merchants_of_record_is_flagged():
+    text = "We help merchants of record handle global tax. How do you manage tax today?"
+    assert any("Dodo is the merchant of record" in p for p in check_opener(text, FACTS))
+
+
+def test_dashes_are_tidied_not_failed():
+    from app.audit.opener import tidy_dashes
+    out = tidy_dashes("Selling cross-border from Jarvislabs — how is tax going?")
+    assert out == "Selling cross border from Jarvislabs, how is tax going?" and not DASH_RE.search(out)
+
+
+def test_groq_json_validate_failed_is_retried():
+    class JsonFail(Exception):
+        status_code = 400
+
+        def __str__(self):
+            return "Error code: 400 - {'error': {'code': 'json_validate_failed'}}"
+
+    c = FakeClient(JsonFail(), '{"x": 5}')
+    assert chat_json("s", "u", Out, client=c).x == 5 and len(c.calls) == 2
+
+
+@pytest.mark.parametrize("title,domain,name", [
+    ("Agno docs", "docs.agno.com", "Agno"),
+    ("Bishvili Health", "health.bishvili.org", "Bishvili"),
+    ("LMS Predictions", "lms-predictions.vercel.app", "LMS Predictions"),
+    ("Inkcadence | your handwriting", "mafzalkalwardev.github.io", "Inkcadence"),
+    ("Pricing", "pumpkit.io", "Pumpkit"),
+    ("Bolna AI pricing", "bolna.ai", "Bolna"),
+])
+def test_company_name_skips_generic_and_shared_hosts(title, domain, name):
+    from app.audit.builder import company_name
+    assert company_name(title, domain) == name
+
+
+@pytest.mark.parametrize("text", [
+    "Dodo can help you become the legal seller. How do you handle tax today?",
+    "We can help you cap spend and keep costs predictable. How do you set limits today?",
+])
+def test_wrong_dodo_claims_flagged(text):
+    assert check_opener(text, FACTS)
+
+
+def test_dodo_offer_inside_scope_passes():
+    text = "Dodo can act as the legal seller and handle VAT for Jarvislabs. How do you handle tax today?"
+    assert check_opener(text, FACTS) == []

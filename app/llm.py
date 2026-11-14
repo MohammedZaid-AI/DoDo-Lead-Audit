@@ -32,6 +32,11 @@ def model_name() -> str:
     return env("LLM_MODEL", "openai/gpt-oss-120b")
 
 
+def opener_model() -> str:
+    """Openers are few and customer facing, so they can use a stronger model than classification."""
+    return env("LLM_OPENER_MODEL", "") or model_name()
+
+
 def make_client() -> Any:
     key = env("GROQ_API_KEY")
     if not key:
@@ -106,8 +111,9 @@ def _is_daily_limit(err: Exception) -> bool:
 
 
 def _complete(client: Any, messages: list[dict], temperature: float, max_tokens: int,
-              reasoning_effort: str | None, sleep=time.sleep, pace: TokenPacer | None = None) -> str:
-    kwargs: dict[str, Any] = dict(model=model_name(), messages=messages, temperature=temperature,
+              reasoning_effort: str | None, sleep=time.sleep, pace: TokenPacer | None = None,
+              model: str | None = None) -> str:
+    kwargs: dict[str, Any] = dict(model=model or model_name(), messages=messages, temperature=temperature,
                                   max_completion_tokens=max_tokens, response_format={"type": "json_object"})
     if reasoning_effort:
         kwargs["reasoning_effort"] = reasoning_effort
@@ -122,6 +128,10 @@ def _complete(client: Any, messages: list[dict], temperature: float, max_tokens:
                 pace.record(getattr(usage, "total_tokens", None) or estimate)
             return resp.choices[0].message.content or ""
         except Exception as e:  # noqa: BLE001 - provider SDK errors vary
+            if getattr(e, "status_code", None) == 400 and "json_validate_failed" in str(e):
+                if pace:
+                    pace.record(estimate)
+                return ""  # the model produced bad JSON: let chat_json's retry handle it
             if _is_daily_limit(e):
                 wait = re.search(r"try again in ([\w.]+)", str(e))
                 raise DailyLimitError("daily LLM limit reached" + (f"; try again in {wait.group(1)}" if wait else "")) from e
@@ -143,8 +153,9 @@ def parse_json(text: str, schema: type[T]) -> T:
 
 
 def chat_json(system: str, user: str, schema: type[T], *, client: Any = None, temperature: float = 0.2,
-              max_tokens: int = 2048, reasoning_effort: str | None = "low", sleep=time.sleep) -> T:
-    """One JSON call validated against `schema`. Retries once if the JSON is invalid."""
+              max_tokens: int = 2048, reasoning_effort: str | None = "low", sleep=time.sleep,
+              model: str | None = None) -> T:
+    """One JSON call validated against `schema`. Retries once if the JSON is invalid. `model` overrides LLM_MODEL."""
     pace = pacer() if client is None else None  # injected test clients are not paced
     client = client or make_client()
     if JSON_RULE not in system:
@@ -152,7 +163,7 @@ def chat_json(system: str, user: str, schema: type[T], *, client: Any = None, te
     messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
     last_err = ""
     for _ in range(2):
-        text = _complete(client, messages, temperature, max_tokens, reasoning_effort, sleep, pace)
+        text = _complete(client, messages, temperature, max_tokens, reasoning_effort, sleep, pace, model)
         try:
             return parse_json(text, schema)
         except ValueError as e:
