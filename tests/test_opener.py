@@ -248,3 +248,16 @@ def test_wrong_dodo_claims_flagged(text):
 def test_dodo_offer_inside_scope_passes():
     text = "Dodo can act as the legal seller and handle VAT for Jarvislabs. How do you handle tax today?"
     assert check_opener(text, FACTS) == []
+
+
+def test_processor_compared_with_mor_is_fine_but_called_mor_is_not():
+    from app.audit.opener import check_opener
+
+    def flagged(t):
+        return any("seller of record" in p for p in check_opener(t, {"company": "X"}))
+
+    assert not flagged("Your team leaned toward Stripe or a merchant of record like Paddle. Still open?")
+    assert not flagged("Moving from Stripe to a merchant of record could cover VAT. Worth a look?")
+    assert not flagged("Stripe is not the seller of record, so who files VAT?")
+    assert flagged("Since Stripe acts as merchant of record for you, is tax handled?")
+    assert flagged("Stripe and Paddle act as merchants of record for you, right?")

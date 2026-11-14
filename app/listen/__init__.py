@@ -16,7 +16,7 @@ import httpx
 from app.settings import load_yaml, request_delay, user_agent_tag
 
 EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
-PHONE_RE = re.compile(r"(?<![\w.])\+?\d[\d\s().-]{8,}\d(?![\w.])")
+PHONE_RE = re.compile(r"(?<![\w.])\+?\d[\d\s().-]{8,}\d(?!\w|\.\d)")  # a full stop after the number is fine
 TAG_RE = re.compile(r"<[^>]+>")
 
 
@@ -31,9 +31,16 @@ class RawSignal:
     context: dict = field(default_factory=dict)  # matched phrase, story url, repo, ...
 
 
+PHONE_MIN_DIGITS = 9  # a date like 2026-05-14 has 8 digits and is left alone
+
+
+def _phone(m: re.Match) -> str:
+    return "[phone removed]" if sum(ch.isdigit() for ch in m.group(0)) >= PHONE_MIN_DIGITS else m.group(0)
+
+
 def redact(text: str) -> str:
     """Remove emails and phone numbers (we only store public post text and usernames)."""
-    return PHONE_RE.sub("[phone removed]", EMAIL_RE.sub("[email removed]", text or ""))
+    return PHONE_RE.sub(_phone, EMAIL_RE.sub("[email removed]", text or ""))
 
 
 def html_to_text(html: str) -> str:

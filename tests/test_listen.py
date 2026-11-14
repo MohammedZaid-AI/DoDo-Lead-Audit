@@ -123,3 +123,10 @@ def test_prefilter_needs_payment_and_pain_terms():
     assert worth_classifying(mk("Epic: USD plans and own billing for global businesses", "Move off Razorpay INR only"))
     assert not worth_classifying(mk("PATCH stripe_payments return_url before redirect"))
     assert not worth_classifying(mk("Adds zebra striping to all tables"))
+
+
+def test_redact_keeps_dates_and_issue_numbers():
+    from app.listen import redact
+
+    out = redact("The 2026-05-14 discussion (issues 1422, 1427). Call +91 98765 43210.")
+    assert "2026-05-14" in out and "1422, 1427" in out and "98765" not in out

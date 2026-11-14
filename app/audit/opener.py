@@ -25,6 +25,10 @@ DASH_RE = re.compile(r"[-‐‑‒–—―]")
 HARD_ASK_RE = re.compile(r"\b(?:quick chat|a chat|hop on|jump on|a call|book|schedule|demo|meeting|"
                          r"open to exploring|exploring how)\b", re.I)
 ATTEMPTS = 3  # first draft plus two rewrites that are told which rules they broke
+# Words between a processor and "merchant of record" that mean the two are being compared, not equated:
+# "Stripe or a merchant of record", "Stripe is not the seller of record", "Stripe instead of an MoR".
+CONTRAST_RE = re.compile(r"\b(?:or|vs|versus|instead|rather|than|unlike|compared|not|isn't|"
+                         r"to|toward|towards|from|over)\b", re.I)
 COPY_WORDS = 7  # a run of this many words shared with their post counts as pasting it
 MOR_ROLE_RE = re.compile(r"\bhelps?\s+(?:\w+\s+){0,2}(?:merchants? of record|become (?:the |a |your )?"
                          r"(?:legal seller|seller of record|merchant of record))", re.I)
@@ -170,9 +174,11 @@ def check_opener(text: str, facts: dict) -> list[str]:
         if fp.get("is_mor"):
             continue
         for brand in fp.get("names", []):
-            if re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:seller|merchant) of record", text, re.I) and \
-                    not re.search(rf"\b{re.escape(brand)}\b[^.?!]{{0,40}}\b(?:not|isn't|is not)\b", text, re.I):
-                problems.append(f"calls {brand} the seller of record; {brand} only processes payments")
+            for m in re.finditer(rf"\b{re.escape(brand)}\b([^.?!]{{0,40}})\b(?:seller|merchant)s? of record",
+                                 text, re.I):
+                if not CONTRAST_RE.search(m.group(1)):
+                    problems.append(f"calls {brand} the seller of record; {brand} only processes payments")
+                    break
     bad_units = _price_units(text) - _price_units(facts_text)
     if bad_units:
         problems.append("price units not in facts: " + ", ".join(f"{n} per {u}" for n, u in sorted(bad_units)))
