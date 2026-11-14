@@ -70,16 +70,12 @@
       <label>Audit top
         <input type="number" name="top" min="1" max="50" value="20">
       </label>
-      <label title="YC directory companies to check for the first time this run. Ones checked in the last 14 days are always scored from the cache.">New YC sites
-        <input type="number" name="yc" min="0" max="100" value="20">
-      </label>
       <label class="check"><input type="checkbox" name="fetch" checked> Fetch new posts</label>
       <label class="check"><input type="checkbox" name="opener" checked> Draft openers</label>
       <button type="submit" id="run-btn">Run</button>
     </form>
-    <p class="hint">Reads Hacker News, GitHub, the YC startup directory and the companies' public pages, then rewrites
-      the audits. A full run takes several minutes, plus about half a minute per new YC site. Untick "Fetch new
-      posts" to re-score what is already stored.</p>
+    <p class="hint">Reads Hacker News, GitHub and the companies' public pages, then rewrites the audits. A full run
+      takes several minutes. Untick "Fetch new posts" to re-score what is already stored.</p>
     <p class="run-state" id="run-state" aria-live="polite"></p>
     <pre class="run-log" id="run-log"></pre>
   </section>
@@ -193,8 +189,7 @@ document.querySelectorAll('input[type=checkbox][data-id]').forEach(function (box
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var body = {days: +form.days.value || 7, top: +form.top.value || 20,
-                fetch: form.fetch.checked, opener: form.opener.checked,
-                yc: Math.max(0, +form.yc.value || 0)};
+                fetch: form.fetch.checked, opener: form.opener.checked};
     btn.disabled = true;
     fetch('/run', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
       .then(function (r) {

@@ -20,7 +20,6 @@ from app.listen import RawSignal
 from app.listen.classify import PAYMENT_TERMS, classify, worth_classifying
 from app.listen.github import fetch_github, repo_homepage, repo_readme_site
 from app.listen.hn import fetch_hn
-from app.listen.yc import batch_year, fetch_directory
 from app.llm import DailyLimitError
 from app.score import facts_for, score_lead
 from app.settings import OUTPUT_DIR
@@ -125,7 +124,6 @@ SKIP_HOSTS = re.compile(r"(^|\.)(github\.com|gitlab\.com|npmjs\.com|pypi\.org|ve
                         r"ycombinator\.com|localhost|example\.com)$")
 CACHE_DIR = OUTPUT_DIR / "cache" / "pages"
 CACHE_HOURS = 24
-YC_CACHE_DAYS = 14  # YC company sites are re-checked at most every two weeks
 
 
 @dataclass
@@ -150,8 +148,6 @@ class RunStats:
     scored: int = 0
     audited: int = 0
     openers: int = 0
-    yc_sites: int = 0
-    yc_new: int = 0
     csv: str = ""
 
 
@@ -190,12 +186,6 @@ def signal_quote(sig: db.Signal, limit: int = 240) -> str:
 
 
 def signal_dict(sig: db.Signal) -> dict:
-    if sig.source == "yc":
-        c = sig.context or {}
-        batch = f" ({c['batch'].upper()})" if c.get("batch") else ""
-        return {"id": sig.id, "source": "yc", "url": sig.url, "author": None,
-                "title": f"{c.get('name') or sig.title} on the YC startup directory{batch}", "posted": None,
-                "quote": c.get("one_liner") or "", "pain_type": None, "urgency": None, "body": ""}
     return {"id": sig.id, "source": sig.source, "url": sig.url, "author": sig.author, "title": sig.title,
             "posted": sig.created_at.date().isoformat(), "quote": signal_quote(sig), "pain_type": sig.pain_type,
             "urgency": sig.urgency, "body": (sig.body or "")[:400]}
@@ -205,28 +195,19 @@ def _slug(domain: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", domain.lower()).strip("_")
 
 
-def _cache_age_hours(slug: str) -> float | None:
-    files = list(CACHE_DIR.glob(f"{slug}__*.json"))
-    if not files:
+def _cached_pages(slug: str) -> list[PageData] | None:
+    stems = sorted({p.with_suffix("") for p in CACHE_DIR.glob(f"{slug}__*.json")})
+    if not stems or time.time() - stems[0].with_suffix(".json").stat().st_mtime > CACHE_HOURS * 3600:
         return None
-    return (time.time() - min(f.stat().st_mtime for f in files)) / 3600
+    return [PageData.load(s) for s in stems]
 
 
-def _cached_pages(slug: str, max_hours: float = CACHE_HOURS) -> list[PageData] | None:
-    age = _cache_age_hours(slug)
-    if age is None or age > max_hours:
-        return None
-    return [PageData.load(s) for s in sorted({p.with_suffix("") for p in CACHE_DIR.glob(f"{slug}__*.json")})]
-
-
-def detect_sites(urls: dict[str, str], log=print, max_hours: dict[str, float] | None = None) -> dict:
-    """Detect each domain once. Rendered pages are cached (24 hours, or per domain in max_hours)
-    so a re-run does not reload sites."""
+def detect_sites(urls: dict[str, str], log=print) -> dict:
+    """Detect each domain once. Rendered pages are cached for 24 hours so a re-run does not reload sites."""
     results: dict = {}
     todo: dict[str, str] = {}
-    max_hours = max_hours or {}
     for domain, url in urls.items():
-        pages = _cached_pages(_slug(domain), max_hours.get(domain, CACHE_HOURS))
+        pages = _cached_pages(_slug(domain))
         if pages:
             results[domain] = analyze_pages(url, pages)
         else:
@@ -243,66 +224,6 @@ def detect_sites(urls: dict[str, str], log=print, max_hours: dict[str, float] | 
     return results
 
 
-def lead_score(sig: db.Signal, det, now: datetime):
-    """Pain posts are scored with the post. YC directory companies have no post, so only their site counts."""
-    if sig.source == "yc":
-        sc = score_lead(facts_for(None, det), now=now)
-        sc.reasons.insert(0, "from the YC directory: no pain post, so no pain or urgency points")
-        return sc
-    return score_lead(facts_for(sig, det), now=now)
-
-
-def store_directory(s, raws) -> int:
-    """Insert or refresh YC directory companies. They are not posts, so they skip the LLM classifier."""
-    known = {r.url: r for r in s.exec(select(db.Signal).where(db.Signal.source == "yc")).all()}
-    new = 0
-    for r in raws:
-        row = known.get(r.url)
-        if row is None:
-            row = db.Signal(source="yc", url=r.url, created_at=r.created_at, context={},
-                            status="directory", is_payment_pain=False)
-            known[r.url] = row
-            new += 1
-        row.title, row.body, row.product_url = r.title, r.body, r.context.get("website")
-        row.context = {**(row.context or {}), **r.context}  # keeps checked_at
-        s.add(row)
-    s.commit()
-    return new
-
-
-def yc_candidates(s, new_limit: int, now: datetime) -> tuple[list[tuple[str, str, db.Signal]], set[str]]:
-    """YC companies to score this run: every one whose site was loaded in the last YC_CACHE_DAYS (cheap,
-    from the page cache) plus up to new_limit not checked yet, newest batch first.
-    Returns (domain, url, signal) triples and the domains that will be loaded fresh."""
-    rows = s.exec(select(db.Signal).where(db.Signal.source == "yc", db.Signal.status == "directory")).all()
-    rows = sorted(rows, key=lambda r: (-(batch_year((r.context or {}).get("batch")) or 0), r.id))
-    out, fresh, seen = [], set(), set()
-    window = timedelta(days=YC_CACHE_DAYS)
-    for sig in rows:
-        url = product_url_for(sig)
-        if not url:
-            continue
-        d = site_domain(url)
-        if d in seen:
-            continue
-        age = _cache_age_hours(_slug(d))
-        checked = (sig.context or {}).get("checked_at")
-        if age is not None and age <= YC_CACHE_DAYS * 24:
-            out.append((d, url, sig))
-        elif checked and now - datetime.fromisoformat(checked) < window:
-            continue  # tried recently and nothing was cached (the site did not load): wait for the window
-        elif len(fresh) < new_limit:
-            sig.context = {**(sig.context or {}), "checked_at": now.isoformat()}
-            s.add(sig)
-            fresh.add(d)
-            out.append((d, url, sig))
-        else:
-            continue
-        seen.add(d)
-    s.commit()
-    return out, fresh
-
-
 def pick_leads(by_domain: dict[str, list], urls: dict[str, str], detections: dict, now: datetime,
                stats: RunStats, log=print) -> list[Lead]:
     """Score every (site, post) pair; keep each site's best post. Sorted best first."""
@@ -312,7 +233,7 @@ def pick_leads(by_domain: dict[str, list], urls: dict[str, str], detections: dic
             stats.site_errors += 1
             log(f"  skipped {domain}: no page loaded ({'; '.join(det.page_errors.values())[:120]})")
             continue
-        best = max(((sig, lead_score(sig, det, now)) for sig in by_domain[domain]),
+        best = max(((sig, score_lead(facts_for(sig, det), now=now)) for sig in by_domain[domain]),
                    key=lambda pair: pair[1].value)
         leads.append(Lead(domain, urls[domain], best[0].id, best[1].value, best[1].reasons, det))
     leads.sort(key=lambda l: (-l.score, l.domain))
@@ -322,21 +243,12 @@ def pick_leads(by_domain: dict[str, list], urls: dict[str, str], detections: dic
 
 def run(days: int = 7, top: int = 20, do_listen: bool = True, sources: list[str] | None = None,
         with_opener: bool = True, csv_path: Path = OUTPUT_DIR / "leads.csv", now: datetime | None = None,
-        log=print, yc: int = 0, yc_lists: list[str] | None = None) -> tuple[RunStats, list[Lead]]:
-    """listen > classify > product url > detect > score > audit the top N > leads.csv.
-    yc: how many YC directory companies not checked yet to load this run (0 = only those already cached)."""
+        log=print) -> tuple[RunStats, list[Lead]]:
+    """listen > classify > product url > detect > score > audit the top N > leads.csv."""
     now = now or datetime.now(timezone.utc)
     stats = RunStats()
     if do_listen:
         listen(days, sources or ["hn", "github"], True, log=log)
-    if do_listen and yc > 0:
-        log("fetching the YC startup directory...")
-        try:
-            raws = fetch_directory(yc_lists, log=log)
-            with db.session() as s:
-                log(f"  {store_directory(s, raws)} new YC companies stored ({len(raws)} match the filter)")
-        except Exception as e:  # noqa: BLE001 - the directory failing should not stop the run
-            log(f"  YC directory failed: {type(e).__name__}: {e}"[:200])
 
     since = now - timedelta(days=days)
     with db.session() as s:
@@ -358,17 +270,7 @@ def run(days: int = 7, top: int = 20, do_listen: bool = True, sources: list[str]
         s.commit()
         log(f"{len(urls)} distinct product sites ({stats.no_url} posts had no usable product url)")
 
-        yc_rows, fresh = yc_candidates(s, yc, now)
-        max_hours: dict[str, float] = {}
-        for d, url, sig in yc_rows:
-            by_domain.setdefault(d, []).append(sig)
-            urls.setdefault(d, url)
-            max_hours[d] = YC_CACHE_DAYS * 24
-        stats.yc_sites, stats.yc_new = len(yc_rows), len(fresh)
-        if yc_rows:
-            log(f"{len(yc_rows)} YC directory companies to score ({len(fresh)} new sites to load)")
-
-        detections = detect_sites(urls, log=log, max_hours=max_hours)
+        detections = detect_sites(urls, log=log)
         stats.sites = len(detections)
         leads = pick_leads(by_domain, urls, detections, now, stats, log)
         chosen = leads[:top]
@@ -413,23 +315,22 @@ def export_leads(s, leads: list[Lead], path: Path) -> Path:
             mor = {True: "yes", False: "no", None: "not verified"}[det.provider.has_mor]
             w.writerow([rank, lead.score, lead.domain, lead.url, det.provider.primary or "not verified", mor,
                         det.pricing.currency_mode, det.provider.confidence, sig.pain_type, sig.urgency,
-                        sig.source, sig.url, "" if sig.source == "yc" else sig.created_at.date(),
-                        "; ".join(lead.reasons), lead.opener,
+                        sig.source, sig.url, sig.created_at.date(), "; ".join(lead.reasons), lead.opener,
                         lead.audit_path])
     return path
 
 
 def redraft(only_missing: bool = True, log=print) -> tuple[int, int]:
     """Draft openers again for audited leads (by default only those whose opener failed its checks).
-    Uses the cached pages and keeps each lead's score, reasons, signal and 'reviewed'. Returns (tried, ok)."""
+    Uses the cached pages when fresh and keeps each lead's score, reasons, signal and 'reviewed'.
+    Returns (tried, ok)."""
     tried = ok = 0
     with db.session() as s:
         rows = s.exec(select(db.Audit).where(db.Audit.signal_id != None)).all()  # noqa: E711
         rows = [r for r in rows if not (only_missing and r.opener)]
         for i, row in enumerate(rows, 1):
             company, sig = s.get(db.Company, row.company_id), s.get(db.Signal, row.signal_id)
-            det = detect_sites({company.domain: company.url}, log=log,
-                               max_hours={company.domain: YC_CACHE_DAYS * 24})[company.domain]
+            det = detect_sites({company.domain: company.url}, log=log)[company.domain]
             if not det.pages_checked:
                 log(f"  [{i}/{len(rows)}] {company.domain}: site did not load, skipped")
                 continue

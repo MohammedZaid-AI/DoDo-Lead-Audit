@@ -89,7 +89,7 @@ def build_facts(audit: dict, signal: dict | None = None) -> dict:
         "issues": [f"{i['title']}. {i['detail']}" for i in audit["issues"]],
         "switching": audit["switch_effort"]["text"],
     }
-    if signal and signal.get("source") != "yc":  # a YC directory listing is not something they wrote to us
+    if signal:
         facts["their_post"] = {"title": signal.get("title"), "quote": signal.get("quote") or (signal.get("body") or "")[:400]}
     return _strip_dashes(facts)
 

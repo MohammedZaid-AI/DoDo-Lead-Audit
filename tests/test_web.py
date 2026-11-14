@@ -75,14 +75,14 @@ def test_run_button_starts_one_run_at_a_time(client, monkeypatch):
 
     gate, calls = threading.Event(), []
 
-    def fake_run(days, top, fetch, sources, opener, log, yc=0):
-        calls.append((days, top, fetch, opener, yc))
+    def fake_run(days, top, fetch, sources, opener, log):
+        calls.append((days, top, fetch, opener))
         log("listening")
         gate.wait(5)
         return SimpleNamespace(candidates=4, sites=3, openers=2), [1, 2]
 
     monkeypatch.setattr(main, "runner", Runner(target=fake_run))
-    r = client.post("/run", json={"days": 3, "top": 5, "fetch": False, "opener": True, "yc": 7})
+    r = client.post("/run", json={"days": 3, "top": 5, "fetch": False, "opener": True})
     assert r.status_code == 200 and r.json()["state"] == "running"
     assert client.post("/run", json={}).status_code == 409  # second click while busy
     gate.set()
@@ -92,7 +92,7 @@ def test_run_button_starts_one_run_at_a_time(client, monkeypatch):
             break
         time.sleep(0.05)
     assert s["state"] == "done" and "2 leads audited" in s["summary"] and "listening" in s["log"]
-    assert calls == [(3, 5, False, True, 7)]
+    assert calls == [(3, 5, False, True)]
     assert client.post("/run", json={"days": 99}).status_code == 422  # out of range
     assert client.post("/run", data={"days": "3"}).status_code == 422  # plain form posts are refused
     assert 'id="run-btn"' in client.get("/").text
