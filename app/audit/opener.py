@@ -29,6 +29,7 @@ ATTEMPTS = 3  # first draft plus two rewrites that are told which rules they bro
 # "Stripe or a merchant of record", "Stripe is not the seller of record", "Stripe instead of an MoR".
 CONTRAST_RE = re.compile(r"\b(?:or|vs|versus|instead|rather|than|unlike|compared|not|isn't|"
                          r"to|toward|towards|from|over)\b", re.I)
+TERM_RE = re.compile(r"\b(?:merchant|seller)s? of record\b", re.I)
 COPY_WORDS = 7  # a run of this many words shared with their post counts as pasting it
 MOR_ROLE_RE = re.compile(r"\bhelps?\s+(?:\w+\s+){0,2}(?:merchants? of record|become (?:the |a |your )?"
                          r"(?:legal seller|seller of record|merchant of record))", re.I)
@@ -125,7 +126,9 @@ def _words(text: str) -> list[str]:
 
 
 def _shared_run(text: str, source: str, n: int = COPY_WORDS) -> str:
-    """The first run of n words that appears in both texts, or ''."""
+    """The first run of n words that appears in both texts, or ''. Industry terms count as one word, so
+    'is sold through a merchant of record' is five words of standard wording, not copying."""
+    text, source = TERM_RE.sub("mor", text), TERM_RE.sub("mor", source)
     src = _words(source)
     grams = {tuple(src[i:i + n]) for i in range(len(src) - n + 1)}
     w = _words(text)

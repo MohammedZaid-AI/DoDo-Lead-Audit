@@ -274,3 +274,11 @@ def test_previous_opener_is_kept_only_while_it_passes_the_checks(site, monkeypat
     assert builder.build_audit(det, None, True, keep_opener=good).opener == good and calls == []
     bad = "Stripe acts as merchant of record for Bolna, right?"  # breaks a rule: drafted again
     assert builder.build_audit(det, None, True, keep_opener=bad).opener == "New one?" and calls == [1]
+
+
+def test_industry_terms_are_not_copying():
+    from app.audit.opener import _shared_run
+
+    post = "Our app is sold through a merchant of record today and we want to move."
+    assert _shared_run("Since Latchkey is sold through a merchant of record, who files VAT?", post) == ""
+    assert _shared_run("Our app is sold through a merchant of record today, right?", post)  # real copying
