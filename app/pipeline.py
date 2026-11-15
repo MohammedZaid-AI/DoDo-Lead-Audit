@@ -121,7 +121,9 @@ def mark_pain_for_recheck(all_classified: bool = False) -> int:
 
 SKIP_HOSTS = re.compile(r"(^|\.)(github\.com|gitlab\.com|npmjs\.com|pypi\.org|vercel\.com|netlify\.com|"
                         r"stripe\.com|paddle\.com|lemonsqueezy\.com|razorpay\.com|paypal\.com|dodopayments\.com|"
-                        r"ycombinator\.com|localhost|example\.com)$")
+                        r"ycombinator\.com|localhost|example\.com)$"
+                        r"|\.(test|local|localhost|invalid|example|internal)$"  # reserved: never a real site
+                        r"|^\d{1,3}(\.\d{1,3}){3}$")  # bare IP address
 CACHE_DIR = OUTPUT_DIR / "cache" / "pages"
 CACHE_HOURS = 24
 
@@ -278,7 +280,7 @@ def run(days: int = 7, top: int = 20, do_listen: bool = True, sources: list[str]
         log(f"auditing the top {len(chosen)} of {len(leads)} scored sites...")
         for i, lead in enumerate(chosen, 1):
             sig = s.get(db.Signal, lead.signal_id)
-            audit = build_audit(lead.detection, signal_dict(sig), with_opener)
+            audit = build_audit(lead.detection, signal_dict(sig), with_opener, previous_opener(s, lead))
             path = save_audit(audit)
             company = db.upsert_company(s, audit.company_name, audit.url, audit.domain)
             db.save_detection(s, company.id, lead.detection)
@@ -301,6 +303,15 @@ def run(days: int = 7, top: int = 20, do_listen: bool = True, sources: list[str]
         s.commit()
         stats.csv = str(export_leads(s, chosen, csv_path))
     return stats, chosen
+
+
+def previous_opener(s, lead: Lead) -> str:
+    """The opener saved for this site from the same post on an earlier run, if any."""
+    company = s.exec(select(db.Company).where(db.Company.domain == lead.domain)).first()
+    if company is None:
+        return ""
+    row = s.exec(select(db.Audit).where(db.Audit.company_id == company.id)).first()
+    return row.opener if row and row.signal_id == lead.signal_id and row.opener else ""
 
 
 def export_leads(s, leads: list[Lead], path: Path) -> Path:

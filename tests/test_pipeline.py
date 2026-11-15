@@ -54,3 +54,8 @@ def test_readme_lookup_runs_once_after_homepage():
     s2 = sig()
     s2.context["homepage_checked"] = s2.context["readme_checked"] = True
     assert product_url_for(s2, lambda r: 1 / 0, lambda r: 1 / 0) is None  # both already tried: no lookups
+
+
+def test_reserved_domains_are_skipped():
+    for url in ["https://tea-alley.test", "http://shop.local", "http://10.0.0.1:3000"]:
+        assert product_url_for(sig(product_url=url), lambda r: None, lambda r: None) is None

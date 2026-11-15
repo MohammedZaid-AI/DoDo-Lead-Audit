@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 from app.audit.fees import FeeTable, build_fee_table
-from app.audit.opener import draft_opener
+from app.audit.opener import build_facts, check_opener, draft_opener
 from app.detect import DetectionResult
 from app.detect.providers import fingerprints
 
@@ -221,7 +221,10 @@ def build_summary(name: str, s: SetupInfo, issues: list[Issue]) -> str:
     return f"{name} takes payments through {provider}, {mor}. Pricing: {mode}. {found.capitalize()}."
 
 
-def build_audit(d: DetectionResult, signal: dict | None = None, with_opener: bool = True) -> Audit:
+def build_audit(d: DetectionResult, signal: dict | None = None, with_opener: bool = True,
+                keep_opener: str = "") -> Audit:
+    """keep_opener: an opener drafted earlier for the same post. It is reused, without an LLM call,
+    when it still passes every check against this audit's facts."""
     domain = domain_of(d.pages_checked[0] if d.pages_checked else d.url)
     name = company_name(d.title, domain)
     setup = build_setup(d)
@@ -234,7 +237,9 @@ def build_audit(d: DetectionResult, signal: dict | None = None, with_opener: boo
         evidence=[asdict(e) for e in d.provider.evidence], pages_checked=d.pages_checked,
         page_errors=d.page_errors, checked_at=d.checked_at,
     )
-    if with_opener:
+    if with_opener and keep_opener and not check_opener(keep_opener, build_facts(audit.to_dict(), signal)):
+        audit.opener, audit.opener_note = keep_opener, ""
+    elif with_opener:
         result = draft_opener(audit.to_dict(), signal)
         audit.opener = result.text if result.ok else ""
         audit.opener_note = "" if result.ok else "Opener failed checks: " + "; ".join(result.problems)

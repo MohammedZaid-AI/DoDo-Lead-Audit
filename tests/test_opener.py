@@ -261,3 +261,16 @@ def test_processor_compared_with_mor_is_fine_but_called_mor_is_not():
     assert not flagged("Stripe is not the seller of record, so who files VAT?")
     assert flagged("Since Stripe acts as merchant of record for you, is tax handled?")
     assert flagged("Stripe and Paddle act as merchants of record for you, right?")
+
+
+def test_previous_opener_is_kept_only_while_it_passes_the_checks(site, monkeypatch):
+    from app.audit import builder
+    from app.audit.opener import OpenerResult
+
+    calls = []
+    monkeypatch.setattr(builder, "draft_opener", lambda a, s: calls.append(1) or OpenerResult("New one?", True))
+    det = site("bolna_ai_pricing")
+    good = "Saw your post about payments for Bolna. Is selling abroad on your list this quarter?"
+    assert builder.build_audit(det, None, True, keep_opener=good).opener == good and calls == []
+    bad = "Stripe acts as merchant of record for Bolna, right?"  # breaks a rule: drafted again
+    assert builder.build_audit(det, None, True, keep_opener=bad).opener == "New one?" and calls == [1]
