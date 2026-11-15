@@ -166,6 +166,16 @@ def redraft(all_leads: bool = typer.Option(False, "--all", help="Redraft every l
     typer.secho(f"  redrafted: {tried}  openers ok: {ok}", bold=True)
 
 
+@cli.command()
+def report(out: Path = typer.Option(OUTPUT_DIR / "report.html", help="Where to write the report"),
+           author: str = typer.Option("", help="Your name, shown in the footer"),
+           repo: str = typer.Option("", help="Code repository link, shown in the footer")) -> None:
+    """Write one self-contained HTML file with the ranked leads and every audit, to send or share."""
+    from app.report import build_report
+
+    typer.secho(f"  report: {build_report(out, author, repo)}", fg="green")
+
+
 @cli.command("classify")
 def classify_cmd(recheck_pain: bool = typer.Option(False, help="Re-check posts already marked as payment pain"),
                  recheck_all: bool = typer.Option(False, help="Re-check every classified post (after a prompt change)"),

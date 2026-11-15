@@ -1,16 +1,75 @@
 # Dodo Lead Audit
 
-## What this is (for the Dodo team)
+A lead engine for [Dodo Payments](https://dodopayments.com). It finds software founders who are posting publicly about getting paid, checks how their product takes payments today, and writes a one page payment audit with a drafted opening message for a person to send.
 
-1. It reads public Hacker News and GitHub posts where small software teams talk about payment trouble: Stripe is not available in their country, a payment provider rejected them, they have tax worries, or they are picking a merchant of record.
-2. It opens each team's public website and works out which payment provider they use, whether they have a merchant of record, and what currencies they charge in.
-3. It scores every company from 0 to 10 for fit with Dodo Payments. You can see why each company got its score.
-4. It writes a one page audit for each top lead: their provider, what breaks when they sell abroad, the fee math, how hard switching would be, and a short opener someone can send.
-5. It only reads and drafts. It never sends, posts or signs up for anything. A person reviews every lead and sends every message. If something can't be confirmed, the audit says "not verified".
+Built by Mohammed Zaid as a working answer to the question: *where do Dodo's next customers announce themselves, and what would you say to them?*
+
+![The lead report](docs/report.png)
+
+## The problem
+
+Founders choosing a payment setup rarely search for "merchant of record". They post things like *"Stripe isn't available in India, what do I use?"*, *"Moving off Lemon Squeezy"*, or *"Spec: Stripe payments, Stripe is the seller of record"* (it isn't). Those posts are the best buying signal there is, and they are spread across thousands of GitHub issues and Hacker News threads.
+
+## What it does
+
+1. **Listens.** Pulls recent public GitHub issues and Hacker News posts that mention payment providers, merchant of record, tax or selling abroad.
+2. **Filters, then classifies.** A keyword pre-filter drops obvious noise for free, then an LLM labels the rest: is this real payment pain, what kind (choosing a gateway, MoR switch, Stripe access, tax), and how urgent.
+3. **Finds the product.** Uses the link in the post, else the repo homepage, else a link in the README that is clearly the product site.
+4. **Reads their site.** Loads the public pages in a headless browser and detects the payment provider from scripts, checkout links and network calls, plus pricing currencies, tax wording and local payment methods.
+5. **Scores 0 to 10**, and every score lists its reasons.
+6. **Writes the audit:** current setup, what breaks when they sell abroad, fee per sale against Dodo and a reference MoR, switch effort, and a drafted opener. Each issue shows the evidence it rests on.
+
+Everything is browsable in a local dashboard, or exported as one self-contained HTML report.
+
+## Results from the first week
+
+| Step | Count |
+|---|---|
+| Public posts read (4 to 15 Nov 2026) | 711 |
+| Dropped by the keyword pre-filter, at no LLM cost | 415 |
+| Classified by the LLM | 295 |
+| Real payment pain | 141 |
+| Distinct product sites found (latest run) | 33 |
+| Top leads audited (latest run) | 25 |
+| Openers that passed every automated check | 24 |
+
+The strongest leads: a WhatsApp ordering app on Stripe with no merchant of record, charging in USD; two products already on Lemon Squeezy whose founders are rethinking their payment setup; and several founders mid-way through choosing a provider. The one opener that failed was for a founder whose own spec says "Stripe is the seller of record". The checks refused to let the model repeat that, so it is marked "write by hand", which is the right call.
 
 ![One audit](docs/audit.png)
 
-![The dashboard](docs/dashboard.png)
+## Design decisions
+
+- **Never invent a fact.** If the public pages do not prove a provider or price, the audit says "not verified" and the score takes −2. A wrong claim in a sales message costs more than a missing one.
+- **Check the LLM in code, do not just prompt it.** Every opener is tested before it is shown:
+  - at most 60 words, no dashes, Dodo named at most once, ending on a soft question
+  - no hard ask like "book a call"
+  - no copying 7 or more words from the founder's post
+  - no number, price or brand that is not in the audit
+  - never calling Stripe or Razorpay the seller of record
+  - never promising Dodo does something outside payments and tax
+
+  A failed draft is rewritten up to twice with the broken rules fed back. Openers that still pass are kept across runs, so no tokens are spent redrafting good ones.
+- **Get the domain right.** The audit explains the difference between a processor (Stripe: you stay the seller of record and own the tax) and a merchant of record (Dodo, Paddle, Lemon Squeezy: they are the seller and handle the tax), and the fee table shows both.
+- **Spend tokens only where they matter.** The keyword pre-filter dropped 58% of posts before the LLM saw them. Rendered pages are cached. It runs within Groq's free tier, and stops cleanly at the daily limit and resumes the next day.
+- **Prefer a miss to a wrong guess.** The README product-site lookup only accepts a link labelled as the site, or a domain named after the repo. On 65 real READMEs it found 9 sites, all correct. Earlier looser rules picked 6 wrong ones, which are now regression tests.
+- **Be a good citizen.** It respects robots.txt and skips a site if robots.txt cannot be read. It waits 3 seconds between requests to the same site, sends an identifying user agent, and never logs in or submits a form. It stores only public post links, usernames and company URLs. Emails and phone numbers are stripped from post text.
+- **A human sends everything.** The tool reads and drafts. Nothing is ever posted, replied to or emailed.
+
+## Honest limits
+
+- **Most providers are unconfirmed.** 22 of 25 audited sites show no live checkout yet. Many of these founders are still building it, which is exactly when they pick a provider, but it means those audits lean on the post more than on the site.
+- **Many posts have no product site.** About half of the pain posts link no product site and cannot be audited.
+- **GitHub dominates.** Hacker News search returned very few matching posts in this window.
+- **The score weights are a first guess.** Reply rates from real outreach are what should tune them.
+
+## What I would do next at Dodo
+
+- Tune the score with real outcomes: which leads replied, signed up, went live.
+- Add sources where Dodo's buyers talk, such as Indie Hackers, X and Discord communities, within each platform's rules.
+- Push reviewed leads into the CRM instead of a CSV.
+- Watch for posts mentioning a competitor's outage or a pricing change, which are the most urgent switch signals.
+
+---
 
 ## Setup
 
@@ -38,34 +97,33 @@ Then fill in `.env`:
 
 `.env` is in `.gitignore`. Never commit it.
 
-Check the install:
-
-```powershell
-pytest
-```
+Check the install with `pytest`.
 
 ## Use
 
 ```powershell
 python cli.py run --days 7 --top 20   # find, score and audit the top 20 leads
 python cli.py serve                   # dashboard at http://127.0.0.1:8000
+python cli.py report                  # one HTML file with every lead and audit
+python cli.py redraft                 # redo only the openers that failed their checks
 ```
 
-`run` makes one pass over the last `--days` days and then stops. Run it again whenever you want fresh leads. One run every day or two with `--days 3` works well.
+`run` makes one pass over the last `--days` days and then stops. Run it again for fresh leads; one run every day or two with `--days 3` works well.
 
-- Posts are stored once and keyed by their URL, so a re-run only classifies new posts.
-- Site pages are cached for 24 hours.
-- "Reviewed" ticks survive a re-run for companies still in the top N. A company that drops out of the top N has its audit removed.
+- **Re-runs are cheap.** Posts are stored once, keyed by URL, so a re-run only classifies new ones. Site pages are cached for 24 hours, and openers that still pass are kept.
+- **Reviewed ticks are kept** for companies still in the top N. A company that drops out of the top N has its audit removed.
+
+The dashboard:
+- lists leads by score, with filters for provider, pain type, minimum score and reviewed state
+- opens each audit and saves "Mark reviewed" ticks to the database
+- has a **Run** button that does the same as `python cli.py run`, with a live log
 
 Output:
 
+- `output/report.html`: one self-contained file with the ranked leads and every audit, to send to someone.
 - `output/leads.csv`: the ranked leads.
-- `output/audits/*.html`: one audit per lead. Each is a standalone file you can open or share.
+- `output/audits/*.html`: one standalone audit per lead.
 - `output/leads.db`: SQLite database with posts, companies, audits and reviewed ticks.
-
-The dashboard has a **Run** button that does the same thing as `python cli.py run`. You can set the days and the top N. It shows the run's log as it happens and reloads the list when it finishes. Only one run can go at a time. Untick "Fetch new posts" to re-score what is already stored without fetching anything new.
-
-The dashboard lists leads by score, filters by provider, pain type, minimum score and reviewed state, opens each audit, and saves the "Mark reviewed" ticks to the database.
 
 Other commands:
 
@@ -90,17 +148,12 @@ Add `--no-opener` to `run` or `audit` to skip the LLM opener.
 | +2 | They use Lemon Squeezy or Paddle (they already chose a merchant of record, so they can switch) |
 | +1 | INR-only pricing, and the post talks about selling abroad |
 | +1 | Posted in the last 3 days |
-| -2 | Low confidence in which provider they use |
+| −2 | Low confidence in which provider they use |
 | 0 | They already use Dodo Payments, or their post mentions Dodo |
 
-The total is kept between 0 and 10. The reasons appear on the dashboard and in the CSV.
+The total is kept between 0 and 10.
 
-## Limits and rules
+## Operating notes
 
-- **Free LLM tier:** Groq's free tier allows about 200,000 tokens a day per model. Classifying a few hundred posts can use up a day's quota. When that happens the tool stops cleanly, and the rest are finished by `python cli.py classify` the next day.
-- **Missing sites:** many pain posts don't link to a product site. Those can't be audited and are counted as "without product url" in the run summary.
-- **Polite fetching:** the tool follows robots.txt, waits at least 3 seconds between requests to the same site, and identifies itself as `DodoLeadAudit/0.1 (research; contact: <CONTACT_EMAIL>)`.
-- **Public pages only:** it never logs in or submits forms.
-- **Public data only:** it stores company URLs, public post links and public usernames. It stores no emails or phone numbers.
-- **Unconfirmed facts:** anything it can't confirm is marked "not verified". Check the evidence section at the bottom of each audit before sending an opener.
-- **Memory:** Chromium needs a few hundred MB of free memory. If a run crashes with "Target crashed", close some browser tabs and run it again.
+- **Free LLM tier:** Groq's free tier allows about 200,000 tokens a day per model. When the limit is hit the run stops cleanly, and `python cli.py classify` finishes the rest the next day.
+- **Memory:** Chromium needs a few hundred MB free. If a run crashes with "Target crashed", close some browser tabs and run it again.

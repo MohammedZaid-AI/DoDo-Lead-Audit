@@ -137,3 +137,13 @@ def test_redraft_only_touches_failed_openers(client, monkeypatch, site):
         assert row.opener == "Fresh opener?" and row.score == 8 and row.reviewed
         assert row.data["score_reasons"] == ["+3 real payment pain in their post"]
     assert pipeline.redraft(log=lambda *_: None) == (0, 0)  # nothing missing now
+
+
+def test_report_lists_leads_and_embeds_their_audits(client, tmp_path):
+    from app.report import build_report
+
+    html = build_report(tmp_path / "r.html", author="A. Person", repo_url="https://example.org/repo").read_text(encoding="utf-8")
+    assert 'href="#bolna-ai"' in html and 'id="bolna-ai"' in html  # list links to the embedded audit
+    assert "Scalio" not in html  # hand-made audits (no source post) are not leads
+    assert "Payment audit" in html and "MoR switch" in html and "write by hand" in html
+    assert "built by A. Person" in html and "<b>1</b><span>real payment pain</span>" in html

@@ -1,0 +1,28 @@
+  :root { --ink: #1a1a1a; --muted: #6b6b6b; --line: #e6e6e6; --soft: #f6f6f4; --accent: #2f5d50; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--ink);
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+  .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 4px; }
+  h2 { font-size: 18px; margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  a { color: var(--accent); }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .summary { background: var(--soft); border-left: 3px solid var(--accent); padding: 14px 16px; margin: 20px 0 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  .kv th { width: 34%; font-weight: 500; color: var(--muted); }
+  .num { text-align: right; white-space: nowrap; }
+  tr.dodo td { font-weight: 600; }
+  ol.issues { padding-left: 20px; } ol.issues li { margin-bottom: 12px; }
+  .issue-ev { display: block; font-size: 13px; color: var(--muted); }
+  .note { font-size: 14px; color: var(--muted); }
+  pre { background: var(--soft); padding: 10px 12px; overflow-x: auto; font-size: 14px; }
+  blockquote { margin: 0; padding: 12px 16px; background: var(--soft); border-radius: 4px; }
+  .evidence { margin-top: 48px; font-size: 12.5px; color: var(--muted); }
+  .evidence h2 { font-size: 14px; color: var(--muted); }
+  .evidence li { margin-bottom: 4px; word-break: break-all; }
+  .tag { display: inline-block; font-size: 11px; padding: 0 6px; border: 1px solid var(--line); border-radius: 3px; }
+  .wrap { overflow-x: auto; }
+  main p, main li, blockquote { overflow-wrap: anywhere; }
