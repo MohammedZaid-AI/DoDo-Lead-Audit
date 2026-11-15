@@ -61,6 +61,7 @@ def build_report(path: Path = OUTPUT_DIR / "report.html", author: str = "", repo
     stats["openers"] = sum(l["has_opener"] for l in leads)
     html = _env.get_template("report.html").render(
         leads=leads, stats=stats, author=author, repo_url=repo_url,
+        providers=sorted({l["provider"] for l in leads}), pains=sorted({l["pain"] for l in leads if l["pain"]}),
         generated=datetime.now(timezone.utc).strftime("%Y-%m-%d"))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding="utf-8")
